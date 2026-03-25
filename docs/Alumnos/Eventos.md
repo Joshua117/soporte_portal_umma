@@ -5,49 +5,72 @@ sidebar_position: 3
 
 <style>
   {`
-  /* 1. EL FONDO DE TODA LA PÁGINA (DERECHA Y MÁRGENES) */
-  .main-wrapper {
-    background-color: #ffffff !important; /* Cambia este por tu color de fondo */
-    min-height: 100vh;
-  }
+    .navbar { background-color: #1A3867 !important; border-bottom: 1px solid #30363d !important; }
+    .navbar__link, .navbar__title { color: #ffffff !important; }
 
-  /* 2. EL FONDO DE LA BARRA LATERAL (IZQUIERDA) */
-  .theme-doc-sidebar-container {
-    background-color: #020407 !important; 
-    border-right: 1px solid #010407 !important;
-  }
+    .theme-doc-sidebar-container { background-color: #ffffff !important; border-right: 1px solid #1A3867 !important; }
+    .menu__link { color: #1A3867 !important; }
 
-  /* 3. ESTILO PARA ESCRIBIR DIRECTAMENTE SOBRE EL FONDO */
-  .area-escritura {
-    background: transparent !important;
-    color: #180606 !important; /* Color de la letra para que se vea en el fondo */
-    padding: 20px 0;
-  }
+    .breadcrumbs { margin-bottom: 1.5rem !important; }
+    .breadcrumbs__link { color: #1A3867 !important; font-weight: 500; }
+    .breadcrumbs__item:not(:last-child)::after, 
+    .breadcrumb-home-icon,
+    .breadcrumbs__item--active .breadcrumbs__link { color: #1A3867 !important; }
 
-  /* 4. AJUSTE DE TÍTULOS PARA QUE NO SEAN NEGROS */
-  .area-escritura h1, .area-escritura h2, .area-escritura h3 {
-    color: #01070d !important; /* Un azul suave tipo GitHub/Ionic */
-  }
+    .main-wrapper { background-color: #ffffff !important; }
+    .markdown, .markdown p, .markdown li { color: #1A3867 !important; }
+    .markdown h1, .markdown h2, .markdown h3 { color: #1A3867 !important; }
+
+    .mi-cuadro-personalizado {
+      background-color: #ffffff !important; 
+      padding: 35px;
+      border-radius: 20px;
+      color: #1A3867 !important;
+    }
+
+    .menu__link:hover {
+      background-color: rgba(26, 56, 103, 0.1) !important;
+      color: #1A3867 !important;
+    }
+
+    .menu__link--active {
+      background-color: #a5bfe9 !important;
+      color: #1A3867 !important;
+      font-weight: bold !important;
+    }
+
+    .menu__caret:before {
+      filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+    }
+
+    .menu__list-item--active > .menu__link .menu__caret:before,
+    .menu__link--active .menu__caret:before {
+      filter: brightness(1) invert(0) !important;
+    }
+
+    .menu__caret {
+      transition: transform 0.2s ease;
+    }
+
+    .pagination-nav__link {
+      border: 1px solid #1A3867 !important;
+      background-color: #ffffff !important;
+      transition: all 0.3s ease !important;
+    }
+
+    .pagination-nav__sublabel, .pagination-nav__label {
+      color: #1A3867 !important;
+    }
+
+    .pagination-nav__link:hover {
+      background-color: #1A3867 !important;
+      border-color: #1A3867 !important;
+      text-decoration: none !important;
+    }
+
+    .pagination-nav__link:hover .pagination-nav__sublabel,
+    .pagination-nav__link:hover .pagination-nav__label {
+      color: #ffffff !important;
+    }
   `}
 </style>
-
-{/* --- AQUÍ EMPIEZA TU CONTENIDO --- */}
-
-<div className="area-escritura">
-
-  # Eventos 
-  
-  Aquí ya puedes escribir normalmente. El texto flotará directamente sobre el fondo 
-  que elegiste arriba (en este caso, el azul oscuro #040c17).
-  
-  ### ¿Cómo funciona esto?
-  Al usar la clase `area-escritura`, le decimos a Docusaurus que el fondo de este 
-  bloque es **transparente**. Así, lo que ves de fondo es el color global de la página.
-
-  * **Punto 1:** 
-  * **Punto 2:** 
-  * **Punto 3:** 
-
-</div>
-
-{/* Si después quieres meter un cuadro blanco otra vez, solo usa el código anterior */}

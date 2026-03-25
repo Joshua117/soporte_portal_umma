@@ -1,30 +1,98 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
+/* ==========================================================================
+   1. COLORES BASE Y CONFIGURACIÓN DEL SITIO
+   ========================================================================== */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #1A3867;       
+  --ifm-background-color: #ffffff;    
+  --ifm-navbar-background-color: #1A3867; 
+  --ifm-font-color-base: #1A3867;     
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+[data-theme='dark'], [data-theme='light'], html, body, .main-wrapper {
+  background-color: #ffffff !important;
+  color: #1A3867 !important;
+}
+
+/* ==========================================================================
+   2. CABECERA (NAVBAR Y HERO) - TODO EN BLANCO
+   ========================================================================== */
+.hero__title, .hero__subtitle, .hero__title b, .hero p,
+.navbar__title, .navbar__link, .navbar__items a, .navbar__toggle {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+
+.navbar { background-color: #1A3867 !important; }
+
+/* ==========================================================================
+   3. MENÚ LATERAL (SIDEBAR) Y FLECHITAS AZULES
+   ========================================================================== */
+.menu__link { color: #1A3867 !important; }
+
+.menu__caret:before {
+  filter: invert(18%) sepia(36%) saturate(3015%) hue-rotate(195deg) brightness(93%) contrast(92%) !important;
+}
+
+.menu__link--active {
+  background-color: #e6eef9 !important;
+  color: #1A3867 !important;
+  font-weight: bold !important;
+}
+
+/* ==========================================================================
+   4. TARJETAS (CARDS) - TODO EL TEXTO BLANCO
+   ========================================================================== */
+.card {
+  background-color: #1A3867 !important;
+  border-radius: 12px !important;
+  border: 1px solid #1A3867 !important;
+  transition: all 0.3s ease;
+}
+
+/* FORZAR TODO EL TEXTO A BLANCO DENTRO DE LA CARD */
+.card h2, 
+.card h2 *, 
+.card b, 
+.card strong,
+.card span,
+.card a,
+.card i,
+.card svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  opacity: 1 !important;
+  text-decoration: none !important;
+}
+
+/* QUITAR OBSERVACIONES Y TEXTOS SECUNDARIOS */
+.card p, .card small, .card__body, .card [class*="description"], .card div[class*="cardBody"] {
+  display: none !important;
+}
+
+.card h2 { margin-bottom: 0 !important; padding: 10px 0; }
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(26, 56, 103, 0.3) !important;
+}
+
+/* ==========================================================================
+   5. DOCUMENTOS Y PAGINACIÓN AZUL CON LETRAS BLANCAS
+   ========================================================================== */
+.markdown h1, .markdown h2, .markdown h3, .markdown p, .markdown li {
+  color: #1A3867 !important;
+}
+
+.pagination-nav__link {
+  border: 2px solid #1A3867 !important;
+  background-color: #1A3867 !important; 
+}
+
+.pagination-nav__label, .pagination-nav__sublabel, .pagination-nav__link strong {
+  color: #ffffff !important; 
+}
+
+.pagination-nav__link:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 4px 10px rgba(26, 56, 103, 0.2) !important;
 }
