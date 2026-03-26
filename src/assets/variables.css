@@ -1,0 +1,15 @@
+:root {
+  /* Colores Principales UMMA */
+  --umma-blue: #1A3867;
+  --umma-blue-hover: #1e427d; /* Un azul un pelín más claro para el hover */
+  --umma-light-blue: #2563EB; /* Azul vibrante para la animación */
+  --umma-white: #ffffff;
+  
+  /* Estados de Navegación */
+  --umma-bg-hover: #f0f7ff;
+  --umma-bg-active: #e6eef9;
+  
+  /* Sombras para las Tarjetas */
+  --umma-shadow-card: rgba(26, 56, 103, 0.1);
+  --umma-shadow-hover: rgba(26, 56, 103, 0.2);
+}

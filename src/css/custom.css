@@ -1,98 +1,144 @@
-/* ==========================================================================
-   1. COLORES BASE Y CONFIGURACIÓN DEL SITIO
-   ========================================================================== */
-:root {
-  --ifm-color-primary: #1A3867;       
-  --ifm-background-color: #ffffff;    
-  --ifm-navbar-background-color: #1A3867; 
-  --ifm-font-color-base: #1A3867;     
-}
-
-[data-theme='dark'], [data-theme='light'], html, body, .main-wrapper {
-  background-color: #ffffff !important;
-  color: #1A3867 !important;
-}
+@import "../assets/variables.css";
 
 /* ==========================================================================
-   2. CABECERA (NAVBAR Y HERO) - TODO EN BLANCO
+   FIX TOTAL: ELIMINAR MEDIALUNAS Y BORDES REBELDES (LAS COSITAS AZULES)
+   ========================================================================= */
+.menu__link::before,
+.menu__link::after,
+.theme-doc-sidebar-item-link::before,
+.theme-doc-sidebar-item-link::after,
+*:focus {
+  display: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ==========================================================================
+   1. FONDO DE LA WEB Y TEXTO GENERAL
    ========================================================================== */
-.hero__title, .hero__subtitle, .hero__title b, .hero p,
-.navbar__title, .navbar__link, .navbar__items a, .navbar__toggle {
-  color: #ffffff !important;
+html, body, .main-wrapper {
+  background-color: var(--umma-white) !important;
+  color: var(--umma-blue) !important;
+}
+
+/* ==========================================================================
+   2. NAVBAR: FONDO AZUL / LETRAS BLANCAS (IMPLEMENTADO)
+   ========================================================================== */
+.navbar {
+  background-color: var(--umma-blue) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Portal UMMA y Home en Blanco */
+.navbar__title, 
+.navbar__item.navbar__link {
+  color: var(--umma-white) !important;
   opacity: 1 !important;
 }
 
-.navbar { background-color: #1A3867 !important; }
+.navbar__search-input {
+  background-color: var(--umma-white) !important;
+  color: var(--umma-blue) !important; /* Texto azul para que se vea al escribir */
+  border-radius: 20px !important;
+  border: none !important;
+}
+
+.breadcrumbs__link, .breadcrumbs__item, .breadcrumbs__separator,
+.breadcrumbs__item svg, [class*="homeIcon"] svg {
+  color: var(--umma-blue) !important;
+  fill: var(--umma-blue) !important;
+}
 
 /* ==========================================================================
-   3. MENÚ LATERAL (SIDEBAR) Y FLECHITAS AZULES
+   3. SIDEBAR: FLECHAS FIJAS (SIEMPRE VISIBLES)
    ========================================================================== */
-.menu__link { color: #1A3867 !important; }
+.theme-doc-sidebar-container {
+  background-color: var(--umma-white) !important;
+  border-right: 1px solid rgba(26, 56, 103, 0.08) !important;
+}
 
-.menu__caret:before {
-  filter: invert(18%) sepia(36%) saturate(3015%) hue-rotate(195deg) brightness(93%) contrast(92%) !important;
+.menu__link {
+  color: var(--umma-blue) !important;
+  font-weight: 600;
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+}
+
+.menu__link:hover {
+  background-color: var(--umma-bg-hover) !important;
+  color: var(--umma-light-blue) !important;
 }
 
 .menu__link--active {
-  background-color: #e6eef9 !important;
-  color: #1A3867 !important;
-  font-weight: bold !important;
+  background-color: var(--umma-bg-active) !important;
+  color: var(--umma-blue) !important;
+  border-left: 5px solid var(--umma-blue) !important;
+  border-radius: 0 12px 12px 0 !important;
+}
+
+/* FLECHAS CARETS */
+.menu__caret {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.menu__list-item .menu__caret {
+  display: flex !important;
+}
+
+.menu__caret svg {
+  color: var(--umma-blue) !important;
+  fill: var(--umma-blue) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.menu__list-item--collapsed .menu__caret {
+  transform: rotate(0deg) !important;
 }
 
 /* ==========================================================================
-   4. TARJETAS (CARDS) - TODO EL TEXTO BLANCO
+   4. TARJETAS (CARDS): FONDO AZUL / LETRAS BLANCAS / ANIMACIÓN
    ========================================================================== */
 .card {
-  background-color: #1A3867 !important;
-  border-radius: 12px !important;
-  border: 1px solid #1A3867 !important;
-  transition: all 0.3s ease;
+  background-color: var(--umma-blue) !important;
+  border-radius: 20px !important;
+  padding: 2.5rem !important;
+  border: none !important;
+  box-shadow: 0 10px 20px var(--umma-shadow-card) !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
 }
 
-/* FORZAR TODO EL TEXTO A BLANCO DENTRO DE LA CARD */
-.card h2, 
-.card h2 *, 
-.card b, 
-.card strong,
-.card span,
-.card a,
-.card i,
-.card svg {
-  color: #ffffff !important;
-  fill: #ffffff !important;
+.card h2, .card h2 *, 
+.card h3, .card h3 *, 
+.card strong, .card b, 
+.card span, .card i, 
+.card svg, .card p, .card li {
+  color: var(--umma-white) !important;
+  fill: var(--umma-white) !important;
   opacity: 1 !important;
-  text-decoration: none !important;
 }
 
-/* QUITAR OBSERVACIONES Y TEXTOS SECUNDARIOS */
-.card p, .card small, .card__body, .card [class*="description"], .card div[class*="cardBody"] {
+.card:hover {
+  background-color: var(--umma-blue-hover) !important;
+  transform: translateY(-15px) scale(1.02) !important;
+  box-shadow: 0 25px 50px var(--umma-shadow-hover) !important;
+  border: 2px solid var(--umma-white) !important;
+}
+
+.card p, .card__body, [class*="description"] {
   display: none !important;
 }
 
-.card h2 { margin-bottom: 0 !important; padding: 10px 0; }
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(26, 56, 103, 0.3) !important;
-}
-
 /* ==========================================================================
-   5. DOCUMENTOS Y PAGINACIÓN AZUL CON LETRAS BLANCAS
+   5. PAGINACIÓN
    ========================================================================== */
-.markdown h1, .markdown h2, .markdown h3, .markdown p, .markdown li {
-  color: #1A3867 !important;
-}
-
 .pagination-nav__link {
-  border: 2px solid #1A3867 !important;
-  background-color: #1A3867 !important; 
+  border: none !important;
+  background-color: var(--umma-blue) !important;
+  border-radius: 15px !important;
 }
 
 .pagination-nav__label, .pagination-nav__sublabel, .pagination-nav__link strong {
-  color: #ffffff !important; 
-}
-
-.pagination-nav__link:hover {
-  filter: brightness(1.2);
-  box-shadow: 0 4px 10px rgba(26, 56, 103, 0.2) !important;
+  color: var(--umma-white) !important;
 }

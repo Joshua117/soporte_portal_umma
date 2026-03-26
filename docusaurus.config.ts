@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Portal UMMA',
-  tagline: 'Documentación y Recursos',
+  title: 'Universidad Mundo Maya',
+  tagline: 'Portal de Soporte',
   favicon: 'img/favicon.ico',
 
   url: 'https://tu-sitio.com',

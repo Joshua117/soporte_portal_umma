@@ -5,11 +5,21 @@ sidebar_position: 1
 
 <style>
   {`
+  /* NAVBAR: Fondo azul y letras BLANCAS */
   .navbar { background-color: #1A3867 !important; border-bottom: 1px solid #30363d !important; }
-  .navbar__link, .navbar__title { color: #ffffff !important; }
+  .navbar__link, .navbar__title, .navbar__item { color: #ffffff !important; opacity: 1 !important; }
 
+  /* SIDEBAR: Fondo blanco y letras azules */
   .theme-doc-sidebar-container { background-color: #ffffff !important; border-right: 1px solid #1A3867 !important; }
   .menu__link { color: #1A3867 !important; }
+
+  /* FLECHAS: SIEMPRE VISIBLES */
+  .menu__caret { 
+    opacity: 1 !important; 
+    visibility: visible !important; 
+    display: flex !important;
+    transition: transform 0.2s ease; 
+  }
 
   .breadcrumbs { margin-bottom: 1.5rem !important; }
   .breadcrumbs__link { color: #1A3867 !important; font-weight: 500; }
@@ -46,10 +56,6 @@ sidebar_position: 1
   .menu__list-item--active > .menu__link .menu__caret:before,
   .menu__link--active .menu__caret:before {
     filter: brightness(1) invert(0) !important;
-  }
-
-  .menu__caret {
-    transition: transform 0.2s ease;
   }
 
   .pagination-nav__link {
