@@ -1,3 +1,8 @@
+---
+sidebar_label: Alumnos Ausentes
+sidebar_position: 1
+---
+
 <style>
   {`
   .navbar { background-color: #1A3867 !important; border-bottom: 1px solid #30363d !important; }
@@ -69,3 +74,10 @@
   }
   `}
 </style>
+
+<div className="mi-cuadro-personalizado">
+  <h2>Faltas</h2>
+  <p>
+    
+  </p>
+</div>

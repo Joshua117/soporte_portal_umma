@@ -1,6 +1,6 @@
 ---
 sidebar_label: Eventos
-sidebar_position: 3
+sidebar_position: 2
 ---
 
 <style>
@@ -74,3 +74,36 @@ sidebar_position: 3
     }
   `}
 </style>
+
+# Eventos
+
+<div className="mi-cuadro-personalizado">
+  <h2>Dias</h2>
+  <p>
+    
+  </p>
+</div>
+
+<div className="mi-cuadro-personalizado">
+  <h2>Horarios</h2>
+  <p>
+    
+  </p>
+</div>
+
+<div className="mi-cuadro-personalizado">
+  <h2>Tipos de Eventos</h2>
+  <p>
+    
+  </p>
+</div>
+
+<div className="mi-cuadro-personalizado">
+  <h2></h2>
+  <p>
+    
+  </p>
+</div>
+
+
+

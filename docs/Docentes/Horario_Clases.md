@@ -1,6 +1,6 @@
 ---
-sidebar_label: Citas
-sidebar_position: 2
+sidebar_label: Horario de clases
+sidebar_position: 4
 ---
 
 <style>

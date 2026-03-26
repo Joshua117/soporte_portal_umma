@@ -1,3 +1,7 @@
+---
+sidebar_label: Control de asistencias
+sidebar_position: 2
+---
 <style>
   {`
   .navbar { background-color: #1A3867 !important; border-bottom: 1px solid #30363d !important; }
@@ -69,3 +73,5 @@
   }
   `}
 </style>
+
+<h2>Hola</h2>
