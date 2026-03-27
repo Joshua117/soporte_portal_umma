@@ -2,11 +2,7 @@
 sidebar_position: 1
 ---
 
-<<<<<<< HEAD
-# PORTAL UMMA 
-=======
 # PORTAL UMMA
->>>>>>> 02d51f7864a1b01f5c7ea20dfe0ad5a5ed11d211
 
 ## Bienvenido a la documentación del Portal UMMA
 <style>
