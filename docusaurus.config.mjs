@@ -37,7 +37,11 @@ export default {
     "path": "i18n",
     "localeConfigs": {}
   },
+<<<<<<< HEAD
 themes: [
+=======
+ "themes": [
+>>>>>>> 22117934d81627660553f7f7ca494c68c26c9f38
     [
       "@easyops-cn/docusaurus-search-local",
       {
