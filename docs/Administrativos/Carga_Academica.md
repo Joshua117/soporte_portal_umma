@@ -3,6 +3,7 @@ sidebar_label: Carga Academica
 sidebar_position: 1
 ---
 
+# Carga Academica
 
 <style>
   {`

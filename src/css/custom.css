@@ -5,42 +5,31 @@
    ========================================================================== */
 :root {
   /* --- NAVBAR --- */
-  --nav-text-color: #ffffff; /* Color de Portal UMMA, Home y links superiores */
+  --nav-text-color: #ffffff; 
 
   /* --- PÁGINA DE INICIO (HOME) --- */
-  --home-banner-text: #ffffff; /* Color de "Universidad Mundo Maya" y subtítulo */
+  --home-banner-text: var(--umma-blue); /* Invertido */
   
-  /* --- TARJETAS GLOBALES (APLICA A TODAS LAS TARJETAS DEL PORTAL) --- */
-  --card-bg-color: var(--umma-blue); /* Fondo azul oficial de las tarjetas */
-  --card-text-color: #ffffff;        /* Texto blanco fijo por defecto en todas las tarjetas */
+  /* --- TARJETAS GLOBALES (INVERTIDAS POR DEFECTO) --- */
+  --card-bg-color: #ffffff;         /* Ahora blancas */
+  --card-text-color: var(--umma-blue); /* Letras azules */
 
-  /* *** MODIFICA EL TAMAÑO DE LAS TARJETAS HOME *** */
-  --home-card-width: 320px;   /* Ancho por defecto (en píxeles) */
-  --home-card-height: 250px;  /* Alto por defecto (en píxeles) */
-  --home-card-radius: 20px;   /* Curvatura de las esquinas */
+  /* *** TAMAÑO DE LAS TARJETAS HOME *** */
+  --home-card-width: 320px;   
+  --home-card-height: 250px;  
+  --home-card-radius: 20px;   
 
-  /* *** MODIFICA EL COLOR DE LOS TÍTULOS DE TARJETAS GLOBALES *** */
-  --card-title-color: #ffffff; /* Blanco por defecto */
-
-  /* *** MODIFICA EL COLOR DE LOS SUBTÍTULOS DE TARJETAS GLOBALES *** */
-  --card-subtitle-color: rgba(255, 255, 255, 0.8); /* Blanco translúcido */
-
-  /* --- SECCIONES INTERNAS (ADMINISTRATIVOS) --- */
-  --internal-title-color: var(--umma-blue); /* Color de títulos principales y breadcrumbs */
-  --internal-bg-white: #ffffff;             /* Color de fondo de la página interna */
+  /* --- SECCIONES INTERNAS --- */
+  --internal-title-color: var(--umma-blue); 
+  --internal-bg-white: #ffffff;             
 }
 
 /* ==========================================================================
-   1. REGLAS GLOBALES (No tocar si no es necesario)
+   1. REGLAS GLOBALES Y NAVBAR (ESTRICTO)
    ========================================================================= */
-.navbar {
-  background-color: var(--umma-blue) !important;
-  border: none !important;
-}
+.navbar { background-color: var(--umma-blue) !important; border: none !important; }
 
-.navbar__title, 
-.navbar__item.navbar__link,
-.navbar__link {
+.navbar__title, .navbar__item.navbar__link, .navbar__link {
   color: var(--nav-text-color) !important;
   opacity: 1 !important;
 }
@@ -51,62 +40,40 @@
   border-radius: 20px !important;
 }
 
-.menu__caret {
-  opacity: 1 !important;
-  visibility: visible !important;
-  display: flex !important;
+.menu__caret { opacity: 1 !important; visibility: visible !important; display: flex !important; }
+
+.menu__caret:before {
+  filter: sepia(100%) hue-rotate(185deg) saturate(400%) brightness(0.6) !important;
 }
 
-.menu__caret svg {
-  color: var(--umma-blue) !important;
-  fill: var(--umma-blue) !important;
-}
+.menu__link--active .menu__caret:before { filter: brightness(0) invert(1) !important; }
 
-.menu__link::before,
-.menu__link::after,
-.theme-doc-sidebar-item-link::before,
-.theme-doc-sidebar-item-link::after,
-*:focus {
+.menu__link::before, .menu__link::after, .theme-doc-sidebar-item-link::before,
+.theme-doc-sidebar-item-link::after, *:focus {
   display: none !important;
   outline: none !important;
   box-shadow: none !important;
 }
 
 /* ==========================================================================
-   2. REGLAS EXCLUSIVAS PARA LA HOME (BICOLOR)
+   2. REGLAS EXCLUSIVAS PARA LA HOME (ESTILO CLARO POR DEFECTO)
    ========================================================================== */
 .main-wrapper:not(:has(.theme-doc-sidebar-container)) {
-  background: linear-gradient(
-    to bottom,
-    var(--umma-blue) 0%,
-    var(--umma-blue) 32%,
-    var(--umma-white) 32%,
-    var(--umma-white) 100%
-  ) !important;
+  background: linear-gradient(to bottom, #f5f7fa 0%, #f5f7fa 32%, #ffffff 32%, #ffffff 100%) !important;
   background-attachment: fixed !important;
 }
 
-.hero, [class*="heroBanner"] {
-  background-color: transparent !important;
-}
+.hero, [class*="heroBanner"] { background-color: transparent !important; }
+.hero__title, .hero__subtitle { color: var(--umma-blue) !important; }
 
-.hero__title, .hero__subtitle {
-  color: var(--home-banner-text) !important;
-}
-
-/* Aplicación de tamaño solo a tarjetas en la Home */
 .main-wrapper:not(:has(.theme-doc-sidebar-container)) .card {
   width: var(--home-card-width) !important;
   height: var(--home-card-height) !important;
   border-radius: var(--home-card-radius) !important;
 }
 
-/* ==========================================================================
-   3. REGLAS PARA PÁGINAS INTERNAS (FONDO BLANCO)
-   ========================================================================== */
-:has(.theme-doc-sidebar-container) .main-wrapper {
-  background-color: var(--internal-bg-white) !important;
-}
+/* Páginas Internas */
+:has(.theme-doc-sidebar-container) .main-wrapper { background-color: var(--internal-bg-white) !important; }
 
 :has(.theme-doc-sidebar-container) h1,
 :has(.theme-doc-sidebar-container) h2,
@@ -121,24 +88,13 @@
   border-right: 1px solid rgba(26, 56, 103, 0.08) !important;
 }
 
-.menu__link {
-  color: var(--umma-blue) !important;
-  font-weight: 600;
-  border-radius: 12px !important;
-}
-
-.menu__link:hover {
-  background-color: var(--umma-bg-hover) !important;
-}
-
 /* ==========================================================================
-   4. TARJETAS (CARDS) - UNIFICADO (AZUL Y LETRAS BLANCAS)
+   3. GESTIÓN DE ICONOS Y TARJETAS (MODO POR DEFECTO: BLANCO CON BORDE)
    ========================================================================== */
 .card {
-  background-color: var(--card-bg-color) !important;
-  color: var(--card-text-color) !important;
-  border-radius: var(--home-card-radius) !important;
-  border: none !important;
+  background-color: #ffffff !important;
+  color: var(--umma-blue) !important;
+  border: 2px solid var(--umma-blue) !important;
   padding: 2.5rem !important;
   display: flex !important;
   flex-direction: column !important;
@@ -148,23 +104,94 @@
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
 }
 
-/* Forzar letras e iconos a blanco dentro de todas las tarjetas */
-.card h3, 
-.card strong, 
-.card b, 
-.card p, 
-.card span, 
-.card i, 
-.card svg,
-.card [class*="cardTitle"],
-.card [class*="description"] {
-  color: #ffffff !important;
-  fill: #ffffff !important;
-  opacity: 1 !important;
+.card:hover { transform: translateY(-10px) !important; box-shadow: 0 15px 35px rgba(26, 56, 103, 0.2) !important; }
+
+/* Limpieza */
+.card [class*="cardIcon"], .card p, .card [class*="description"], .card span:not(.card__title) {
+  display: none !important;
 }
 
-/* Efecto Hover Global */
-.card:hover {
-  transform: translateY(-10px) !important;
-  box-shadow: 0 15px 35px rgba(26, 56, 103, 0.2) !important;
+.card h3, .card [class*="cardTitle"], .card strong {
+  color: var(--umma-blue) !important;
+  font-size: 1.35rem !important;
+  margin: 0 !important;
+  font-weight: 600 !important;
 }
+
+.card::before {
+  content: ""; display: block; width: 55px; height: 55px; margin-bottom: 15px;
+  background-size: contain; background-repeat: no-repeat; background-position: center;
+  filter: brightness(0) sepia(1) hue-rotate(195deg) saturate(600%) !important; /* Iconos Azules */
+}
+
+/* --- ASIGNACIÓN DE ICONOS --- */
+[href*="Eventos_Academicos"].card::before { background-image: url('../components/Icons/collections bookmark.png'); }
+[href*="Eventos_Culturales"].card::before { background-image: url('../components/Icons/calendar.png'); }
+[href*="Agregar_Estudiantes"].card::before { background-image: url('../components/Icons/Stack Book.png'); }
+[href*="Alumnos_Ausentes"].card::before   { background-image: url('../components/Icons/person remove.png'); }
+[href*="Lista_Estudiantes"].card::before  { background-image: url('../components/Icons/Gruups.png'); }
+[href*="Agregar_Docente"].card::before    { background-image: url('../components/Icons/person add.png'); }
+[href*="Control_Asistencia"].card::before { background-image: url('../components/Icons/calendar.png'); }
+[href*="Formatos_Docente"].card::before   { background-image: url('../components/Icons/Forms.png'); }
+[href*="Gafetes_Docentes"].card::before   { background-image: url('../components/Icons/Card.png'); }
+[href*="Lista_docentes"].card::before     { background-image: url('../components/Icons/Gruups.png'); }
+[href*="Seguimiento_Docentes"].card::before { background-image: url('../components/Icons/person search.png'); }
+[href*="Agregar_Personal"].card::before   { background-image: url('../components/Icons/person add.png'); }
+[href*="Asistencia_Faltas"].card::before  { background-image: url('../components/Icons/CalendarClock.png'); }
+[href*="Lista_Personal"].card::before     { background-image: url('../components/Icons/Gruups.png'); }
+
+/* ==========================================================================
+   4. SIDEBAR Y CARPETAS (REMARCADO INTEGRAL)
+   ========================================================================== */
+.menu__link { color: var(--umma-blue) !important; font-weight: 600 !important; border-radius: 12px !important; }
+
+.theme-doc-sidebar-item-link .menu__link--active {
+  background-color: var(--umma-blue) !important;
+  color: #ffffff !important;
+  position: relative !important;
+  border-radius: 8px !important;
+}
+
+.theme-doc-sidebar-item-link .menu__link--active::before {
+  content: "" !important; position: absolute !important; left: 0; top: 20%; height: 60%; width: 4px; 
+  background-color: #ffffff !important; border-radius: 0 4px 4px 0 !important;
+}
+
+.menu__list-item:not(.menu__list-item--collapsed) > .menu__link--sublist {
+  background-color: rgba(26, 56, 103, 0.1) !important;
+  color: var(--umma-blue) !important;
+  font-weight: 800 !important;
+  border-left: 5px solid var(--umma-blue) !important;
+  border-radius: 0 10px 10px 0 !important;
+}
+
+.menu__list-item:not(.menu__list-item--collapsed) .menu__list {
+  margin-left: 1.25rem !important;
+  padding-left: 0.5rem !important;
+  border-left: 2px solid rgba(26, 56, 103, 0.1) !important;
+}
+
+.menu__link:hover:not(.menu__link--active) {
+  background-color: rgba(26, 56, 103, 0.05) !important;
+  transform: translateX(5px) !important;
+  transition: all 0.2s ease !important;
+}
+
+/* ==========================================================================
+   5. MODO CLARO (FORZADO A ESTILO AZUL/OSCURO)
+   ========================================================================== */
+[data-theme='light'] .main-wrapper:not(:has(.theme-doc-sidebar-container)) {
+  background: linear-gradient(to bottom, var(--umma-blue) 0%, var(--umma-blue) 32%, var(--umma-white) 32%, var(--umma-white) 100%) !important;
+}
+
+[data-theme='light'] .hero__title, [data-theme='light'] .hero__subtitle { color: #ffffff !important; }
+
+[data-theme='light'] .card {
+  background-color: var(--umma-blue) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+[data-theme='light'] .card h3, [data-theme='light'] .card [class*="cardTitle"] { color: #ffffff !important; }
+
+[data-theme='light'] .card::before { filter: brightness(0) invert(1) !important; }

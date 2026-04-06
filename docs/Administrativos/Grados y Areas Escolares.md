@@ -1,3 +1,8 @@
+---
+sidebar_label: Grados y Areas Escolares
+sidebar_position: 4
+---
+
 <style>
   {`
   .navbar { background-color: #1A3867 !important; border-bottom: 1px solid #30363d !important; }

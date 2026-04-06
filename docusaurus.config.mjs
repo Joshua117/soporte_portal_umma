@@ -37,15 +37,17 @@ export default {
     "path": "i18n",
     "localeConfigs": {}
   },
-  "themes": [
+themes: [
     [
-      "C:\\Users\\angel\\OneDrive\\Documentos\\Proyectos\\soporte_portal_umma\\node_modules\\@easyops-cn\\docusaurus-search-local\\dist\\server\\server\\index.js",
+      "@easyops-cn/docusaurus-search-local",
       {
-        "language": [
-          "es"
-        ],
-        "indexDocs": true,
-        "indexBlog": false
+        hashed: true,
+        language: ["es"],
+        indexDocs: true,
+        indexBlog: false,
+        // ESTA LÍNEA ES MAGIA PARA WINDOWS:
+        forceIgnoreNoIndex: true, 
+        explicitSearchResultPath: true
       }
     ]
   ],

@@ -6,12 +6,12 @@ sidebar_position: 1
 <style>
   {`
   /* NAVBAR: Fondo azul y letras BLANCAS */
-  .navbar { background-color: #1A3867 !important; border-bottom: 1px solid #30363d !important; }
-  .navbar__link, .navbar__title, .navbar__item { color: #ffffff !important; opacity: 1 !important; }
+  .navbar { background-color: var(--umma-blue) !important; border-bottom: 1px solid #30363d !important; }
+  .navbar__link, .navbar__title, .navbar__item { color: var(--umma-white) !important; opacity: 1 !important; }
 
   /* SIDEBAR: Fondo blanco y letras azules */
-  .theme-doc-sidebar-container { background-color: #ffffff !important; border-right: 1px solid #1A3867 !important; }
-  .menu__link { color: #1A3867 !important; }
+  .theme-doc-sidebar-container { background-color: var(--umma-white) !important; border-right: 1px solid var(--umma-blue) !important; }
+  .menu__link { color: var(--umma-blue) !important; }
 
   /* FLECHAS: SIEMPRE VISIBLES */
   .menu__caret { 
@@ -22,82 +22,36 @@ sidebar_position: 1
   }
 
   .breadcrumbs { margin-bottom: 1.5rem !important; }
-  .breadcrumbs__link { color: #1A3867 !important; font-weight: 500; }
+  .breadcrumbs__link { color: var(--umma-blue) !important; font-weight: 500; }
   .breadcrumbs__item:not(:last-child)::after,
   .breadcrumb-home-icon,
-  .breadcrumbs__item--active .breadcrumbs__link { color: #1A3867 !important; }
+  .breadcrumbs__item--active .breadcrumbs__link { color: var(--umma-blue) !important; }
 
-  .main-wrapper { background-color: #ffffff !important; }
-  .markdown, .markdown p, .markdown li { color: #1A3867 !important; }
-  .markdown h1, .markdown h2, .markdown h3 { color: #1A3867 !important; }
-
-  .mi-cuadro-personalizado {
-    background-color: #ffffff !important;
-    padding: 35px;
-    border-radius: 20px;
-    color: #1A3867 !important;
-  }
+  .main-wrapper { background-color: var(--umma-white) !important; }
+  .markdown, .markdown p, .markdown li { color: var(--umma-blue) !important; }
+  .markdown h1, .markdown h2, .markdown h3 { color: var(--umma-blue) !important; }
 
   .menu__link:hover {
-    background-color: rgba(26, 56, 103, 0.1) !important;
-    color: #1A3867 !important;
+    background-color: var(--umma-shadow-card) !important;
+    color: var(--umma-blue) !important;
   }
 
   .menu__link--active {
     background-color: #a5bfe9 !important;
-    color: #1A3867 !important;
+    color: var(--umma-blue) !important;
     font-weight: bold !important;
-  }
-
-  .menu__caret:before {
-    filter: sepia(100%) hue-rotate(190deg) saturate(500%);
-  }
-
-  .menu__list-item--active > .menu__link .menu__caret:before,
-  .menu__link--active .menu__caret:before {
-    filter: brightness(1) invert(0) !important;
-  }
-
-  .pagination-nav__link {
-    border: 1px solid #1A3867 !important;
-    background-color: #ffffff !important;
-    transition: all 0.3s ease !important;
-  }
-
-  .pagination-nav__sublabel, .pagination-nav__label {
-    color: #1A3867 !important;
-  }
-
-  .pagination-nav__link:hover {
-    background-color: #1A3867 !important;
-    border-color: #1A3867 !important;
-    text-decoration: none !important;
-  }
-
-  .pagination-nav__link:hover .pagination-nav__sublabel,
-  .pagination-nav__link:hover .pagination-nav__label {
-    color: #ffffff !important;
   }
   `}
 </style>
 
-<div className="mi-cuadro-personalizado">
-  <h2>Horarios</h2>
-  <p>
+# Citas de Cobranza 🎓
 
-  </p>
-</div>
 
-<div className="mi-cuadro-personalizado">
-  <h2>Dias</h2>
-  <p>
+# Días
+Días de disponibilidad para la atención de citas y trámites administrativos.
 
-  </p>
-</div>
+# Horarios
+Consulta los horarios de atención disponibles para agendar tu espacio.
 
-<div className="mi-cuadro-personalizado">
-  <h2></h2>
-  <p>
-
-  </p>
-</div>
+# Pagos
+Información relevante sobre el registro y validación de pagos durante tu cita.
