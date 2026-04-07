@@ -1,7 +1,8 @@
 {
-  "label": "Gestion Personal",
-  "position": 7,
+  "label": "Gestión Personal",
+  "position": 1,
   "link": {
-    "type": "generated-index"
+    "type": "doc",
+    "id": "Administrativos/Gestion_Personal/index"
   }
 }

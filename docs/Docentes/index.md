@@ -1,5 +1,5 @@
 ---
-title: Docentes
+title: Sección Docentes
 ---
 
 <style>
@@ -11,42 +11,54 @@ title: Docentes
     margin-top: 20px;
   }
 
-  .card-total {
-    background-color: var(--umma-blue) !important; /* Usamos tu azul del :root */
+  html body .grid-admin-total a.card-total,
+  html body .grid-admin-total a.card-total:hover,
+  html body .grid-admin-total a.card-total:visited,
+  html body .grid-admin-total a.card-total:active,
+  html body .grid-admin-total a.card-total:focus {
+    background-color: #1A3867 !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    text-decoration: none !important;
     border-radius: 15px;
     padding: 25px 10px;
-    text-align: center;
-    text-decoration: none !important;
-    box-shadow: var(--umma-shadow-card); /* Usamos tu sombra del :root */
-    transition: all 0.3s ease;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 150px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    transition: all 0.3s ease-in-out;
   }
 
-  .card-total:hover {
-    transform: translateY(-5px);
-    background-color: var(--umma-blue-hover) !important; /* Usamos tu azul claro del :root */
-    box-shadow: var(--umma-shadow-hover);
+  html body .grid-admin-total a.card-total:hover {
+    transform: translateY(-5px) !important;
+    background-color: #234a85 !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3) !important;
+    filter: brightness(1.1) !important;
   }
 
-  .card-total h3 {
-    color: var(--umma-white) !important; /* Usamos tu blanco del :root */
-    font-size: 1rem;
-    margin: 12px 0 0 0;
+  html body .grid-admin-total a.card-total img.icon-admin-svg {
+    width: 50px !important;
+    height: auto !important;
+    filter: brightness(0) invert(1) !important;
+    opacity: 1 !important;
+    margin-bottom: 12px;
+    display: block !important;
   }
 
-  .icon-admin-svg {
-    width: 45px;
-    height: auto;
-    filter: brightness(0) invert(1);
+  html body .grid-admin-total a.card-total h3 {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    font-size: 1.1rem !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
   }
   `}
 </style>
 
-# Panel de Docentes 
+# Panel de Docentes
 
 <div className="grid-admin-total">
 
@@ -61,17 +73,17 @@ title: Docentes
   </a>
 
   <a href="./Formatos" className="card-total">
-    <img src={require('@site/src/components/Icons/Forms.png').default} className="icon-admin-svg" />
+    <img src={require('@site/src/components/Icons/Folder.png').default} className="icon-admin-svg" />
     <h3>Formatos</h3>
   </a>
 
   <a href="./Horario_Clases" className="card-total">
-    <img src={require('@site/src/components/Icons/CalendarClock.png').default} className="icon-admin-svg" />
+    <img src={require('@site/src/components/Icons/Date range.png').default} className="icon-admin-svg" />
     <h3>Horario Clases</h3>
   </a>
 
   <a href="./Horarios" className="card-total">
-    <img src={require('@site/src/components/Icons/Clock.png').default} className="icon-admin-svg" />
+    <img src={require('@site/src/components/Icons/calendar.png').default} className="icon-admin-svg" />
     <h3>Horarios</h3>
   </a>
 

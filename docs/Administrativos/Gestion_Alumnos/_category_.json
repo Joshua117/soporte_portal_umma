@@ -1,7 +1,8 @@
 {
-  "label": "Gestion Alumnos",
-  "position": 5,
+  "label": "Gestión Alumnos",
+  "position": 3,
   "link": {
-    "type": "generated-index"
+    "type": "doc",
+    "id": "Administrativos/Gestion_Alumnos/index"
   }
 }

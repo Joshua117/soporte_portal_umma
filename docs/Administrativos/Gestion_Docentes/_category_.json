@@ -1,7 +1,8 @@
 {
-  "label": "Gestion Docentes",
-  "position": 6,
+  "label": "Gestión Docentes",
+  "position": 2,
   "link": {
-    "type": "generated-index"
+    "type": "doc",
+    "id": "Administrativos/Gestion_Docentes/index"
   }
 }

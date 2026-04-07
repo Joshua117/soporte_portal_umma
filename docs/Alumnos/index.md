@@ -1,5 +1,5 @@
 ---
-title: Alumnos
+title: Sección Alumnos
 ---
 
 <style>
@@ -11,51 +11,54 @@ title: Alumnos
     margin-top: 20px;
   }
 
-  .card-total {
-    background-color: var(--umma-blue) !important;
+  html body .grid-admin-total a.card-total,
+  html body .grid-admin-total a.card-total:hover,
+  html body .grid-admin-total a.card-total:visited,
+  html body .grid-admin-total a.card-total:active,
+  html body .grid-admin-total a.card-total:focus {
+    background-color: #1A3867 !important;
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    text-decoration: none !important;
     border-radius: 15px;
     padding: 25px 10px;
-    text-align: center;
-    text-decoration: none !important;
-    box-shadow: var(--umma-shadow-card);
-    transition: all 0.3s ease;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 150px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+    transition: all 0.3s ease-in-out;
   }
 
-  .card-total:hover {
-    transform: translateY(-5px);
-    background-color: var(--umma-blue-hover) !important;
-    box-shadow: var(--umma-shadow-hover);
+  html body .grid-admin-total a.card-total:hover {
+    transform: translateY(-5px) !important;
+    background-color: #234a85 !important;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3) !important;
+    filter: brightness(1.1) !important;
   }
 
-  .card-total h3 {
-    color: var(--umma-white) !important;
-    font-size: 1rem;
-    margin: 12px 0 0 0;
+  html body .grid-admin-total a.card-total img.icon-admin-svg {
+    width: 50px !important;
+    height: auto !important;
+    filter: brightness(0) invert(1) !important;
+    opacity: 1 !important;
+    margin-bottom: 12px;
+    display: block !important;
   }
 
-  .icon-admin-svg {
-    width: 45px;
-    height: auto;
-    filter: brightness(0) invert(1);
-  }
-
-  .section-divider {
-    color: var(--umma-blue);
-    border-bottom: 2px solid var(--umma-blue);
-    margin: 30px 0 15px 0;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.9rem;
+  html body .grid-admin-total a.card-total h3 {
+    color: #ffffff !important;
+    opacity: 1 !important;
+    font-size: 1.1rem !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
   }
   `}
 </style>
 
-# Panel de Alumnos 
+# Panel de Alumnos
 
 <div className="grid-admin-total">
 

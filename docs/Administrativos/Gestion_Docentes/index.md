@@ -1,46 +1,56 @@
 ---
-title: Gestión de Docentes
-sidebar_class_name: ocultar-item
+title: Gestión Docentes
+sidebar_label: Inicio
 ---
 
 <style>
   {`
-  .grid-admin-total {
+  .grid-gestion-total {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     margin-top: 20px;
   }
   .card-total {
-    background-color: #1A3867 !important;
-    border-radius: 15px;
-    padding: 25px 10px;
+    background-color: var(--umma-blue, #1A3867) !important;
+    border-radius: 12px;
+    padding: 30px 15px;
     text-align: center;
     text-decoration: none !important;
     display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 150px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    min-height: 160px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  .card-total:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    filter: brightness(1.1);
   }
   .icon-admin-svg {
-    width: 45px !important;
+    width: 50px !important;
     height: auto !important;
     filter: brightness(0) invert(1);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
   .card-total h3 {
     color: #ffffff !important;
-    font-size: 1rem;
+    font-size: 1.1rem !important;
     margin: 0 !important;
+  }
+  [data-theme='dark'] .card-total {
+    background-color: #242526 !important;
+    border: 1px solid #3e3e3e;
   }
   `}
 </style>
 
-# Gestión de Docentes 
+# Gestión Docentes 
 
-<div className="grid-admin-total">
+<div className="grid-gestion-total">
 
   <a href="./Agregar_Docente" className="card-total">
     <img src={require('@site/src/components/Icons/person add.png').default} className="icon-admin-svg" />

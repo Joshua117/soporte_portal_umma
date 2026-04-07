@@ -1,197 +1,278 @@
-@import "../assets/variables.css";
+/* ============================================================
+   1. REGISTRO DE FUENTE (GELASIO)
+   ============================================================ */
+@font-face {
+  font-family: 'Gelasio';
+  src: url('/fonts/Gelasio-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
 
-/* ==========================================================================
-   CENTRAL DE CONTROL: MODIFICA TUS COLORES Y TAMAÑOS AQUÍ ABAJO
-   ========================================================================== */
+/* ============================================================
+   2. MODO CLARO (Variables que puedes modificar a tu gusto)
+   ============================================================ */
 :root {
-  /* --- NAVBAR --- */
-  --nav-text-color: #ffffff; 
-
-  /* --- PÁGINA DE INICIO (HOME) --- */
-  --home-banner-text: var(--umma-blue); /* Invertido */
+  --umma-blue: #1A3867;           /* Color de Navbar y Hero */
+  --umma-white: #ffffff;   
+  --umma-hero: #fdfdfd; 
+  --umma-hero2: #ffffff; 
+  --umma-navbar: #1A3867; /* Color de fondo de la Navbar */
+  --internal-bg: #ffffff;        /* Fondo de la documentación */
+  --card-bg-color: #1A3867;      /* Fondo de las tarjetas */
+  --card-text: #ffffff;          /* Texto de las tarjetas */
+  --hero-text: #1A3867;          /* Texto del título (Gelasio) */
+  --nav-text: #ffffff;           /* Texto de la Navbar */
+  --internal-title-color: #1A3867;
   
-  /* --- TARJETAS GLOBALES (INVERTIDAS POR DEFECTO) --- */
-  --card-bg-color: #ffffff;         /* Ahora blancas */
-  --card-text-color: var(--umma-blue); /* Letras azules */
-
-  /* *** TAMAÑO DE LAS TARJETAS HOME *** */
-  --home-card-width: 320px;   
-  --home-card-height: 250px;  
-  --home-card-radius: 20px;   
-
-  /* --- SECCIONES INTERNAS --- */
-  --internal-title-color: var(--umma-blue); 
-  --internal-bg-white: #ffffff;             
 }
 
-/* ==========================================================================
-   1. REGLAS GLOBALES Y NAVBAR (ESTRICTO)
-   ========================================================================= */
-.navbar { background-color: var(--umma-blue) !important; border: none !important; }
-
-.navbar__title, .navbar__item.navbar__link, .navbar__link {
-  color: var(--nav-text-color) !important;
-  opacity: 1 !important;
+/* ============================================================
+   3. MODO OSCURO (Colores cuando se activa la Luna)
+   ============================================================ */
+[data-theme='dark'] {
+  --umma-blue: #0d1b2e;          /* Azul muy oscuro */
+  --umma-white: #1b1b1d; 
+  --umma-hero: #1A3867; 
+  --umma-hero2: #ffffff;
+  --umma-navbar: #1A3867; /* Color de fondo de la Navbar */
+  --internal-bg: #1b1b1d;        /* Fondo de documentación oscuro */
+  --card-bg-color: #242526;      /* Tarjetas gris oscuro */
+  --card-text: #1A3867;          /* Texto gris claro */
+  --hero-text: #1A3867;          /* Texto del Hero */
+  --internal-title-color: #58a6ff;
 }
 
-.navbar__search-input {
-  background-color: var(--umma-white) !important;
-  color: var(--umma-blue) !important;
-  border-radius: 20px !important;
+/* ============================================================
+   4. ESTILOS FUNCIONALES (No necesitas tocarlos, usan las variables)
+   ============================================================ */
+
+/* Navbar */
+.navbar {
+  background-color: var(--umma-navbar) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: background-color 0.3s ease;
 }
 
-.menu__caret { opacity: 1 !important; visibility: visible !important; display: flex !important; }
-
-.menu__caret:before {
-  filter: sepia(100%) hue-rotate(185deg) saturate(400%) brightness(0.6) !important;
+.navbar__link, .navbar__title, .navbar__brand {
+  color: var(--nav-text) !important;
 }
 
-.menu__link--active .menu__caret:before { filter: brightness(0) invert(1) !important; }
-
-.menu__link::before, .menu__link::after, .theme-doc-sidebar-item-link::before,
-.theme-doc-sidebar-item-link::after, *:focus {
-  display: none !important;
-  outline: none !important;
-  box-shadow: none !important;
+/* Hero Section */
+.hero--primary {
+  background-color: transparent !important; /* Para que luzca el gradiente */
 }
 
-/* ==========================================================================
-   2. REGLAS EXCLUSIVAS PARA LA HOME (ESTILO CLARO POR DEFECTO)
-   ========================================================================== */
+.hero__title {
+  font-family: 'Gelasio', serif !important;
+  font-weight: bold !important;
+  color: var(--hero-text) !important;
+  font-size: 4rem !important;
+}
+
+.hero__subtitle {
+  color: var(--hero-text) !important;
+  opacity: 0.9;
+}
+
 .main-wrapper:not(:has(.theme-doc-sidebar-container)) {
-  background: linear-gradient(to bottom, #f5f7fa 0%, #f5f7fa 32%, #ffffff 32%, #ffffff 100%) !important;
+  background: linear-gradient(
+    to bottom,
+    var(--umma-hero) 0%,      
+    var(--umma-hero) 55%,     
+    var(--umma-hero2) 45%,    
+    var(--umma-hero2) 100%    
+  ) !important;
   background-attachment: fixed !important;
+  transition: all .10s ease;
 }
 
-.hero, [class*="heroBanner"] { background-color: transparent !important; }
-.hero__title, .hero__subtitle { color: var(--umma-blue) !important; }
-
-.main-wrapper:not(:has(.theme-doc-sidebar-container)) .card {
-  width: var(--home-card-width) !important;
-  height: var(--home-card-height) !important;
-  border-radius: var(--home-card-radius) !important;
-}
-
-/* Páginas Internas */
-:has(.theme-doc-sidebar-container) .main-wrapper { background-color: var(--internal-bg-white) !important; }
-
-:has(.theme-doc-sidebar-container) h1,
-:has(.theme-doc-sidebar-container) h2,
-:has(.theme-doc-sidebar-container) h3,
-:has(.theme-doc-sidebar-container) .breadcrumbs__link,
-:has(.theme-doc-sidebar-container) .breadcrumbs__item {
-  color: var(--internal-title-color) !important;
-}
-
-.theme-doc-sidebar-container {
-  background-color: var(--internal-bg-white) !important;
-  border-right: 1px solid rgba(26, 56, 103, 0.08) !important;
-}
-
-/* ==========================================================================
-   3. GESTIÓN DE ICONOS Y TARJETAS (MODO POR DEFECTO: BLANCO CON BORDE)
-   ========================================================================== */
+/* Tarjetas */
 .card {
-  background-color: #ffffff !important;
-  color: var(--umma-blue) !important;
-  border: 2px solid var(--umma-blue) !important;
+  background-color: var(--card-bg-color) !important;
+  color: var(--card-text) !important;
+  border-radius: 12px !important;
+  border: none !important;
   padding: 2.5rem !important;
   display: flex !important;
   flex-direction: column !important;
-  justify-content: center !important;
   align-items: center !important;
   text-align: center !important;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  transition: all 0.3s ease !important;
 }
 
-.card:hover { transform: translateY(-10px) !important; box-shadow: 0 15px 35px rgba(26, 56, 103, 0.2) !important; }
+.card h3, .card p, .card svg, .card i, .card span {
+  color: var(--card-text) !important;
+  fill: var(--card-text) !important;
+}
 
-/* Limpieza */
-.card [class*="cardIcon"], .card p, .card [class*="description"], .card span:not(.card__title) {
+/* Contenido Interno y Sidebar */
+.theme-doc-sidebar-container {
+  background-color: var(--internal-bg) !important;
+}
+
+.menu__link {
+  color: var(--internal-title-color) !important;
+  font-weight: 600;
+}
+
+.ocultar-item {
   display: none !important;
 }
 
-.card h3, .card [class*="cardTitle"], .card strong {
-  color: var(--umma-blue) !important;
-  font-size: 1.35rem !important;
-  margin: 0 !important;
-  font-weight: 600 !important;
+/* ============================================================
+   CONTROL DE SECCIONES (ALUMNO, DOCENTE, ADMIN) - MATERIAL ICONS
+   ============================================================ */
+
+/* 1. MODO CLARO (Personaliza aquí) */
+:root {
+  --home-icon-color: #1A3867;       /* Color del icono (Libro, birrete, etc.) */
+  --home-title-color: #1A3867;      /* Color del título (Alumno, Docente) */
+  --home-desc-color: #444444;       /* Color del texto descriptivo */
+  --home-icon-size: 64px;           /* Tamaño del icono */
 }
 
-.card::before {
-  content: ""; display: block; width: 55px; height: 55px; margin-bottom: 15px;
-  background-size: contain; background-repeat: no-repeat; background-position: center;
-  filter: brightness(0) sepia(1) hue-rotate(195deg) saturate(600%) !important; /* Iconos Azules */
+/* 2. MODO OSCURO (Personaliza aquí) */
+[data-theme='dark'] {
+  --home-icon-color: #1A3867;       /* Los iconos brillan más en oscuro */
+  --home-title-color: #1A3867;      /* Títulos blancos */
+  --home-desc-color: #1A3867;       /* Texto gris claro */
 }
 
-/* --- ASIGNACIÓN DE ICONOS --- */
-[href*="Eventos_Academicos"].card::before { background-image: url('../components/Icons/collections bookmark.png'); }
-[href*="Eventos_Culturales"].card::before { background-image: url('../components/Icons/calendar.png'); }
-[href*="Agregar_Estudiantes"].card::before { background-image: url('../components/Icons/Stack Book.png'); }
-[href*="Alumnos_Ausentes"].card::before   { background-image: url('../components/Icons/person remove.png'); }
-[href*="Lista_Estudiantes"].card::before  { background-image: url('../components/Icons/Gruups.png'); }
-[href*="Agregar_Docente"].card::before    { background-image: url('../components/Icons/person add.png'); }
-[href*="Control_Asistencia"].card::before { background-image: url('../components/Icons/calendar.png'); }
-[href*="Formatos_Docente"].card::before   { background-image: url('../components/Icons/Forms.png'); }
-[href*="Gafetes_Docentes"].card::before   { background-image: url('../components/Icons/Card.png'); }
-[href*="Lista_docentes"].card::before     { background-image: url('../components/Icons/Gruups.png'); }
-[href*="Seguimiento_Docentes"].card::before { background-image: url('../components/Icons/person search.png'); }
-[href*="Agregar_Personal"].card::before   { background-image: url('../components/Icons/person add.png'); }
-[href*="Asistencia_Faltas"].card::before  { background-image: url('../components/Icons/CalendarClock.png'); }
-[href*="Lista_Personal"].card::before     { background-image: url('../components/Icons/Gruups.png'); }
+/* 3. ESTILOS FUNCIONALES (No tocar a menos que sepas CSS) */
 
-/* ==========================================================================
-   4. SIDEBAR Y CARPETAS (REMARCADO INTEGRAL)
-   ========================================================================== */
-.menu__link { color: var(--umma-blue) !important; font-weight: 600 !important; border-radius: 12px !important; }
+/* Contenedor de cada sección */
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col {
+  padding: 2rem !important;
+  text-align: center !important;
+}
 
-.theme-doc-sidebar-item-link .menu__link--active {
-  background-color: var(--umma-blue) !important;
+/* Estilo para los Material Icons */
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col span.material-icons,
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col i {
+  font-size: var(--home-icon-size) !important;
+  color: var(--home-icon-color) !important;
+  margin-bottom: 1.5rem !important;
+  display: inline-block !important;
+  transition: transform 0.3s ease !important;
+}
+
+/* Efecto Hover en el icono */
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col:hover span.material-icons,
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col:hover i {
+  transform: scale(1.15) !important;
+}
+
+/* Títulos (Alumno, Docente, Administrativo) */
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col h3 {
+  font-weight: bold !important;
+  font-size: 1.8rem !important;
+  color: var(--home-title-color) !important;
+  margin-bottom: 0.8rem !important;
+  transition: color 0.3s ease;
+}
+
+/* Texto de descripción */
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col p {
+  font-size: 1.1rem !important;
+  line-height: 1.5 !important;
+  color: var(--home-desc-color) !important;
+  max-width: 300px !important;
+  margin: 0 auto !important;
+  transition: color 0.3s ease;
+}
+
+/* ============================================================
+   LOGO GRANDE + PEGADO TOTAL (NAVBAR, TÍTULO Y SUBTÍTULO)
+   ============================================================ */
+
+/* 1. EL CONTENEDOR (BANNER): Todo hacia arriba */
+.hero, [class*="heroBanner"] {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  /* Eliminamos el espacio superior para pegarlo a la Navbar */
+  padding-top: 0 !important; 
+  padding-bottom: 0rem !important; 
+  gap: 0 !important; 
+}
+
+/* 2. EL LOGO: Más grande y pegado al título */
+.hero::before {
+  content: "";
+  display: block;
+  
+  /* Tamaño aumentado */
+  width: 350px; 
+  height: 220px; 
+  
+  background-image: url('/img/Umma_Azul.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  /* Margen negativo para que el título 'entre' un poco en el área del logo */
+  margin-top: 0 !important;
+  margin-bottom: -30px !important; 
+}
+
+/* 3. EL TÍTULO: Sin espacios abajo */
+.hero__title {
+  font-family: 'Gelasio', serif !important;
+  font-size: 4rem !important;
+  color: var(--hero-text) !important;
+  margin-bottom: 1 !important;
+  padding-bottom: 1 !important;
+  line-height: 1.85 !important; /* Más apretado aún */
+}
+
+/* 4. EL SUBTÍTULO: Pegado al título */
+.hero__subtitle {
+  color: var(--hero-text) !important;
+  padding-top: 0 !important;
+  /* Subimos el texto para eliminar el aire */
+  margin-top: -50px !important; 
+  display: block !important;
+  opacity: 1;
+  font-size: 2.5rem !important;
+}
+
+/* ============================================================
+   LOGO AUTODINÁMICO (CAMBIA SEGÚN EL MODO)
+   ============================================================ */
+
+/* 1. IMAGEN PARA MODO CLARO (Azul) */
+.hero::before {
+  content: "";
+  display: block;
+  width: 350px; 
+  height: 220px; 
+  background-image: url('/img/Umma_Azul.png'); /* Carga el azul */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 0 !important;
+  margin-bottom: -35px !important; 
+  transition: background-image 0.2s ease-in-out; /* Cambio suave */
+}
+
+/* 2. IMAGEN PARA MODO OSCURO (Blanco) */
+[data-theme='dark'] .hero::before {
+  background-image: url('/img/Umma_Blanco.png') !important; /* Cambia al blanco */
+}
+
+/* ============================================================
+   REFUERZO DE TEXTO (Para que siempre sea legible)
+   ============================================================ */
+
+/* En modo claro: Usa el azul de tu variable */
+.hero__title, .hero__subtitle {
+  color: var(--hero-text) !important;
+}
+
+/* En modo oscuro: Forzamos blanco puro */
+[data-theme='dark'] .hero__title,
+[data-theme='dark'] .hero__subtitle {
   color: #ffffff !important;
-  position: relative !important;
-  border-radius: 8px !important;
 }
-
-.theme-doc-sidebar-item-link .menu__link--active::before {
-  content: "" !important; position: absolute !important; left: 0; top: 20%; height: 60%; width: 4px; 
-  background-color: #ffffff !important; border-radius: 0 4px 4px 0 !important;
-}
-
-.menu__list-item:not(.menu__list-item--collapsed) > .menu__link--sublist {
-  background-color: rgba(26, 56, 103, 0.1) !important;
-  color: var(--umma-blue) !important;
-  font-weight: 800 !important;
-  border-left: 5px solid var(--umma-blue) !important;
-  border-radius: 0 10px 10px 0 !important;
-}
-
-.menu__list-item:not(.menu__list-item--collapsed) .menu__list {
-  margin-left: 1.25rem !important;
-  padding-left: 0.5rem !important;
-  border-left: 2px solid rgba(26, 56, 103, 0.1) !important;
-}
-
-.menu__link:hover:not(.menu__link--active) {
-  background-color: rgba(26, 56, 103, 0.05) !important;
-  transform: translateX(5px) !important;
-  transition: all 0.2s ease !important;
-}
-
-/* ==========================================================================
-   5. MODO CLARO (FORZADO A ESTILO AZUL/OSCURO)
-   ========================================================================== */
-[data-theme='light'] .main-wrapper:not(:has(.theme-doc-sidebar-container)) {
-  background: linear-gradient(to bottom, var(--umma-blue) 0%, var(--umma-blue) 32%, var(--umma-white) 32%, var(--umma-white) 100%) !important;
-}
-
-[data-theme='light'] .hero__title, [data-theme='light'] .hero__subtitle { color: #ffffff !important; }
-
-[data-theme='light'] .card {
-  background-color: var(--umma-blue) !important;
-  color: #ffffff !important;
-  border: none !important;
-}
-
-[data-theme='light'] .card h3, [data-theme='light'] .card [class*="cardTitle"] { color: #ffffff !important; }
-
-[data-theme='light'] .card::before { filter: brightness(0) invert(1) !important; }

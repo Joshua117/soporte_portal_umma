@@ -5,7 +5,7 @@
  */
 export default {
   "title": "Universidad Mundo Maya",
-  "tagline": "Manual de usuario del portal UMMA",
+  "tagline": "Manual de usuario",
   "favicon": "img/Umma_BlancoC.png",
   "url": "https://tu-sitio.com",
   "baseUrl": "/",
@@ -38,7 +38,7 @@ export default {
     "localeConfigs": {}
   },
 
- themes: [
+ "themes": [
     [
       "@easyops-cn/docusaurus-search-local",
       {
