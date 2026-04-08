@@ -1,71 +1,115 @@
+---
+title: Agregar Estudiantes
+pagination_prev: null
+---
+
 <style>
   {`
-  .navbar { background-color: #1A3867 !important; border-bottom: 1px solid #30363d !important; }
-  .navbar__link, .navbar__title { color: #ffffff !important; }
+  /* ============================================================
+     1. VARIABLES Y CONFIGURACIÓN BASE
+     ============================================================ */
+  :root {
+    --umma-blue: #1A3867;
+    --umma-blue-hover: #1e427d;
+    --umma-white: #ffffff;
+    --color-encabezado: #262624;
 
-  .theme-doc-sidebar-container { background-color: #ffffff !important; border-right: 1px solid #1A3867 !important; }
-  .menu__link { color: #1A3867 !important; }
-
-  .breadcrumbs { margin-bottom: 1.5rem !important; }
-  .breadcrumbs__link { color: #1A3867 !important; font-weight: 500; }
-  .breadcrumbs__item:not(:last-child)::after, 
-  .breadcrumb-home-icon,
-  .breadcrumbs__item--active .breadcrumbs__link { color: #1A3867 !important; }
-
-  .main-wrapper { background-color: #ffffff !important; }
-  .markdown, .markdown p, .markdown li { color: #1A3867 !important; }
-  .markdown h1, .markdown h2, .markdown h3 { color: #1A3867 !important; }
-
-  .mi-cuadro-personalizado {
-    background-color: #ffffff !important; 
-    padding: 35px;
-    border-radius: 20px;
-    color: #1A3867 !important;
+    /* Aplicación Dinámica */
+    --bg-global: var(--umma-white);
+    --sidebar-bg: var(--umma-white);
+    --text-global: var(--umma-blue);
+    --navbar-bg: #1A3867;
+    
+    /* Tarjetas */
+    --card-bg: var(--umma-blue);
+    --card-text: var(--umma-white);
+    --card-hover-bg: var(--umma-blue-hover);
+    --card-border: transparent;
+    
+    --umma-shadow-card: rgba(0, 0, 0, 0.1);
+    --umma-bg-active: #a5bfe9;
+    --icon-filter: brightness(0) invert(1);
   }
 
-  .menu__link:hover {
-    background-color: rgba(26, 56, 103, 0.1) !important;
-    color: #1A3867 !important;
+  [data-theme='dark'] {
+    --bg-global: #262624;
+    --sidebar-bg: #262624;
+    --text-global: #e3e3e3;
+    --navbar-bg: #1a2a3f;
+    --color-encabezado: #ffffff;
+    
+    --card-bg: #1e1f20; 
+    --card-text: #ffffff;
+    --card-hover-bg: #2d2e30;
+    --card-border: #30363d;
+    
+    --umma-bg-active: #1A3867;
+    --icon-filter: brightness(0) invert(1);
   }
 
-  .menu__link--active {
-    background-color: #a5bfe9 !important;
-    color: #1A3867 !important;
-    font-weight: bold !important;
+  /* ============================================================
+     2. FUERZA BRUTA PARA TÍTULOS Y ESTRUCTURA
+     ============================================================ */
+  header h1, article h1, .markdown h1, h1[class*='docTitle'] { 
+    color: var(--color-encabezado) !important; 
+    opacity: 1 !important;
   }
 
-  .menu__caret:before {
-    filter: sepia(100%) hue-rotate(190deg) saturate(500%);
+  .main-wrapper { background-color: var(--bg-global) !important; }
+  .navbar { background-color: var(--navbar-bg) !important; }
+  .navbar__link, .navbar__title { color: var(--umma-white) !important; }
+  
+  .theme-doc-sidebar-container { background-color: var(--sidebar-bg) !important; border-right: 1px solid var(--umma-blue) !important; }
+  .menu__link { color: var(--text-global) !important; }
+  .menu__link--active { background-color: var(--umma-bg-active) !important; color: var(--text-global) !important; }
+
+  /* BLOQUEO DE PAGINACIÓN (Oculta visualmente la barra inferior) */
+  .pagination-nav { display: none !important; }
+
+  /* ============================================================
+     3. GRID Y TARJETAS
+     ============================================================ */
+  .grid-admin-total {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
   }
 
-  .menu__list-item--active > .menu__link .menu__caret:before,
-  .menu__link--active .menu__caret:before {
-    filter: brightness(1) invert(0) !important;
-  }
-
-  .menu__caret {
-    transition: transform 0.2s ease;
-  }
-
-  .pagination-nav__link {
-    border: 1px solid #1A3867 !important;
-    background-color: #ffffff !important;
-    transition: all 0.3s ease !important;
-  }
-
-  .pagination-nav__sublabel, .pagination-nav__label {
-    color: #1A3867 !important;
-  }
-
-  .pagination-nav__link:hover {
-    background-color: #1A3867 !important;
-    border-color: #1A3867 !important;
+  html body .grid-admin-total a.card-total {
+    background-color: var(--card-bg) !important;
+    color: var(--card-text) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 15px;
+    padding: 25px 10px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    box-shadow: var(--umma-shadow-card) !important;
+    transition: all 0.3s ease-in-out;
     text-decoration: none !important;
   }
 
-  .pagination-nav__link:hover .pagination-nav__sublabel,
-  .pagination-nav__link:hover .pagination-nav__label {
-    color: #ffffff !important;
+  html body .grid-admin-total a.card-total:hover {
+    transform: translateY(-5px) !important;
+    background-color: var(--card-hover-bg) !important;
+    filter: brightness(1.1) !important;
+  }
+
+  html body .grid-admin-total a.card-total img.icon-admin-svg {
+    width: 50px !important;
+    filter: var(--icon-filter) !important;
+    margin-bottom: 12px;
+  }
+
+  html body .grid-admin-total a.card-total h3 {
+    color: var(--card-text) !important;
+    font-size: 1.1rem !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
   }
   `}
 </style>
+

@@ -1,49 +1,108 @@
 ---
-title: Gestión Docentes
 sidebar_label: Inicio
 ---
 
 <style>
   {`
-  .grid-gestion-total {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
+  :root {
+    /* ============================================================
+       ZONA DE CONTROL DE COLORES (FONDO Y TEXTO)
+       ============================================================ */
+    --color-encabezado: #262624; 
+    --umma-blue: #1A3867;
+    --umma-light-blue: #2563EB;
+    --umma-white: #ffffff;
+    --umma-navbar: #1a2a3f;
   }
-  .card-total {
-    background-color: var(--umma-blue, #1A3867) !important;
-    border-radius: 12px;
+
+  /* FUERZA BRUTA PARA EL TÍTULO (INDEX) */
+  header h1, 
+  article h1, 
+  .markdown h1, 
+  h1[class*='docTitle'] { 
+    color: var(--color-encabezado) !important; 
+    opacity: 1 !important;
+  }
+
+  [data-theme='light'] {
+    --bg-page: #f5f6f7;
+    --text-page: #1A3867;
+    --umma-navbar: #1A3867;
+    --color-paginacion-enlace: #1A3867;
+    --color-breadcrumbs-enlace: #1A3867;
+    --card-bg: var(--umma-blue);
+    --card-border: var(--umma-blue);
+    --sidebar-bg: var(--umma-white);
+    --sidebar-link: var(--umma-blue);
+    --c-txt-card: #ffffff;
+    --icon-f: brightness(0) invert(1); 
+  }
+
+  [data-theme='dark'] {
+    --bg-page: #262624;
+    --text-page: #ffffff;
+    --umma-navbar: #1a2a3f;
+    --color-encabezado: #ffffff; /* Título blanco en modo oscuro */
+    --color-paginacion-enlace: #fefeff; 
+    --color-breadcrumbs-enlace: #ffffff;
+    --card-bg: #1e1f20;
+    --card-border: #30363d;
+    --sidebar-bg: #262624; 
+    --sidebar-link: #ffffff;
+    --c-txt-card: #ffffff;
+    --icon-f: brightness(0) invert(1);
+  }
+
+  /* --- APLICACIÓN GENERAL --- */
+  .main-wrapper { 
+    background-color: var(--bg-page) !important; 
+    color: var(--text-page) !important;
+  }
+
+  /* SIDEBAR */
+  .theme-doc-sidebar-container { background-color: var(--sidebar-bg) !important; }
+  .menu__link { color: var(--sidebar-link) !important; }
+
+  /* PAGINACIÓN Y BREADCRUMBS */
+  .pagination-nav__link { 
+    background-color: transparent !important; 
+    border: none !important; 
+    box-shadow: none !important; 
+  }
+  .pagination-nav__label { color: var(--color-paginacion-enlace) !important; }
+  .breadcrumbs__link { color: var(--color-breadcrumbs-enlace) !important; }
+
+  /* --- TARJETAS (ESTRUCTURA ORIGINAL) --- */
+  .grid-gestion-total { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+    margin-top: 20px; 
+  }
+  
+  html body .card-total {
+    background-color: var(--card-bg) !important;
+    border: 2px solid var(--card-border) !important;
+    border-radius: 15px;
     padding: 30px 15px;
-    text-align: center;
-    text-decoration: none !important;
     display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: all 0.3s ease;
     min-height: 160px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-decoration: none !important;
   }
-  .card-total:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    filter: brightness(1.1);
+
+  html body .card-total h3 { 
+    color: var(--c-txt-card) !important; 
+    font-size: 1.15rem !important; 
+    margin: 0 !important; 
   }
-  .icon-admin-svg {
-    width: 50px !important;
-    height: auto !important;
-    filter: brightness(0) invert(1);
-    margin-bottom: 12px;
-  }
-  .card-total h3 {
-    color: #ffffff !important;
-    font-size: 1.1rem !important;
-    margin: 0 !important;
-  }
-  [data-theme='dark'] .card-total {
-    background-color: #242526 !important;
-    border: 1px solid #3e3e3e;
+  
+  html body .card-total img.icon-admin-svg { 
+    width: 55px !important; 
+    margin-bottom: 12px; 
+    filter: var(--icon-f) !important; 
   }
   `}
 </style>

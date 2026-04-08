@@ -9,6 +9,7 @@ title: Administrativos
      ============================================================ */
   :root {
     --umma-blue: #1A3867;
+    --color-breadcrumbs-enlace: #1A3867;
     --umma-blue-hover: #1e427d;
     --umma-white: #ffffff;
 
@@ -48,9 +49,9 @@ title: Administrativos
     --bg-global: #262624;
     --sidebar-bg: #262624;
     --text-global: #e3e3e3;
-    --navbar-bg: #1e1e1c;
+    --navbar-bg: #1a2a3f;
     
-    /* Sidebar en Oscuro (Tu captura) */
+    /* Sidebar en Oscuro */
     --menu-link-color: #ffffff; 
     --menu-link-bg-hover: rgba(255, 255, 255, 0.05);
     --menu-link-bg-active: #ffffff;
@@ -69,7 +70,12 @@ title: Administrativos
     
     --umma-shadow-card: rgba(0, 0, 0, 0.5);
   }
-
+/* ELIMINAR CUADRO DE PAGINACIÓN */
+  .pagination-nav__link { 
+    background-color: transparent !important; 
+    border: none !important; 
+    box-shadow: none !important; 
+  } 
   /* ============================================================
      3. APLICACIÓN DE ESTILOS (SIDEBAR, CARDS, PAGINACIÓN)
      ============================================================ */

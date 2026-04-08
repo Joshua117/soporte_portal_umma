@@ -5,73 +5,131 @@ sidebar_position: 2
 
 <style>
   {`
-    .navbar { background-color: #1A3867 !important; border-bottom: 1px solid #30363d !important; }
-    .navbar__link, .navbar__title { color: #ffffff !important; }
+  /* ============================================================
+     1. VARIABLES Y MODO CLARO
+     ============================================================ */
+  :root {
+    /* Colores Base UMMA */
+    --umma-blue: #1A3867;
+    --umma-blue-hover: #1e427d;
+    --umma-white: #ffffff;
 
-    .theme-doc-sidebar-container { background-color: #ffffff !important; border-right: 1px solid #1A3867 !important; }
-    .menu__link { color: #1A3867 !important; }
+    /* Variables de Aplicación Dinámica (Modificables) */
+    --bg-global: var(--umma-white);        /* Fondo de la página */
+    --sidebar-bg: var(--umma-white);     /* Fondo del menú lateral */
+    --text-global: var(--umma-blue);       /* Color de letras principal */
+    --navbar-bg: #1A3867;                /* Fondo de la barra superior */
+    
+    /* Configuración de Tarjetas */
+    --card-bg: var(--umma-blue);           /* Fondo de las tarjetas */
+    --card-text: var(--umma-white);        /* Texto de las tarjetas */
+    --card-hover-bg: var(--umma-blue-hover);
+    --card-border: transparent;
+    
+    /* Sombras y Navegación */
+    --umma-shadow-card: rgba(0, 0, 0, 0.2);
+    --umma-shadow-hover: rgba(0, 0, 0, 0.3);
+    --umma-bg-hover: rgba(26, 56, 103, 0.1);
+    --umma-bg-active: #a5bfe9;
+    
+    /* Filtros (Iconos) */
+    --icon-filter: brightness(0) invert(1); /* Convierte iconos a blanco */
+  }
 
-    .breadcrumbs { margin-bottom: 1.5rem !important; }
-    .breadcrumbs__link { color: #1A3867 !important; font-weight: 500; }
-    .breadcrumbs__item:not(:last-child)::after, 
-    .breadcrumb-home-icon,
-    .breadcrumbs__item--active .breadcrumbs__link { color: #1A3867 !important; }
+  /* ============================================================
+     2. CONFIGURACIÓN MODO OSCURO
+     ============================================================ */
+  [data-theme='dark'] {
+    --bg-global: #262624;
+    --sidebar-bg: #262624;
+    --text-global: #e3e3e3;
+    --navbar-bg: #1a2a3f;
+    
+    /* Tarjetas en Modo Oscuro */
+    --card-bg: #1e1f20; 
+    --card-text: #ffffff;
+    --card-hover-bg: #2d2e30;
+    --card-border: #30363d;
+    
+    /* Ajustes de Acentos */
+    --umma-blue: #262624;
+    --umma-shadow-card: rgba(0, 0, 0, 0.5);
+    --umma-shadow-hover: rgba(0, 0, 0, 0.7);
+    --umma-bg-hover: rgba(255, 255, 255, 0.05);
+    --umma-bg-active: #1A3867;
+    
+    /* Iconos */
+    --icon-filter: brightness(0) invert(1);
+  }
 
-    .main-wrapper { background-color: #ffffff !important; }
-    .markdown, .markdown p, .markdown li { color: #1A3867 !important; }
-    .markdown h1, .markdown h2, .markdown h3 { color: #1A3867 !important; }
+  /* ============================================================
+     3. ESTILOS FUNCIONALES (No tocar si no es necesario)
+     ============================================================ */
 
-    .mi-cuadro-personalizado {
-      background-color: #ffffff !important; 
-      padding: 35px;
-      border-radius: 20px;
-      color: #1A3867 !important;
-    }
+  /* Estructura Global */
+  .main-wrapper { background-color: var(--bg-global) !important; transition: background-color 0.3s ease; }
+  .navbar { background-color: var(--navbar-bg) !important; border-bottom: 1px solid #30363d !important; transition: background-color 0.3s ease; }
+  .navbar__link, .navbar__title { color: var(--umma-white) !important; }
+  
+  .theme-doc-sidebar-container { background-color: var(--sidebar-bg) !important; border-right: 1px solid var(--umma-blue) !important; }
+  .menu__link { color: var(--text-global) !important; }
+  .breadcrumbs__link, .breadcrumb-home-icon, .breadcrumbs__item--active .breadcrumbs__link { color: var(--text-global) !important; }
+  
+  .markdown h1, .markdown h2, .markdown h3, .markdown p, .markdown li { color: var(--text-global) !important; }
+  
+  .menu__link:hover { background-color: var(--umma-bg-hover) !important; color: var(--text-global) !important; }
+  .menu__link--active { background-color: var(--umma-bg-active) !important; color: var(--text-global) !important; font-weight: bold !important; }
 
-    .menu__link:hover {
-      background-color: rgba(26, 56, 103, 0.1) !important;
-      color: #1A3867 !important;
-    }
+  /* Paginación */
+  .pagination-nav__link { border: 1px solid var(--umma-blue) !important; background-color: var(--bg-global) !important; }
+  .pagination-nav__sublabel, .pagination-nav__label { color: var(--text-global) !important; }
+  .pagination-nav__link:hover { background-color: var(--umma-blue) !important; }
+  .pagination-nav__link:hover .pagination-nav__sublabel, .pagination-nav__link:hover .pagination-nav__label { color: var(--umma-white) !important; }
 
-    .menu__link--active {
-      background-color: #a5bfe9 !important;
-      color: #1A3867 !important;
-      font-weight: bold !important;
-    }
+  /* --- DISEÑO DE TARJETAS --- */
+  .grid-admin-total {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
 
-    .menu__caret:before {
-      filter: sepia(100%) hue-rotate(190deg) saturate(500%);
-    }
+  html body .grid-admin-total a.card-total {
+    background-color: var(--card-bg) !important;
+    color: var(--card-text) !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 15px;
+    padding: 25px 10px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    box-shadow: var(--umma-shadow-card) !important;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none !important;
+  }
 
-    .menu__list-item--active > .menu__link .menu__caret:before,
-    .menu__link--active .menu__caret:before {
-      filter: brightness(1) invert(0) !important;
-    }
+  html body .grid-admin-total a.card-total:hover {
+    transform: translateY(-5px) !important;
+    background-color: var(--card-hover-bg) !important;
+    box-shadow: var(--umma-shadow-hover) !important;
+    filter: brightness(1.1) !important;
+  }
 
-    .menu__caret {
-      transition: transform 0.2s ease;
-    }
+  html body .grid-admin-total a.card-total img.icon-admin-svg {
+    width: 50px !important;
+    filter: var(--icon-filter) !important;
+    margin-bottom: 12px;
+    display: block !important;
+  }
 
-    .pagination-nav__link {
-      border: 1px solid #1A3867 !important;
-      background-color: #ffffff !important;
-      transition: all 0.3s ease !important;
-    }
-
-    .pagination-nav__sublabel, .pagination-nav__label {
-      color: #1A3867 !important;
-    }
-
-    .pagination-nav__link:hover {
-      background-color: #1A3867 !important;
-      border-color: #1A3867 !important;
-      text-decoration: none !important;
-    }
-
-    .pagination-nav__link:hover .pagination-nav__sublabel,
-    .pagination-nav__link:hover .pagination-nav__label {
-      color: #ffffff !important;
-    }
+  html body .grid-admin-total a.card-total h3 {
+    color: var(--card-text) !important;
+    font-size: 1.1rem !important;
+    margin: 0 !important;
+    font-weight: 600 !important;
+  }
   `}
 </style>
 

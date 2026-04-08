@@ -1,89 +1,133 @@
 ---
 title: Eventos
-sidebar_label: Eventos
-sidebar_class_name: ocultar-item
+pagination_prev: null
 ---
-
-# Eventos UMMA 
 
 <style>
   {`
-  /* --- ESTILOS ENCAPSULADOS: SOLO PARA ESTE PANEL DE EVENTOS --- */
-  
-  /* 1. Encapsulador Principal */
-  .seccion-eventos-unica {
-    margin-top: 2rem;
-    padding: 1rem;
+  :root {
+    /* ============================================================
+       ZONA DE CONTROL DE COLORES
+       ============================================================ */
+    --color-encabezado: #262624; 
+    --umma-blue: #1A3867;
+    --umma-light-blue: #2563EB;
+    --umma-white: #ffffff;
+    --umma-shadow-card: rgba(26, 56, 103, 0.1);
+    --umma-navbar: #1A3867;
   }
 
-  /* 2. Grid de Tarjetas (Afecta solo aquí) */
-  .seccion-eventos-unica .grid-eventos-principal { 
+  /* FUERZA BRUTA PARA EL TÍTULO (Resuelve el problema de visibilidad en modo oscuro) */
+  header h1, 
+  article h1, 
+  .markdown h1, 
+  h1[class*='docTitle'] { 
+    color: var(--color-encabezado) !important; 
+    opacity: 1 !important;
+  }
+
+  [data-theme='light'] {
+    --bg-page: #f5f6f7;
+    --text-page: #1A3867;
+    --umma-navbar: #1A3867;
+    --color-paginacion-enlace: #1A3867;
+    --color-breadcrumbs-enlace: #1A3867;
+    --card-bg: var(--umma-blue);
+    --card-border: var(--umma-blue);
+    --sidebar-bg: var(--umma-white);
+    --sidebar-link: var(--umma-blue);
+    --c-txt-card: #ffffff;
+    --icon-f: brightness(0) invert(1); 
+  }
+
+  [data-theme='dark'] {
+    --bg-page: #262624;
+    --text-page: #ffffff;
+    --umma-navbar: #1a2a3f;
+    --color-encabezado: #ffffff; /* Título blanco en modo oscuro */
+    --color-paginacion-enlace: #fefeff; 
+    --color-breadcrumbs-enlace: #ffffff;
+    --card-bg: #1e1f20;
+    --card-border: #30363d;
+    --sidebar-bg: #262624; 
+    --sidebar-link: #ffffff;
+    --c-txt-card: #ffffff;
+    --icon-f: brightness(0) invert(1);
+  }
+
+  /* --- APLICACIÓN GENERAL --- */
+  .main-wrapper { 
+    background-color: var(--bg-page) !important; 
+    color: var(--text-page) !important;
+  }
+
+  /* SIDEBAR (Mantiene fondo oscuro y texto blanco) */
+  .theme-doc-sidebar-container { background-color: var(--sidebar-bg) !important; }
+  .menu__link { color: var(--sidebar-link) !important; }
+
+  /* PAGINACIÓN Y BREADCRUMBS */
+  .pagination-nav__link { 
+    background-color: transparent !important; 
+    border: none !important; 
+    box-shadow: none !important; 
+  }
+  .pagination-nav__label { color: var(--color-paginacion-enlace) !important; }
+  .breadcrumbs__link { color: var(--color-breadcrumbs-enlace) !important; }
+
+  /* --- GRID Y TARJETAS (ESTRUCTURA ORIGINAL) --- */
+  .grid-gestion-total { 
     display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-    gap: 25px; 
-    margin-top: 30px; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 20px; 
+    margin-top: 20px; 
+  }
+  
+  html body .card-total {
+    background-color: var(--card-bg) !important;
+    border: 2px solid var(--card-border) !important;
+    border-radius: 15px;
+    padding: 30px 15px;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+    text-decoration: none !important;
+    box-shadow: var(--umma-shadow-card) !important;
+    transition: transform 0.3s ease;
   }
 
-  /* 3. Estilo de la Tarjeta (Afecta solo aquí) */
-  .seccion-eventos-unica .card-evento-pro { 
-    background-color: #1A3867 !important; /* Azul UMMA exacto */
-    border-radius: 18px; 
-    padding: 40px 20px; 
-    text-align: center; 
-    text-decoration: none !important; 
-    display: flex !important; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center; 
-    min-height: 180px; 
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    transition: all 0.3s ease;
-  }
+  .card-total:hover { transform: translateY(-5px); }
 
-  /* 4. Efecto Hover (Afecta solo aquí) */
-  .seccion-eventos-unica .card-evento-pro:hover { 
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    background-color: #1a3867cc !important; /* Un poco más claro al hover */
-  }
-
-  /* 5. Icono Blanco (Afecta solo aquí) */
-  .seccion-eventos-unica .icon-svg-blanco { 
-    width: 55px !important; 
-    height: auto !important; 
-    filter: brightness(0) invert(1); /* Vuelve blanco el icono .png */
-    margin-bottom: 15px; 
-  }
-
-  /* 6. Texto de la Tarjeta (Afecta solo aquí) */
-  .seccion-eventos-unica .card-evento-pro h3 { 
-    color: #ffffff !important; 
-    font-size: 1.25rem; 
+  html body .card-total h3 { 
+    color: var(--c-txt-card) !important; 
+    font-size: 1.15rem !important; 
     margin: 0 !important; 
-    font-weight: 600;
+    font-weight: 600 !important;
   }
+  
+  html body .card-total img.icon-admin-svg { 
+    width: 55px !important; 
+    margin-bottom: 12px; 
+    filter: var(--icon-f) !important; 
+  }
+
+
   `}
 </style>
 
 # Eventos 
 
-{/* USAMOS EL ENCAPSULADOR AQUÍ */}
-<div className="seccion-eventos-unica">
+<div className="grid-gestion-total">
 
-  <div className="grid-eventos-principal">
+  <a href="./Eventos_Academicos" className="card-total">
+    <img src={require('@site/src/components/Icons/collections bookmark.png').default} className="icon-admin-svg" />
+    <h3>Eventos Académicos</h3>
+  </a>
 
-    {/* 1. EVENTOS ACADÉMICOS */}
-    <a href="./Eventos_Academicos" className="card-evento-pro">
-      <img src={require('@site/src/components/Icons/collections bookmark.png').default} className="icon-svg-blanco" />
-      <h3>Eventos Académicos</h3>
-    </a>
-
-    {/* 2. EVENTOS CULTURALES */}
-    <a href="./Eventos_Culturales" className="card-evento-pro">
-      <img src={require('@site/src/components/Icons/calendar.png').default} className="icon-svg-blanco" />
-      <h3>Eventos Culturales</h3>
-    </a>
-
-  </div>
+  <a href="./Eventos_Culturales" className="card-total">
+    <img src={require('@site/src/components/Icons/calendar.png').default} className="icon-admin-svg" />
+    <h3>Eventos Culturales</h3>
+  </a>
 
 </div>

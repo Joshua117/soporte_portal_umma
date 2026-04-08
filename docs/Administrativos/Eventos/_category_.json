@@ -1,7 +1,8 @@
 {
   "label": "Eventos",
+  "position": 1,
   "link": {
-    "type": "generated-index",
-    "description": "."
+    "type": "doc",
+    "id": "Administrativos/Eventos/index"
   }
 }
