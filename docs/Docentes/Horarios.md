@@ -1,6 +1,7 @@
 ---
 sidebar_label: Horarios
 sidebar_position: 4
+pagination_next: Docentes/index
 ---
 
 <style>

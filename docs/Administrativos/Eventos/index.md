@@ -3,13 +3,15 @@ title: Eventos
 pagination_prev: null
 ---
 
+# Eventos 
+
 <style>
   {`
   :root {
     /* ============================================================
        ZONA DE CONTROL DE COLORES
        ============================================================ */
-    --color-encabezado: #262624; 
+    --color-encabezado: #1A3867; 
     --umma-blue: #1A3867;
     --umma-light-blue: #2563EB;
     --umma-white: #ffffff;
@@ -17,7 +19,7 @@ pagination_prev: null
     --umma-navbar: #1A3867;
   }
 
-  /* FUERZA BRUTA PARA EL TÍTULO (Resuelve el problema de visibilidad en modo oscuro) */
+  /* FUERZA BRUTA PARA EL TÍTULO (Resuelve el problema de visibilidad) */
   header h1, 
   article h1, 
   .markdown h1, 
@@ -61,7 +63,7 @@ pagination_prev: null
     color: var(--text-page) !important;
   }
 
-  /* SIDEBAR (Mantiene fondo oscuro y texto blanco) */
+  /* SIDEBAR (Mantiene el fondo oscuro y texto blanco de tus fotos) */
   .theme-doc-sidebar-container { background-color: var(--sidebar-bg) !important; }
   .menu__link { color: var(--sidebar-link) !important; }
 
@@ -111,12 +113,8 @@ pagination_prev: null
     margin-bottom: 12px; 
     filter: var(--icon-f) !important; 
   }
-
-
   `}
 </style>
-
-# Eventos 
 
 <div className="grid-gestion-total">
 

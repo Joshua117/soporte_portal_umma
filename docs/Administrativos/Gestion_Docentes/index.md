@@ -1,18 +1,23 @@
 ---
-sidebar_label: Inicio
+sidebar_label: Gestion Docentes
+pagination_prev: null
 ---
 
 <style>
   {`
   :root {
     /* ============================================================
-       ZONA DE CONTROL DE COLORES (FONDO Y TEXTO)
-       ============================================================ */
+        ZONA DE CONTROL DE COLORES (FONDO Y TEXTO)
+        ============================================================ */
     --color-encabezado: #262624; 
     --umma-blue: #1A3867;
-    --umma-light-blue: #2563EB;
+    --umma-blue-hover: #1e427d;
     --umma-white: #ffffff;
     --umma-navbar: #1a2a3f;
+
+    /* Paginación Texto (Modo Claro) */
+    --nav-color-normal: #1A3867;
+    --nav-color-hover: #1e427d;
   }
 
   /* FUERZA BRUTA PARA EL TÍTULO (INDEX) */
@@ -28,7 +33,6 @@ sidebar_label: Inicio
     --bg-page: #f5f6f7;
     --text-page: #1A3867;
     --umma-navbar: #1A3867;
-    --color-paginacion-enlace: #1A3867;
     --color-breadcrumbs-enlace: #1A3867;
     --card-bg: var(--umma-blue);
     --card-border: var(--umma-blue);
@@ -42,8 +46,7 @@ sidebar_label: Inicio
     --bg-page: #262624;
     --text-page: #ffffff;
     --umma-navbar: #1a2a3f;
-    --color-encabezado: #ffffff; /* Título blanco en modo oscuro */
-    --color-paginacion-enlace: #fefeff; 
+    --color-encabezado: #ffffff;
     --color-breadcrumbs-enlace: #ffffff;
     --card-bg: #1e1f20;
     --card-border: #30363d;
@@ -51,6 +54,10 @@ sidebar_label: Inicio
     --sidebar-link: #ffffff;
     --c-txt-card: #ffffff;
     --icon-f: brightness(0) invert(1);
+
+    /* Paginación Texto (Modo Oscuro) */
+    --nav-color-normal: #ffffff;
+    --nav-color-hover: #ffffff;
   }
 
   /* --- APLICACIÓN GENERAL --- */
@@ -63,16 +70,33 @@ sidebar_label: Inicio
   .theme-doc-sidebar-container { background-color: var(--sidebar-bg) !important; }
   .menu__link { color: var(--sidebar-link) !important; }
 
-  /* PAGINACIÓN Y BREADCRUMBS */
+  /* ============================================================
+      PAGINACIÓN LIMPIA (SOLO TEXTO)
+     ============================================================ */
   .pagination-nav__link { 
     background-color: transparent !important; 
     border: none !important; 
     box-shadow: none !important; 
+    padding: 0 !important;
   }
-  .pagination-nav__label { color: var(--color-paginacion-enlace) !important; }
+
+  .pagination-nav__sublabel, 
+  .pagination-nav__label { 
+    color: var(--nav-color-normal) !important; 
+    transition: color 0.2s ease;
+  }
+
+  /* Hover de Paginación */
+  .pagination-nav__link:hover .pagination-nav__sublabel, 
+  .pagination-nav__link:hover .pagination-nav__label { 
+    color: var(--nav-color-hover) !important; 
+    background-color: transparent !important;
+    text-decoration: none !important;
+  }
+
   .breadcrumbs__link { color: var(--color-breadcrumbs-enlace) !important; }
 
-  /* --- TARJETAS (ESTRUCTURA ORIGINAL) --- */
+  /* --- TARJETAS --- */
   .grid-gestion-total { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
@@ -91,12 +115,19 @@ sidebar_label: Inicio
     justify-content: center;
     min-height: 160px;
     text-decoration: none !important;
+    transition: all 0.3s ease;
+  }
+
+  html body .card-total:hover {
+    transform: translateY(-5px);
+    filter: brightness(1.1);
   }
 
   html body .card-total h3 { 
     color: var(--c-txt-card) !important; 
     font-size: 1.15rem !important; 
     margin: 0 !important; 
+    text-align: center;
   }
   
   html body .card-total img.icon-admin-svg { 

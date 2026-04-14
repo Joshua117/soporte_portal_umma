@@ -1,44 +1,44 @@
 ---
 sidebar_position: 1
-sidebar_class_name: ocultar-item
-sidebar_label: PORTAL UMMA
+sidebar_label: INICIO
 ---
-# PORTAL UMMA
+
+<p align="center">
+  <img src="/img/Umma_Azul.png" width="350" />
+</p>
+
+# UNIVERSIDAD MUNDO MAYA
+
 <style>
   {`
   /* ============================================================
-     1. VARIABLES Y MODO CLARO
+      1. VARIABLES Y MODO CLARO
      ============================================================ */
   :root {
-    /* Colores Base UMMA */
     --umma-blue: #1A3867;
     --umma-blue-hover: #1e427d;
     --umma-white: #ffffff;
 
-    /* Variables de Aplicación Dinámica (Modificables) */
-    --bg-global: var(--umma-white);        /* Fondo de la página */
-    --sidebar-bg: var(--umma-white);     /* Fondo del menú lateral */
-    --text-global: var(--umma-blue);       /* Color de letras principal */
-    --navbar-bg: #1A3867;                /* Fondo de la barra superior */
+    --bg-global: var(--umma-white);
+    --sidebar-bg: var(--umma-white);
+    --text-global: var(--umma-blue);
+    --navbar-bg: #1A3867;
     
-    /* Configuración de Tarjetas */
-    --card-bg: var(--umma-blue);           /* Fondo de las tarjetas */
-    --card-text: var(--umma-white);        /* Texto de las tarjetas */
+    --card-bg: var(--umma-blue);
+    --card-text: var(--umma-white);
     --card-hover-bg: var(--umma-blue-hover);
     --card-border: transparent;
     
-    /* Sombras y Navegación */
     --umma-shadow-card: rgba(0, 0, 0, 0.2);
     --umma-shadow-hover: rgba(0, 0, 0, 0.3);
     --umma-bg-hover: rgba(26, 56, 103, 0.1);
     --umma-bg-active: #a5bfe9;
     
-    /* Filtros (Iconos) */
-    --icon-filter: brightness(0) invert(1); /* Convierte iconos a blanco */
+    --icon-filter: brightness(0) invert(1);
   }
 
   /* ============================================================
-     2. CONFIGURACIÓN MODO OSCURO
+      2. CONFIGURACIÓN MODO OSCURO
      ============================================================ */
   [data-theme='dark'] {
     --bg-global: #262624;
@@ -46,28 +46,30 @@ sidebar_label: PORTAL UMMA
     --text-global: #e3e3e3;
     --navbar-bg: #1a2a3f;
     
-    /* Tarjetas en Modo Oscuro */
     --card-bg: #1e1f20; 
     --card-text: #ffffff;
     --card-hover-bg: #2d2e30;
     --card-border: #30363d;
     
-    /* Ajustes de Acentos */
     --umma-blue: #262624;
     --umma-shadow-card: rgba(0, 0, 0, 0.5);
     --umma-shadow-hover: rgba(0, 0, 0, 0.7);
     --umma-bg-hover: rgba(255, 255, 255, 0.05);
     --umma-bg-active: #1A3867;
     
-    /* Iconos */
     --icon-filter: brightness(0) invert(1);
   }
 
   /* ============================================================
-     3. ESTILOS FUNCIONALES (No tocar si no es necesario)
+      3. ESTILOS FUNCIONALES
      ============================================================ */
 
-  /* Estructura Global */
+  .markdown h1:first-of-type {
+    text-align: center !important;
+    margin-bottom: 30px !important;
+    width: 100%;
+  }
+
   .main-wrapper { background-color: var(--bg-global) !important; transition: background-color 0.3s ease; }
   .navbar { background-color: var(--navbar-bg) !important; border-bottom: 1px solid #30363d !important; transition: background-color 0.3s ease; }
   .navbar__link, .navbar__title { color: var(--umma-white) !important; }
@@ -76,16 +78,38 @@ sidebar_label: PORTAL UMMA
   .menu__link { color: var(--text-global) !important; }
   .breadcrumbs__link, .breadcrumb-home-icon, .breadcrumbs__item--active .breadcrumbs__link { color: var(--text-global) !important; }
   
-  .markdown h1, .markdown h2, .markdown h3, .markdown p, .markdown li { color: var(--text-global) !important; }
+  .markdown h1, .markdown h2, .markdown h3, .markdown p, .markdown li { color: var(--text-global) !important;}
   
   .menu__link:hover { background-color: var(--umma-bg-hover) !important; color: var(--text-global) !important; }
   .menu__link--active { background-color: var(--umma-bg-active) !important; color: var(--text-global) !important; font-weight: bold !important; }
 
-  /* Paginación */
-  .pagination-nav__link { border: 1px solid var(--umma-blue) !important; background-color: var(--bg-global) !important; }
-  .pagination-nav__sublabel, .pagination-nav__label { color: var(--text-global) !important; }
-  .pagination-nav__link:hover { background-color: var(--umma-blue) !important; }
-  .pagination-nav__link:hover .pagination-nav__sublabel, .pagination-nav__link:hover .pagination-nav__label { color: var(--umma-white) !important; }
+  /* ============================================================
+      4. NAVEGACIÓN LIMPIA (Paginación Corregida)
+     ============================================================ */
+  html body nav.pagination-nav {
+    border: none !important;
+    box-shadow: none !important;
+    background: none !important;
+  }
+
+  html body .pagination-nav__link {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  html body .pagination-nav__link--next {
+    align-items: flex-end !important;
+    text-align: right !important;
+  }
+
+  .pagination-nav__sublabel, .pagination-nav__label { 
+    color: var(--text-global) !important; 
+  }
 
   /* --- DISEÑO DE TARJETAS --- */
   .grid-admin-total {
