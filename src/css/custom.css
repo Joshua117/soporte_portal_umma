@@ -9,44 +9,41 @@
 }
 
 /* ============================================================
-   2. MODO CLARO (Variables que puedes modificar a tu gusto)
+   2. MODO CLARO (Variables UMMA)
    ============================================================ */
 :root {
   --umma-blue: #1A3867;           /* Color de Navbar y Hero */
-  --umma-white: #ffffff;   
-  --umma-hero: #fdfdfd; 
-  --umma-hero2: #ffffff; 
-  --umma-navbar: #1A3867; /* Color de fondo de la Navbar */
+  --umma-white: #ffffff;  
+  --umma-hero: #fdfdfd;
+  --umma-hero2: #ffffff;
+  --umma-navbar: #1A3867;         /* Color de fondo de la Navbar */
   --internal-bg: #ffffff;        /* Fondo de la documentación */
   --card-bg-color: #1A3867;      /* Fondo de las tarjetas */
   --card-text: #ffffff;          /* Texto de las tarjetas */
   --hero-text: #1A3867;          /* Texto del título (Gelasio) */
   --nav-text: #ffffff;           /* Texto de la Navbar */
   --internal-title-color: #1A3867;
-  
 }
 
 /* ============================================================
-   3. MODO OSCURO (Colores cuando se activa la Luna)
+   3. MODO OSCURO (Luna activa)
    ============================================================ */
 [data-theme='dark'] {
   --umma-blue: #0d1b2e;          /* Azul muy oscuro */
-  --umma-white: #1b1b1d; 
-  --umma-hero: #1A3867; 
+  --umma-white: #1b1b1d;
+  --umma-hero: #1A3867;
   --umma-hero2: #ffffff;
-  --umma-navbar: #1A3867; /* Color de fondo de la Navbar */
+  --umma-navbar: #1A3867;
   --internal-bg: #1b1b1d;        /* Fondo de documentación oscuro */
   --card-bg-color: #242526;      /* Tarjetas gris oscuro */
-  --card-text: #1A3867;          /* Texto gris claro */
-  --hero-text: #1A3867;          /* Texto del Hero */
+  --card-text: #ffffff;          /* Texto blanco para legibilidad */
+  --hero-text: #1A3867;          
   --internal-title-color: #58a6ff;
 }
 
 /* ============================================================
-   4. ESTILOS FUNCIONALES (No necesitas tocarlos, usan las variables)
+   4. ESTILOS FUNCIONALES (Navbar y Layout)
    ============================================================ */
-
-/* Navbar */
 .navbar {
   background-color: var(--umma-navbar) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -57,28 +54,15 @@
   color: var(--nav-text) !important;
 }
 
-/* Hero Section */
 .hero--primary {
-  background-color: transparent !important; /* Para que luzca el gradiente */
-}
-
-.hero__title {
-  font-family: 'Gelasio', serif !important;
-  font-weight: bold !important;
-  color: var(--hero-text) !important;
-  font-size: 4rem !important;
-}
-
-.hero__subtitle {
-  color: var(--hero-text) !important;
-  opacity: 0.9;
+  background-color: transparent !important;
 }
 
 .main-wrapper:not(:has(.theme-doc-sidebar-container)) {
   background: linear-gradient(
     to bottom,
     var(--umma-hero) 0%,      
-    var(--umma-hero) 55%,     
+    var(--umma-hero) 55%,    
     var(--umma-hero2) 45%,    
     var(--umma-hero2) 100%    
   ) !important;
@@ -86,7 +70,9 @@
   transition: all .10s ease;
 }
 
-/* Tarjetas */
+/* ============================================================
+   5. TARJETAS (Home)
+   ============================================================ */
 .card {
   background-color: var(--card-bg-color) !important;
   color: var(--card-text) !important;
@@ -105,7 +91,6 @@
   fill: var(--card-text) !important;
 }
 
-/* Contenido Interno y Sidebar */
 .theme-doc-sidebar-container {
   background-color: var(--internal-bg) !important;
 }
@@ -120,33 +105,26 @@
 }
 
 /* ============================================================
-   CONTROL DE SECCIONES (ALUMNO, DOCENTE, ADMIN) - MATERIAL ICONS
+   6. CONTROL DE SECCIONES (MATERIAL ICONS)
    ============================================================ */
-
-/* 1. MODO CLARO (Personaliza aquí) */
 :root {
-  --home-icon-color: #1A3867;       /* Color del icono (Libro, birrete, etc.) */
-  --home-title-color: #1A3867;      /* Color del título (Alumno, Docente) */
-  --home-desc-color: #444444;       /* Color del texto descriptivo */
-  --home-icon-size: 64px;           /* Tamaño del icono */
+  --home-icon-color: #1A3867;
+  --home-title-color: #1A3867;
+  --home-desc-color: #444444;
+  --home-icon-size: 64px;
 }
 
-/* 2. MODO OSCURO (Personaliza aquí) */
 [data-theme='dark'] {
-  --home-icon-color: #1A3867;       /* Los iconos brillan más en oscuro */
-  --home-title-color: #1A3867;      /* Títulos blancos */
-  --home-desc-color: #1A3867;       /* Texto gris claro */
+  --home-icon-color: #1A3867;
+  --home-title-color: #1A3867;
+  --home-desc-color: #1A3867;
 }
 
-/* 3. ESTILOS FUNCIONALES (No tocar a menos que sepas CSS) */
-
-/* Contenedor de cada sección */
 .main-wrapper:not(:has(.theme-doc-sidebar-container)) .col {
   padding: 2rem !important;
   text-align: center !important;
 }
 
-/* Estilo para los Material Icons */
 .main-wrapper:not(:has(.theme-doc-sidebar-container)) .col span.material-icons,
 .main-wrapper:not(:has(.theme-doc-sidebar-container)) .col i {
   font-size: var(--home-icon-size) !important;
@@ -156,200 +134,158 @@
   transition: transform 0.3s ease !important;
 }
 
-/* Efecto Hover en el icono */
 .main-wrapper:not(:has(.theme-doc-sidebar-container)) .col:hover span.material-icons,
 .main-wrapper:not(:has(.theme-doc-sidebar-container)) .col:hover i {
   transform: scale(1.15) !important;
 }
 
-/* Títulos (Alumno, Docente, Administrativo) */
 .main-wrapper:not(:has(.theme-doc-sidebar-container)) .col h3 {
   font-weight: bold !important;
   font-size: 1.8rem !important;
   color: var(--home-title-color) !important;
   margin-bottom: 0.8rem !important;
-  transition: color 0.3s ease;
 }
 
-/* Texto de descripción */
 .main-wrapper:not(:has(.theme-doc-sidebar-container)) .col p {
   font-size: 1.1rem !important;
   line-height: 1.5 !important;
   color: var(--home-desc-color) !important;
   max-width: 300px !important;
   margin: 0 auto !important;
-  transition: color 0.3s ease;
 }
 
 /* ============================================================
-   LOGO GRANDE + PEGADO TOTAL (NAVBAR, TÍTULO Y SUBTÍTULO)
+   7. LOGO Y TEXTOS DEL HERO (Pegado Total)
    ============================================================ */
-
-/* 1. EL CONTENEDOR (BANNER): Todo hacia arriba */
 .hero, [class*="heroBanner"] {
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
-  
-  /* Eliminamos el espacio superior para pegarlo a la Navbar */
-  padding-top: 0 !important; 
-  padding-bottom: 0rem !important; 
-  gap: 0 !important; 
+  padding-top: 0 !important;
+  padding-bottom: 0rem !important;
+  gap: 0 !important;
 }
 
-/* 2. EL LOGO: Más grande y pegado al título */
-.hero::before {
+html[data-theme='light'] .hero::before {
   content: "";
   display: block;
-  
-  /* Tamaño aumentado */
-  width: 350px; 
-  height: 220px; 
-  
-  background-image: url('/img/Umma_Azul.png');
+  width: 350px;
+  height: 220px;
+  background-image: url('/img/Umma_Azul.png') !important;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  
-  /* Margen negativo para que el título 'entre' un poco en el área del logo */
   margin-top: 0 !important;
-  margin-bottom: -30px !important; 
+  margin-bottom: -35px !important;
 }
 
-/* 3. EL TÍTULO: Sin espacios abajo */
+html[data-theme='dark'] .hero::before {
+  content: "";
+  display: block;
+  width: 350px;
+  height: 220px;
+  background-image: url('/img/Umma_Blanco.png') !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 0 !important;
+  margin-bottom: -35px !important;
+}
+
 .hero__title {
   font-family: 'Gelasio', serif !important;
   font-size: 4rem !important;
   color: var(--hero-text) !important;
-  margin-bottom: 1 !important;
-  padding-bottom: 1 !important;
-  line-height: 1.85 !important; /* Más apretado aún */
+  line-height: 1.85 !important;
 }
 
-/* 4. EL SUBTÍTULO: Pegado al título */
 .hero__subtitle {
   color: var(--hero-text) !important;
-  padding-top: 0 !important;
-  /* Subimos el texto para eliminar el aire */
-  margin-top: -50px !important; 
-  display: block !important;
-  opacity: 1;
+  margin-top: -50px !important;
   font-size: 2.5rem !important;
 }
 
-/* ============================================================
-   LOGO AUTODINÁMICO (CAMBIA SEGÚN EL MODO)
-   ============================================================ */
-
-/* 1. IMAGEN PARA MODO CLARO (Azul) */
-.hero::before {
-  content: "";
-  display: block;
-  width: 350px; 
-  height: 220px; 
-  background-image: url('/img/Umma_Azul.png'); /* Carga el azul */
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  margin-top: 0 !important;
-  margin-bottom: -35px !important; 
-  transition: background-image 0.2s ease-in-out; /* Cambio suave */
-}
-
-/* 2. IMAGEN PARA MODO OSCURO (Blanco) */
-[data-theme='dark'] .hero::before {
-  background-image: url('/img/Umma_Blanco.png') !important; /* Cambia al blanco */
-}
-
-/* ============================================================
-   REFUERZO DE TEXTO (Para que siempre sea legible)
-   ============================================================ */
-
-/* En modo claro: Usa el azul de tu variable */
-.hero__title, .hero__subtitle {
-  color: var(--hero-text) !important;
-}
-
-/* En modo oscuro: Forzamos blanco puro */
 [data-theme='dark'] .hero__title,
 [data-theme='dark'] .hero__subtitle {
   color: #ffffff !important;
 }
 
-/* Esto afectará a todos los iconos con esa clase en cualquier carpeta */
-.icon-admin-svg {
-  filter: brightness(0) invert(1) !important;
+/* ============================================================
+   8. NAVEGACIÓN LIMPIA (ELIMINACIÓN TOTAL Y ABSOLUTA)
+   ============================================================ */
+
+/* 1. Reset de variables en el nivel más alto posible */
+:root {
+  --ifm-pagination-nav-card-bg: transparent !important;
+  --ifm-pagination-nav-border-color: transparent !important;
+  --ifm-pagination-nav-border-width: 0px !important;
+  --ifm-pagination-nav-border-radius: 0px !important;
+  --ifm-pagination-nav-color-hover: transparent !important;
 }
 
-/* Si es el icono del botón de modo claro/oscuro de Docusaurus: */
-[class*='colorModeToggle'] button {
-  color: #ffffff !important; /* Cambia el color si es fuente */
-  filter: brightness(0) invert(1); /* Cambia el color si es imagen */
-}
-/* ELIMINACIÓN TOTAL DE CAJAS DE NAVEGACIÓN */
-html body nav.pagination-nav {
-  border: none !important;
-  box-shadow: none !important;
-  background: none !important;
-}
-
-html body .pagination-nav__link {
-  border: none !important;
+/* 2. Selector ultra-específico para forzar la transparencia */
+html body nav.pagination-nav a.pagination-nav__link {
+  background: transparent !important;
   background-color: transparent !important;
+  border: none !important;
+  border-width: 0 !important;
   box-shadow: none !important;
-  padding: 0 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  /* Alinea el texto a la izquierda o derecha según corresponda */
-  align-items: flex-start !important; 
+  padding: 10px 0 !important; /* Espacio mínimo para que sea clicable pero sin caja */
+  transition: none !important;
 }
 
-/* Para que el botón de "Siguiente" se alinee a la derecha */
-html body .pagination-nav__link--next {
-  align-items: flex-end !important;
-  text-align: right !important;
+/* 3. Asegurar que al pasar el mouse no reviva ningún estilo */
+html body nav.pagination-nav a.pagination-nav__link:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
 }
 
-/* Estilos de los textos */
-.pagination-nav__sublabel {
-  font-size: 0.85rem !important;
-  text-transform: uppercase !important;
-  letter-spacing: 1px !important;
-  margin-bottom: 4px !important;
-}
-
+/* 4. Visibilidad de los textos (Azul UMMA / Blanco) */
+.pagination-nav__sublabel, 
 .pagination-nav__label {
-  font-size: 1.2rem !important;
-  font-weight: 700 !important;
-  color: #1A3867 !important; /* Azul UMMA */
+  color: #1A3867 !important;
+  font-family: 'Gelasio', serif !important;
 }
 
-
-/* Ajuste para modo oscuro */
+[data-theme='dark'] .pagination-nav__sublabel,
 [data-theme='dark'] .pagination-nav__label {
   color: #ffffff !important;
 }
 
-/* Color para el título principal de sección (Administrativos) */
+/* 5. Alineación */
+.pagination-nav__link--prev { align-items: flex-start !important; text-align: left !important; }
+.pagination-nav__link--next { align-items: flex-end !important; text-align: right !important; }
+
+/* ============================================================
+   9. TÍTULOS INTERNOS Y BREADCRUMBS
+   ============================================================ */
 .markdown h1 {
-  color: #1A3867 !important; /* Azul Marino UMMA */
+  color: #1A3867 !important;
+  font-family: 'Gelasio', serif !important;
   font-weight: bold !important;
 }
 
-/* En modo oscuro, lo ponemos blanco para que se lea */
 [data-theme='dark'] .markdown h1 {
   color: #ffffff !important;
 }
 
-/* --- BREADCRUMBS (MIGAS DE PAN) --- */
-
-/* 1. MODO CLARO: Tu azul UMMA */
 .breadcrumbs__link {
   color: #1A3867 !important;
 }
 
-/* 2. MODO OSCURO: Se alterna automáticamente a un azul más claro/brillante */
 [data-theme='dark'] .breadcrumbs__link {
-  color: #ffffff !important; 
+  color: #ffffff !important;
+}
+
+/* Otros ajustes */
+.icon-admin-svg {
+  filter: brightness(0) invert(1) !important;
+}
+
+[class*='colorModeToggle'] button {
+  filter: brightness(0) invert(1);
 }

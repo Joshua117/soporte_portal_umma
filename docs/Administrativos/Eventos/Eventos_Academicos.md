@@ -9,87 +9,95 @@ sidebar_custom_props:
 <style>
   {`
   /* ============================================================
-     1. VARIABLES Y MODO CLARO
+      1. VARIABLES Y TEMAS (CLARO / OSCURO)
      ============================================================ */
   :root {
-    /* Colores Base UMMA */
     --umma-blue: #1A3867;
     --umma-blue-hover: #1e427d;
     --umma-white: #ffffff;
 
-    /* Variables de Aplicación Dinámica (Modificables) */
-    --bg-global: var(--umma-white);        /* Fondo de la página */
-    --sidebar-bg: var(--umma-white);     /* Fondo del menú lateral */
-    --text-global: var(--umma-blue);       /* Color de letras principal */
-    --navbar-bg: #1A3867;                /* Fondo de la barra superior */
+    --bg-global: var(--umma-white);
+    --sidebar-bg: var(--umma-white);
+    --text-global: var(--umma-blue);
+    --navbar-bg: #1A3867;
     
-    /* Configuración de Tarjetas */
-    --card-bg: var(--umma-blue);           /* Fondo de las tarjetas */
-    --card-text: var(--umma-white);        /* Texto de las tarjetas */
+    --card-bg: var(--umma-blue);
+    --card-text: var(--umma-white);
     --card-hover-bg: var(--umma-blue-hover);
     --card-border: transparent;
     
-    /* Sombras y Navegación */
     --umma-shadow-card: rgba(0, 0, 0, 0.2);
     --umma-shadow-hover: rgba(0, 0, 0, 0.3);
     --umma-bg-hover: rgba(26, 56, 103, 0.1);
     --umma-bg-active: #a5bfe9;
     
-    /* Filtros (Iconos) */
-    --icon-filter: brightness(0) invert(1); /* Convierte iconos a blanco */
+    --icon-filter: brightness(0) invert(1);
+
+    /* Paginación */
+    --nav-color-normal: #1A3867;
+    --nav-color-hover: #1e427d;
   }
 
-  /* ============================================================
-     2. CONFIGURACIÓN MODO OSCURO
-     ============================================================ */
   [data-theme='dark'] {
     --bg-global: #262624;
     --sidebar-bg: #262624;
     --text-global: #e3e3e3;
     --navbar-bg: #1a2a3f;
     
-    /* Tarjetas en Modo Oscuro */
     --card-bg: #1e1f20; 
     --card-text: #ffffff;
     --card-hover-bg: #2d2e30;
     --card-border: #30363d;
     
-    /* Ajustes de Acentos */
-    --umma-blue: #262624;
-    --umma-shadow-card: rgba(0, 0, 0, 0.5);
-    --umma-shadow-hover: rgba(0, 0, 0, 0.7);
     --umma-bg-hover: rgba(255, 255, 255, 0.05);
     --umma-bg-active: #1A3867;
-    
-    /* Iconos */
-    --icon-filter: brightness(0) invert(1);
+
+    --nav-color-normal: #ffffff;
+    --nav-color-hover: #ffffff;
   }
 
   /* ============================================================
-     3. ESTILOS FUNCIONALES (No tocar si no es necesario)
+      2. PAGINACIÓN (PURO TEXTO)
      ============================================================ */
+  .pagination-nav__link { 
+    background-color: transparent !important; 
+    border: none !important; 
+    box-shadow: none !important; 
+    padding: 0 !important;
+  }
 
-  /* Estructura Global */
+  .pagination-nav__sublabel, 
+  .pagination-nav__label { 
+    color: var(--nav-color-normal) !important; 
+    transition: color 0.2s ease;
+  }
+
+  .pagination-nav__link:hover .pagination-nav__sublabel, 
+  .pagination-nav__link:hover .pagination-nav__label { 
+    color: var(--nav-color-hover) !important; 
+    background-color: transparent !important;
+    text-decoration: none !important;
+  }
+
+  /* ============================================================
+      3. ESTRUCTURA Y NAVEGACIÓN GLOBAL
+     ============================================================ */
   .main-wrapper { background-color: var(--bg-global) !important; transition: background-color 0.3s ease; }
-  .navbar { background-color: var(--navbar-bg) !important; border-bottom: 1px solid #30363d !important; transition: background-color 0.3s ease; }
+  .navbar { background-color: var(--navbar-bg) !important; border-bottom: 1px solid #30363d !important; }
   .navbar__link, .navbar__title { color: var(--umma-white) !important; }
   
   .theme-doc-sidebar-container { background-color: var(--sidebar-bg) !important; border-right: 1px solid var(--umma-blue) !important; }
   .menu__link { color: var(--text-global) !important; }
-  .breadcrumbs__link, .breadcrumb-home-icon, .breadcrumbs__item--active .breadcrumbs__link { color: var(--text-global) !important; }
+  .breadcrumbs__link { color: var(--text-global) !important; }
   
   .markdown h1, .markdown h2, .markdown h3, .markdown p, .markdown li { color: var(--text-global) !important; }
   
-  .menu__link:hover { background-color: var(--umma-bg-hover) !important; color: var(--text-global) !important; }
+  .menu__link:hover { background-color: var(--umma-bg-hover) !important; }
   .menu__link--active { background-color: var(--umma-bg-active) !important; color: var(--text-global) !important; font-weight: bold !important; }
 
-  /* Paginación */
-  .pagination-nav__link { border: 1px solid var(--umma-blue) !important; background-color: var(--bg-global) !important; }
-  .pagination-nav__sublabel, .pagination-nav__label { color: var(--text-global) !important; }
-  .pagination-nav__link:hover { background-color: var(--umma-blue) !important; }
-  .pagination-nav__link:hover .pagination-nav__sublabel, .pagination-nav__link:hover .pagination-nav__label { color: var(--umma-white) !important; }
-
-  /* --- DISEÑO DE TARJETAS --- */
+  /* ============================================================
+      4. DISEÑO DE TARJETAS (GRID)
+     ============================================================ */
   .grid-admin-total {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -117,14 +125,12 @@ sidebar_custom_props:
     transform: translateY(-5px) !important;
     background-color: var(--card-hover-bg) !important;
     box-shadow: var(--umma-shadow-hover) !important;
-    filter: brightness(1.1) !important;
   }
 
   html body .grid-admin-total a.card-total img.icon-admin-svg {
     width: 50px !important;
     filter: var(--icon-filter) !important;
     margin-bottom: 12px;
-    display: block !important;
   }
 
   html body .grid-admin-total a.card-total h3 {
@@ -135,3 +141,5 @@ sidebar_custom_props:
   }
   `}
 </style>
+
+

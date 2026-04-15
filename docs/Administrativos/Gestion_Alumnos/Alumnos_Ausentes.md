@@ -1,34 +1,38 @@
 ---
 title: Alumnos Ausentes
-pagination_prev: null
 ---
 
 <style>
+  
   {`
   /* ============================================================
-     1. VARIABLES Y CONFIGURACIÓN BASE
+      1. VARIABLES Y TEMAS (CLARO / OSCURO)
      ============================================================ */
   :root {
     --umma-blue: #1A3867;
     --umma-blue-hover: #1e427d;
     --umma-white: #ffffff;
-    --color-encabezado: #262624;
 
-    /* Aplicación Dinámica */
     --bg-global: var(--umma-white);
     --sidebar-bg: var(--umma-white);
     --text-global: var(--umma-blue);
     --navbar-bg: #1A3867;
     
-    /* Tarjetas */
     --card-bg: var(--umma-blue);
     --card-text: var(--umma-white);
     --card-hover-bg: var(--umma-blue-hover);
     --card-border: transparent;
     
-    --umma-shadow-card: rgba(0, 0, 0, 0.1);
+    --umma-shadow-card: rgba(0, 0, 0, 0.2);
+    --umma-shadow-hover: rgba(0, 0, 0, 0.3);
+    --umma-bg-hover: rgba(26, 56, 103, 0.1);
     --umma-bg-active: #a5bfe9;
+    
     --icon-filter: brightness(0) invert(1);
+
+    /* Paginación */
+    --nav-color-normal: #1A3867;
+    --nav-color-hover: #1e427d;
   }
 
   [data-theme='dark'] {
@@ -36,38 +40,60 @@ pagination_prev: null
     --sidebar-bg: #262624;
     --text-global: #e3e3e3;
     --navbar-bg: #1a2a3f;
-    --color-encabezado: #ffffff;
     
     --card-bg: #1e1f20; 
     --card-text: #ffffff;
     --card-hover-bg: #2d2e30;
     --card-border: #30363d;
     
+    --umma-bg-hover: rgba(255, 255, 255, 0.05);
     --umma-bg-active: #1A3867;
-    --icon-filter: brightness(0) invert(1);
+
+    --nav-color-normal: #ffffff;
+    --nav-color-hover: #ffffff;
   }
 
   /* ============================================================
-     2. FUERZA BRUTA PARA TÍTULOS Y ESTRUCTURA
+      2. PAGINACIÓN (PURO TEXTO)
      ============================================================ */
-  header h1, article h1, .markdown h1, h1[class*='docTitle'] { 
-    color: var(--color-encabezado) !important; 
-    opacity: 1 !important;
+  .pagination-nav__link { 
+    background-color: transparent !important; 
+    border: none !important; 
+    box-shadow: none !important; 
+    padding: 0 !important;
   }
 
-  .main-wrapper { background-color: var(--bg-global) !important; }
-  .navbar { background-color: var(--navbar-bg) !important; }
+  .pagination-nav__sublabel, 
+  .pagination-nav__label { 
+    color: var(--nav-color-normal) !important; 
+    transition: color 0.2s ease;
+  }
+
+  .pagination-nav__link:hover .pagination-nav__sublabel, 
+  .pagination-nav__link:hover .pagination-nav__label { 
+    color: var(--nav-color-hover) !important; 
+    background-color: transparent !important;
+    text-decoration: none !important;
+  }
+
+  /* ============================================================
+      3. ESTRUCTURA Y NAVEGACIÓN GLOBAL
+     ============================================================ */
+  .main-wrapper { background-color: var(--bg-global) !important; transition: background-color 0.3s ease; }
+  .navbar { background-color: var(--navbar-bg) !important; border-bottom: 1px solid #30363d !important; }
   .navbar__link, .navbar__title { color: var(--umma-white) !important; }
   
   .theme-doc-sidebar-container { background-color: var(--sidebar-bg) !important; border-right: 1px solid var(--umma-blue) !important; }
   .menu__link { color: var(--text-global) !important; }
-  .menu__link--active { background-color: var(--umma-bg-active) !important; color: var(--text-global) !important; }
-
-  /* BLOQUEO DE PAGINACIÓN (Oculta la barra inferior para evitar saltos de sección) */
-  .pagination-nav { display: none !important; }
+  .breadcrumbs__link { color: var(--text-global) !important; }
+  
+  .markdown h1, .markdown h2, .markdown h3, .markdown p, .markdown li { color: var(--text-global) !important; }
+  
+  .menu__link:hover { background-color: var(--umma-bg-hover) !important; }
+  .menu__link--active { background-color: var(--umma-bg-active) !important; color: var(--text-global) !important; font-weight: bold !important; }
 
   /* ============================================================
-     3. GRID Y TARJETAS
+      4. DISEÑO DE TARJETAS (GRID)
      ============================================================ */
   .grid-admin-total {
     display: grid;
@@ -95,7 +121,7 @@ pagination_prev: null
   html body .grid-admin-total a.card-total:hover {
     transform: translateY(-5px) !important;
     background-color: var(--card-hover-bg) !important;
-    filter: brightness(1.1) !important;
+    box-shadow: var(--umma-shadow-hover) !important;
   }
 
   html body .grid-admin-total a.card-total img.icon-admin-svg {
@@ -112,3 +138,30 @@ pagination_prev: null
   }
   `}
 </style>
+
+{/* Estructura de Texto + Imagen Estática */}
+<div style={{ 
+  display: 'grid', 
+  gridTemplateColumns: '1fr 300px', 
+  gap: '70px', 
+  paddingLeft: '50px', 
+  marginTop: '50px',
+  alignItems: 'start' 
+}}>
+
+  {/* Lado izquierdo: Tu texto */}
+  <div> 
+    <h3>Título de tu sección</h3>
+    <p>Aquí escribes la descripción de tu módulo. Esta imagen se quedará fija y no tendrá animaciones.</p>
+  </div>
+
+  {/* Lado derecho: Imagen estática */}
+  <div style={{ width: '300px' }}>
+    <img 
+      src="/img/EstudiantesPanel/AlumnosAusentes.png" 
+      style={{ width: '100%', height: 'auto', display: 'block' }} 
+      alt="Descripción de imagen" 
+    />
+  </div>
+
+</div>

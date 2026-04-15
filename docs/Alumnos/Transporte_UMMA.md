@@ -1,5 +1,6 @@
 ---
 sidebar_label: Transporte
+pagination_next: Alumnos/index
 sidebar_position: 3
 ---
 
@@ -137,44 +138,77 @@ sidebar_position: 3
 
 <table style={{ border: 'none', borderCollapse: 'collapse', width: '143%' }}>
   <tbody>
-      <tr style={{ border: 'none' }}>
-      <td style={{ border: 'none', padding: '20px 10px' }}>
-        <h2 style={{ color: '#1A3867', marginTop: 0 }}>Boletos</h2>
-        <strong>El transporte UMMA permite a los docentes reservar y asistir a los alumnos en los salones de la universidad. Este sistema se encarga de gestionar el asiento de los alumnos de manera eficiente.</strong>
-      </td>
-      <td style={{ border: 'none', padding: '10px', textAlign: 'right', verticalAlign: 'middle' }}>
-        <img src={require('./image.png').default} style={{ width: '500px', height: 'auto', borderRadius: '10px' }} />
-      </td>
-    </tr>
-
-    <tr style={{ border: 'none' }}>
-      <td style={{ border: 'none', padding: '20px 10px' }}>
+<tr style={{ border: 'none' }}>
+      <td style={{ border: 'none', padding: '10px 50px', verticalAlign: 'middle' }}>
         <h2 style={{ color: '#1A3867', marginTop: 0 }}>Horarios</h2>
-        <strong>Registra la entrada y salida de cada estudiante en tiempo real. Los docentes pueden visualizar quién ha ocupado su lugar asignado y generar reportes automáticos al finalizar la sesión.</strong>
-      </td>
-      <td style={{ border: 'none', padding: '10px', textAlign: 'right', verticalAlign: 'middle' }}>
-        <img src={require('./image.png').default} style={{ width: '500px', height: 'auto', borderRadius: '10px' }} />
-      </td>
-    </tr>
-
-    <tr style={{ border: 'none' }}>
-      <td style={{ border: 'none', padding: '20px 10px' }}>
-        <h2 style={{ color: '#1A3867', marginTop: 0 }}>Lugares Disponibles</h2>
         <strong>Mediante el uso de algoritmos de distribución, el sistema sugiere la mejor disposición de los alumnos para maximizar el aforo de las aulas manteniendo las normativas de seguridad institucional.</strong>
       </td>
-      <td style={{ border: 'none', padding: '10px', textAlign: 'right', verticalAlign: 'middle' }}>
-        <img src={require('./Van Asientos.png').default} style={{ width: '350px', height: 'auto', borderRadius: '5px' }} />
+      <td style={{ border: 'none', padding: '50px 0px', textAlign: 'left', verticalAlign: 'middle' }}>
+        <img 
+          src={require('./Van Asientos.png').default} 
+          style={{ 
+            width: '300px', 
+            height: 'auto', 
+            borderRadius: '70px',
+            display: 'inline-block' /* Asegura que respete el textAlign right */
+          }} 
+        />
       </td>
     </tr>
 
-    <tr style={{ border: 'none' }}>
-      <td style={{ border: 'none', padding: '20px 10px' }}>
-        <h2 style={{ color: '#1A3867', marginTop: 0 }}>Titulo</h2>
-        <strong>Texto.</strong>
+<tr style={{ border: 'none' }}>
+      <td style={{ border: 'none', padding: '10px 50px', verticalAlign: 'middle' }}>
+        <h2 style={{ color: '#1A3867', marginTop: 0 }}>Horarios</h2>
+        <strong>Mediante el uso de algoritmos de distribución, el sistema sugiere la mejor disposición de los alumnos para maximizar el aforo de las aulas manteniendo las normativas de seguridad institucional.</strong>
       </td>
-      <td style={{ border: 'none', padding: '10px', textAlign: 'right', verticalAlign: 'middle' }}>
-        <img src={require('./image.png').default} style={{ width: '500px', height: 'auto', borderRadius: '10px' }} />
+      <td style={{ border: 'none', padding: '50px 0px', textAlign: 'left', verticalAlign: 'middle' }}>
+        <img 
+          src={require('./Van Asientos.png').default} 
+          style={{ 
+            width: '300px', 
+            height: 'auto', 
+            borderRadius: '70px',
+            display: 'inline-block' /* Asegura que respete el textAlign right */
+          }} 
+        />
       </td>
     </tr>
+
+<tr style={{ border: 'none' }}>
+      <td style={{ border: 'none', padding: '10px 50px', verticalAlign: 'middle' }}>
+        <h2 style={{ color: '#1A3867', marginTop: 0 }}>Horarios</h2>
+        <strong>Mediante el uso de algoritmos de distribución, el sistema sugiere la mejor disposición de los alumnos para maximizar el aforo de las aulas manteniendo las normativas de seguridad institucional.</strong>
+      </td>
+      <td style={{ border: 'none', padding: '50px 0px', textAlign: 'left', verticalAlign: 'middle' }}>
+        <img 
+          src={require('./Van Asientos.png').default} 
+          style={{ 
+            width: '300px', 
+            height: 'auto', 
+            borderRadius: '70px',
+            display: 'inline-block' /* Asegura que respete el textAlign right */
+          }} 
+        />
+      </td>
+    </tr>
+
+<tr style={{ border: 'none' }}>
+      <td style={{ border: 'none', padding: '10px 50px', verticalAlign: 'middle' }}>
+        <h2 style={{ color: '#1A3867', marginTop: 0 }}>Horarios</h2>
+        <strong>Mediante el uso de algoritmos de distribución, el sistema sugiere la mejor disposición de los alumnos para maximizar el aforo de las aulas manteniendo las normativas de seguridad institucional.</strong>
+      </td>
+      <td style={{ border: 'none', padding: '50px 01px', textAlign: 'left', verticalAlign: 'middle' }}>
+        <img 
+          src={require('./Van Asientos.png').default} 
+          style={{ 
+            width: '45px', 
+            height: 'auto', 
+            borderRadius: '70px',
+            display: 'inline-block' /* Asegura que respete el textAlign right */
+          }} 
+        />
+      </td>
+    </tr>
+
   </tbody>
 </table>

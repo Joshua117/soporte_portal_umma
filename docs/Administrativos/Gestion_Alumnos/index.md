@@ -1,114 +1,140 @@
 ---
 title: Gestión Alumnos
+pagination_prev: null 
 ---
 
 <style>
   {`
+  /* ============================================================
+      1. VARIABLES Y TEMAS (CLARO / OSCURO)
+     ============================================================ */
   :root {
-    /* ============================================================
-       ZONA DE CONTROL DE COLORES
-       ============================================================ */
-    --color-encabezado: #262624; 
     --umma-blue: #1A3867;
-    --umma-light-blue: #2563EB;
+    --umma-blue-hover: #1e427d;
     --umma-white: #ffffff;
-    --umma-shadow-card: rgba(26, 56, 103, 0.1);
-    --umma-navbar: #1A3867;
-  }
 
-  /* FUERZA BRUTA PARA EL TÍTULO (Resuelve el problema de visibilidad) */
-  header h1, 
-  article h1, 
-  .markdown h1, 
-  h1[class*='docTitle'] { 
-    color: var(--color-encabezado) !important; 
-    opacity: 1 !important;
-  }
-
-  [data-theme='light'] {
-    --bg-page: #f5f6f7;
-    --text-page: #1A3867;
-    --umma-navbar: #1A3867;
-    --color-paginacion-enlace: #1A3867;
-    --color-breadcrumbs-enlace: #1A3867;
-    --card-bg: var(--umma-blue);
-    --card-border: var(--umma-blue);
+    --bg-global: var(--umma-white);
     --sidebar-bg: var(--umma-white);
-    --sidebar-link: var(--umma-blue);
-    --c-txt-card: #ffffff;
-    --icon-f: brightness(0) invert(1); 
+    --text-global: var(--umma-blue);
+    --navbar-bg: #1A3867;
+    
+    --card-bg: var(--umma-blue);
+    --card-text: var(--umma-white);
+    --card-hover-bg: var(--umma-blue-hover);
+    --card-border: transparent;
+    
+    --umma-shadow-card: rgba(0, 0, 0, 0.2);
+    --umma-shadow-hover: rgba(0, 0, 0, 0.3);
+    --umma-bg-hover: rgba(26, 56, 103, 0.1);
+    --umma-bg-active: #a5bfe9;
+    
+    --icon-filter: brightness(0) invert(1);
+
+    /* Paginación */
+    --nav-color-normal: #1A3867;
+    --nav-color-hover: #1e427d;
   }
 
   [data-theme='dark'] {
-    --bg-page: #262624;
-    --text-page: #ffffff;
-    --umma-navbar: #1a2a3f;
-    --color-encabezado: #ffffff; /* Título blanco en modo oscuro */
-    --color-paginacion-enlace: #fefeff; 
-    --color-breadcrumbs-enlace: #ffffff;
-    --card-bg: #1e1f20;
+    --bg-global: #262624;
+    --sidebar-bg: #262624;
+    --text-global: #e3e3e3;
+    --navbar-bg: #1a2a3f;
+    
+    --card-bg: #1e1f20; 
+    --card-text: #ffffff;
+    --card-hover-bg: #2d2e30;
     --card-border: #30363d;
-    --sidebar-bg: #262624; 
-    --sidebar-link: #ffffff;
-    --c-txt-card: #ffffff;
-    --icon-f: brightness(0) invert(1);
+    
+    --umma-bg-hover: rgba(255, 255, 255, 0.05);
+    --umma-bg-active: #1A3867;
+
+    --nav-color-normal: #ffffff;
+    --nav-color-hover: #ffffff;
   }
 
-  /* --- APLICACIÓN GENERAL --- */
-  .main-wrapper { 
-    background-color: var(--bg-page) !important; 
-    color: var(--text-page) !important;
-  }
-
-  /* SIDEBAR (Mantiene el fondo oscuro y texto blanco de tus fotos) */
-  .theme-doc-sidebar-container { background-color: var(--sidebar-bg) !important; }
-  .menu__link { color: var(--sidebar-link) !important; }
-
-  /* PAGINACIÓN Y BREADCRUMBS */
+  /* ============================================================
+      2. PAGINACIÓN (PURO TEXTO)
+     ============================================================ */
   .pagination-nav__link { 
     background-color: transparent !important; 
     border: none !important; 
     box-shadow: none !important; 
+    padding: 0 !important;
   }
-  .pagination-nav__label { color: var(--color-paginacion-enlace) !important; }
-  .breadcrumbs__link { color: var(--color-breadcrumbs-enlace) !important; }
 
-  /* --- GRID Y TARJETAS (ESTRUCTURA ORIGINAL) --- */
-  .grid-gestion-total { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
-    gap: 20px; 
-    margin-top: 20px; 
+  .pagination-nav__sublabel, 
+  .pagination-nav__label { 
+    color: var(--nav-color-normal) !important; 
+    transition: color 0.2s ease;
   }
+
+  .pagination-nav__link:hover .pagination-nav__sublabel, 
+  .pagination-nav__link:hover .pagination-nav__label { 
+    color: var(--nav-color-hover) !important; 
+    background-color: transparent !important;
+    text-decoration: none !important;
+  }
+
+  /* ============================================================
+      3. ESTRUCTURA Y NAVEGACIÓN GLOBAL
+     ============================================================ */
+  .main-wrapper { background-color: var(--bg-global) !important; transition: background-color 0.3s ease; }
+  .navbar { background-color: var(--navbar-bg) !important; border-bottom: 1px solid #30363d !important; }
+  .navbar__link, .navbar__title { color: var(--umma-white) !important; }
   
-  html body .card-total {
+  .theme-doc-sidebar-container { background-color: var(--sidebar-bg) !important; border-right: 1px solid var(--umma-blue) !important; }
+  .menu__link { color: var(--text-global) !important; }
+  .breadcrumbs__link { color: var(--text-global) !important; }
+  
+  .markdown h1, .markdown h2, .markdown h3, .markdown p, .markdown li { color: var(--text-global) !important; }
+  
+  .menu__link:hover { background-color: var(--umma-bg-hover) !important; }
+  .menu__link--active { background-color: var(--umma-bg-active) !important; color: var(--text-global) !important; font-weight: bold !important; }
+
+  /* ============================================================
+      4. DISEÑO DE TARJETAS (GRID ACORDE A EVENTOS)
+     ============================================================ */
+  .grid-gestion-total {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  html body .grid-gestion-total a.card-total {
     background-color: var(--card-bg) !important;
-    border: 2px solid var(--card-border) !important;
+    color: var(--card-text) !important;
+    border: 1px solid var(--card-border) !important;
     border-radius: 15px;
-    padding: 30px 15px;
+    padding: 30px 15px; /* Ajustado para coincidir con Eventos */
     display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 160px;
-    text-decoration: none !important;
+    min-height: 160px; /* Ajustado para coincidir con Eventos */
     box-shadow: var(--umma-shadow-card) !important;
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none !important;
   }
 
-  .card-total:hover { transform: translateY(-5px); }
+  html body .grid-gestion-total a.card-total:hover {
+    transform: translateY(-5px) !important;
+    background-color: var(--card-hover-bg) !important;
+    box-shadow: var(--umma-shadow-hover) !important;
+  }
 
-  html body .card-total h3 { 
-    color: var(--c-txt-card) !important; 
-    font-size: 1.15rem !important; 
-    margin: 0 !important; 
+  html body .grid-gestion-total a.card-total img.icon-admin-svg {
+    width: 55px !important; /* Ajustado para coincidir con Eventos */
+    filter: var(--icon-filter) !important;
+    margin-bottom: 12px;
+  }
+
+  html body .grid-gestion-total a.card-total h3 {
+    color: var(--card-text) !important;
+    font-size: 1.15rem !important; /* Ajustado para coincidir con Eventos */
+    margin: 0 !important;
     font-weight: 600 !important;
-  }
-  
-  html body .card-total img.icon-admin-svg { 
-    width: 55px !important; 
-    margin-bottom: 12px; 
-    filter: var(--icon-f) !important; 
   }
   `}
 </style>
