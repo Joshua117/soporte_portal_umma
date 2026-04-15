@@ -1,9 +1,10 @@
 ---
-sidebar_label: Grados y Areas Escolares
-sidebar_position: 8
+title: Supervision 
+pagination_next: Administrativos/Carga_Academica/index
 ---
 
 <style>
+  
   {`
   /* ============================================================
       1. VARIABLES Y TEMAS (CLARO / OSCURO)
@@ -17,17 +18,17 @@ sidebar_position: 8
     --sidebar-bg: var(--umma-white);
     --text-global: var(--umma-blue);
     --navbar-bg: #1A3867;
-    
+
     --card-bg: var(--umma-blue);
     --card-text: var(--umma-white);
     --card-hover-bg: var(--umma-blue-hover);
     --card-border: transparent;
-    
+
     --umma-shadow-card: rgba(0, 0, 0, 0.2);
     --umma-shadow-hover: rgba(0, 0, 0, 0.3);
     --umma-bg-hover: rgba(26, 56, 103, 0.1);
     --umma-bg-active: #a5bfe9;
-    
+
     --icon-filter: brightness(0) invert(1);
 
     /* Paginación */
@@ -40,12 +41,12 @@ sidebar_position: 8
     --sidebar-bg: #262624;
     --text-global: #e3e3e3;
     --navbar-bg: #1a2a3f;
-    
-    --card-bg: #1e1f20; 
+
+    --card-bg: #1e1f20;
     --card-text: #ffffff;
     --card-hover-bg: #2d2e30;
     --card-border: #30363d;
-    
+
     --umma-bg-hover: rgba(255, 255, 255, 0.05);
     --umma-bg-active: #1A3867;
 
@@ -56,22 +57,22 @@ sidebar_position: 8
   /* ============================================================
       2. PAGINACIÓN (PURO TEXTO)
      ============================================================ */
-  .pagination-nav__link { 
-    background-color: transparent !important; 
-    border: none !important; 
-    box-shadow: none !important; 
+  .pagination-nav__link {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
     padding: 0 !important;
   }
 
-  .pagination-nav__sublabel, 
-  .pagination-nav__label { 
-    color: var(--nav-color-normal) !important; 
+  .pagination-nav__sublabel,
+  .pagination-nav__label {
+    color: var(--nav-color-normal) !important;
     transition: color 0.2s ease;
   }
 
-  .pagination-nav__link:hover .pagination-nav__sublabel, 
-  .pagination-nav__link:hover .pagination-nav__label { 
-    color: var(--nav-color-hover) !important; 
+  .pagination-nav__link:hover .pagination-nav__sublabel,
+  .pagination-nav__link:hover .pagination-nav__label {
+    color: var(--nav-color-hover) !important;
     background-color: transparent !important;
     text-decoration: none !important;
   }
@@ -138,3 +139,30 @@ sidebar_position: 8
   }
   `}
 </style>
+
+{/*Estructura de Texto + Imagen Estática*/}
+<div style={{
+  display: 'grid',
+  gridTemplateColumns: '1fr 300px',
+  gap: '70px',
+  paddingLeft: '50px',
+  marginTop: '50px',
+  alignItems: 'start'
+}}>
+
+  {/*Lado izquierdo: Tu texto*/}
+  <div>
+    <h3>Título de tu sección</h3>
+    <p>Aquí escribes la descripción de tu módulo. Esta imagen se quedará fija y no tendrá animaciones.</p>
+  </div>
+
+  {/*Lado derecho: Imagen estática*/}
+  <div style={{ width: '300px' }}>
+    <img
+      src="/img/EstudiantesPanel/AlumnosAusentes.png"
+      style={{ width: '100%', height: 'auto', display: 'block' }}
+      alt="Descripción de imagen"
+    />
+  </div>
+
+</div>

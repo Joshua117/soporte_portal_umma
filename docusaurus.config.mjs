@@ -313,7 +313,7 @@ export default {
   "future": {
     "v4": {
       "removeLegacyPostBuildHeadAttribute": false,
-      "useCssCascadeLayers": false
+      "useCssCascadeLayers": true,
     },
     "experimental_faster": {
       "swcJsLoader": false,

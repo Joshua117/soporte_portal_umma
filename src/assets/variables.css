@@ -1,25 +1,66 @@
----
-title: Administrativos
----
+:root {
+  /* Variables UMMA */
+  --umma-blue: #1A3867;
+  --umma-blue-hover: #1e427d;
+  --umma-white: #ffffff;
+  --umma-hero: #fdfdfd;
+  --umma-hero2: #ffffff;
+  --umma-navbar: #1A3867;
+  --internal-bg: #ffffff;
+  --card-bg-color: #1A3867;
+  --card-text: #ffffff;
+  --hero-text: #1A3867;
+  --nav-text: #ffffff;
+  --internal-title-color: #1A3867;
+  --home-icon-color: #1A3867;
+  --home-title-color: #1A3867;
+  --home-desc-color: #1A3867;
+  --home-icon-size: 64px;
 
-<style>
-  {`
-  :root {
-    /* Colores Principales UMMA */
-    --umma-blue: #1A3867;
-    --umma-blue-hover: #1e427d;
-    --umma-light-blue: #2563EB;
-    --umma-white: #ffffff;
-    --umma-hero: #1A3867;
-    --umma-hero2: #8c2f2f;
-    --umma-navbar: #1a2a3f;
-    
-    /* Estados de Navegación */
-    --umma-bg-hover: #f0f7ff;
-    --umma-bg-active: #e6eef9;
-    
-    /* Sombras para las Tarjetas */
-    --umma-shadow-card: rgba(26, 56, 103, 0.1);
-    --umma-shadow-hover: rgba(26, 56, 103, 0.2);
-  }
-  `}
+  /* Variables UI */
+  --bg-global: var(--umma-white);
+  --sidebar-bg: var(--umma-white);
+  --text-global: var(--umma-blue);
+  --navbar-bg: #1A3867;
+  --card-bg: #1A3867;
+  --card-border: transparent;
+  --umma-shadow-card: rgba(0, 0, 0, 0.2);
+  --umma-shadow-hover: rgba(0, 0, 0, 0.3);
+  --umma-bg-hover: #ffffff;
+  --umma-bg-active: #a6c2e4;
+  --icon-filter: brightness(0) invert(1);
+  --nav-color-normal: #1A3867;
+  --nav-color-hover: #1e427d;
+  
+  /* Reset Paginación */
+  --ifm-pagination-nav-card-bg: transparent !important;
+  --ifm-pagination-nav-border-color: transparent !important;
+}
+
+[data-theme='dark'] {
+  --umma-blue: #0d1b2e;
+  --umma-white: #1b1b1d;
+  --umma-hero: #1A3867;
+  --umma-hero2: #ffffff;
+  --umma-navbar: #1A3867;
+  --internal-bg: #1b1b1d;
+  --card-bg-color: #242526;
+  --card-text: #ffffff;
+  --hero-text: #1A3867;
+  --internal-title-color: #58a6ff;
+  
+  --bg-global: #262624;
+  --sidebar-bg: #262624;
+  --text-global: #e3e3e3;
+  --navbar-bg: #1a2a3f;
+  --card-bg: #1e1f20;
+  --card-hover-bg: #2d2e30;
+  --card-border: #30363d;
+  --umma-bg-hover: rgba(255, 255, 255, 0.05);
+  --umma-bg-active: #1A3867;
+  --nav-color-normal: #ffffff;
+  --nav-color-hover: #ffffff;
+  --home-icon-color: #1A3867;
+  --home-title-color: #1A3867;
+  --home-desc-color: #1A3867;
+}

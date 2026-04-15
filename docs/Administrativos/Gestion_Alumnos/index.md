@@ -93,7 +93,7 @@ pagination_prev: null
   .menu__link--active { background-color: var(--umma-bg-active) !important; color: var(--text-global) !important; font-weight: bold !important; }
 
   /* ============================================================
-      4. DISEÑO DE TARJETAS (GRID ACORDE A EVENTOS)
+      4. DISEÑO DE TARJETAS 
      ============================================================ */
   .grid-gestion-total {
     display: grid;

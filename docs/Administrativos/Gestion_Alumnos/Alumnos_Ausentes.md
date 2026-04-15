@@ -135,7 +135,7 @@ title: Alumnos Ausentes
     font-size: 1.1rem !important;
     margin: 0 !important;
     font-weight: 600 !important;
-  }
+  } 
   `}
 </style>
 
