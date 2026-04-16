@@ -1,6 +1,10 @@
 {
   "label": "Administrativos",
+<<<<<<< HEAD
   "position": 2,
+=======
+  "position": 4,
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844
   "link": {
     "type": "doc",
     "id": "Administrativos/index"

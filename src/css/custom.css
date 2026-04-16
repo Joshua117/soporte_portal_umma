@@ -13,6 +13,7 @@
 
 
 /* ============================================================
+<<<<<<< HEAD
    2. LAYOUT, NAVBAR Y HERO
    ============================================================ */
 /* --- Navbar y Header --- */
@@ -26,29 +27,106 @@
 
 /* Control del botón de modo oscuro en el navbar */
 .navbar__color-mode-toggle {
+=======
+   2. MODO CLARO (Variables UMMA)
+   ============================================================ */
+:root {
+  --umma-blue: #1A3867;           /* Color de Navbar y Hero */
+  --umma-white: #ffffff;  
+  --umma-hero: #fdfdfd;
+  --umma-hero2: #ffffff;
+  --umma-navbar: #1A3867;         /* Color de fondo de la Navbar */
+  --internal-bg: #ffffff;        /* Fondo de la documentación */
+  --card-bg-color: #1A3867;      /* Fondo de las tarjetas */
+  --card-text: #ffffff;          /* Texto de las tarjetas */
+  --hero-text: #1A3867;          /* Texto del título (Gelasio) */
+  --nav-text: #ffffff;           /* Texto de la Navbar */
+  --internal-title-color: #1A3867;
+}
+
+/* ============================================================
+   3. MODO OSCURO (Luna activa)
+   ============================================================ */
+[data-theme='dark'] {
+  --umma-blue: #0d1b2e;          /* Azul muy oscuro */
+  --umma-white: #1b1b1d;
+  --umma-hero: #1A3867;
+  --umma-hero2: #ffffff;
+  --umma-navbar: #1A3867;
+  --internal-bg: #1b1b1d;        /* Fondo de documentación oscuro */
+  --card-bg-color: #242526;      /* Tarjetas gris oscuro */
+  --card-text: #ffffff;          /* Texto blanco para legibilidad */
+  --hero-text: #1A3867;          
+  --internal-title-color: #58a6ff;
+}
+
+/* ============================================================
+   4. ESTILOS FUNCIONALES (Navbar y Layout)
+   ============================================================ */
+.navbar {
+  background-color: var(--umma-navbar) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  transition: background-color 0.3s ease;
+}
+
+.navbar__link, .navbar__title, .navbar__brand {
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844
   color: var(--nav-text) !important;
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.3s ease !important;
 }
 
+<<<<<<< HEAD
 .navbar__color-mode-toggle:hover {
   transform: rotate(180deg) scale(1.1) !important;
   cursor: pointer;
 }
 
 .hero--primary { background-color: transparent !important; }
+=======
+.hero--primary {
+  background-color: transparent !important;
+}
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844
 
 /* --- Fondo Principal --- */
 .main-wrapper:not(:has(.theme-doc-sidebar-container)) {
+<<<<<<< HEAD
   background: linear-gradient(to bottom, var(--umma-hero) 0%, var(--umma-hero) 55%, var(--umma-hero2) 45%, var(--umma-hero2) 100%) !important;
+=======
+  background: linear-gradient(
+    to bottom,
+    var(--umma-hero) 0%,      
+    var(--umma-hero) 55%,    
+    var(--umma-hero2) 45%,    
+    var(--umma-hero2) 100%    
+  ) !important;
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844
   background-attachment: fixed !important;
 }
 
+<<<<<<< HEAD
 /* --- Hero Banners --- */
 .hero, [class*="heroBanner"] { 
   display: flex !important; 
   flex-direction: column !important; 
   align-items: center !important; 
   padding: 0 !important; 
+=======
+/* ============================================================
+   5. TARJETAS (Home)
+   ============================================================ */
+.card {
+  background-color: var(--card-bg-color) !important;
+  color: var(--card-text) !important;
+  border-radius: 12px !important;
+  border: none !important;
+  padding: 2.5rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  transition: all 0.3s ease !important;
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844
 }
 
 html[data-theme='light'] .hero::before { 
@@ -58,9 +136,14 @@ html[data-theme='light'] .hero::before {
   margin-bottom: -35px !important; 
 }
 
+<<<<<<< HEAD
 /* Aplicamos la animación al hacer clic (o al cambiar el tema) */
 .navbar__color-mode-toggle:active {
   animation: girar 0.5s ease-in-out;
+=======
+.theme-doc-sidebar-container {
+  background-color: var(--internal-bg) !important;
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844
 }
 
 html[data-theme='dark'] .hero::before { 
@@ -88,6 +171,7 @@ html[data-theme='dark'] .hero::before {
 }
 
 /* ============================================================
+<<<<<<< HEAD
    3. GRID Y TARJETAS
    ============================================================ */
 .grid-admin-total { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px; margin-bottom: 20px; }
@@ -98,10 +182,66 @@ html body .card-total, .card {
   border: 1px solid var(--card-border) !important;
   border-radius: 15px !important;
   padding: 30px 15px !important;
+=======
+   6. CONTROL DE SECCIONES (MATERIAL ICONS)
+   ============================================================ */
+:root {
+  --home-icon-color: #1A3867;
+  --home-title-color: #1A3867;
+  --home-desc-color: #444444;
+  --home-icon-size: 64px;
+}
+
+[data-theme='dark'] {
+  --home-icon-color: #1A3867;
+  --home-title-color: #1A3867;
+  --home-desc-color: #1A3867;
+}
+
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col {
+  padding: 2rem !important;
+  text-align: center !important;
+}
+
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col span.material-icons,
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col i {
+  font-size: var(--home-icon-size) !important;
+  color: var(--home-icon-color) !important;
+  margin-bottom: 1.5rem !important;
+  display: inline-block !important;
+  transition: transform 0.3s ease !important;
+}
+
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col:hover span.material-icons,
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col:hover i {
+  transform: scale(1.15) !important;
+}
+
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col h3 {
+  font-weight: bold !important;
+  font-size: 1.8rem !important;
+  color: var(--home-title-color) !important;
+  margin-bottom: 0.8rem !important;
+}
+
+.main-wrapper:not(:has(.theme-doc-sidebar-container)) .col p {
+  font-size: 1.1rem !important;
+  line-height: 1.5 !important;
+  color: var(--home-desc-color) !important;
+  max-width: 300px !important;
+  margin: 0 auto !important;
+}
+
+/* ============================================================
+   7. LOGO Y TEXTOS DEL HERO (Pegado Total)
+   ============================================================ */
+.hero, [class*="heroBanner"] {
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
+<<<<<<< HEAD
   min-height: 160px !important;
   box-shadow: var(--umma-shadow-card) !important;
   transition: all 0.3s ease-in-out !important;
@@ -311,3 +451,132 @@ html body .card-total h3 { color: var(--card-text) !important; font-size: 1.15re
     margin: 0 !important;
     font-weight: 600 !important;
   }
+=======
+  padding-top: 0 !important;
+  padding-bottom: 0rem !important;
+  gap: 0 !important;
+}
+
+html[data-theme='light'] .hero::before {
+  content: "";
+  display: block;
+  width: 350px;
+  height: 220px;
+  background-image: url('/img/Umma_Azul.png') !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 0 !important;
+  margin-bottom: -35px !important;
+}
+
+html[data-theme='dark'] .hero::before {
+  content: "";
+  display: block;
+  width: 350px;
+  height: 220px;
+  background-image: url('/img/Umma_Blanco.png') !important;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 0 !important;
+  margin-bottom: -35px !important;
+}
+
+.hero__title {
+  font-family: 'Gelasio', serif !important;
+  font-size: 4rem !important;
+  color: var(--hero-text) !important;
+  line-height: 1.85 !important;
+}
+
+.hero__subtitle {
+  color: var(--hero-text) !important;
+  margin-top: -50px !important;
+  font-size: 2.5rem !important;
+}
+
+[data-theme='dark'] .hero__title,
+[data-theme='dark'] .hero__subtitle {
+  color: #ffffff !important;
+}
+
+/* ============================================================
+   8. NAVEGACIÓN LIMPIA (ELIMINACIÓN TOTAL Y ABSOLUTA)
+   ============================================================ */
+
+/* 1. Reset de variables en el nivel más alto posible */
+:root {
+  --ifm-pagination-nav-card-bg: transparent !important;
+  --ifm-pagination-nav-border-color: transparent !important;
+  --ifm-pagination-nav-border-width: 0px !important;
+  --ifm-pagination-nav-border-radius: 0px !important;
+  --ifm-pagination-nav-color-hover: transparent !important;
+}
+
+/* 2. Selector ultra-específico para forzar la transparencia */
+html body nav.pagination-nav a.pagination-nav__link {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  border-width: 0 !important;
+  box-shadow: none !important;
+  padding: 10px 0 !important; /* Espacio mínimo para que sea clicable pero sin caja */
+  transition: none !important;
+}
+
+/* 3. Asegurar que al pasar el mouse no reviva ningún estilo */
+html body nav.pagination-nav a.pagination-nav__link:hover {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+/* 4. Visibilidad de los textos (Azul UMMA / Blanco) */
+.pagination-nav__sublabel, 
+.pagination-nav__label {
+  color: #1A3867 !important;
+  font-family: 'Gelasio', serif !important;
+}
+
+[data-theme='dark'] .pagination-nav__sublabel,
+[data-theme='dark'] .pagination-nav__label {
+  color: #ffffff !important;
+}
+
+/* 5. Alineación */
+.pagination-nav__link--prev { align-items: flex-start !important; text-align: left !important; }
+.pagination-nav__link--next { align-items: flex-end !important; text-align: right !important; }
+
+/* ============================================================
+   9. TÍTULOS INTERNOS Y BREADCRUMBS
+   ============================================================ */
+.markdown h1 {
+  color: #1A3867 !important;
+  font-family: 'Gelasio', serif !important;
+  font-weight: bold !important;
+}
+
+[data-theme='dark'] .markdown h1 {
+  color: #ffffff !important;
+}
+
+.breadcrumbs__link {
+  color: #1A3867 !important;
+}
+
+[data-theme='dark'] .breadcrumbs__link {
+  color: #ffffff !important;
+}
+
+/* Otros ajustes */
+.icon-admin-svg {
+  filter: brightness(0) invert(1) !important;
+}
+
+[class*='colorModeToggle'] button {
+  filter: brightness(0) invert(1);
+}
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844

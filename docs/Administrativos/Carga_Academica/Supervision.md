@@ -1,6 +1,11 @@
 ---
+<<<<<<< HEAD:docs/Administrativos/Carga_Academica/Supervision.md
 title: Supervision 
 pagination_next: Administrativos/Carga_Academica/index
+=======
+sidebar_label: Carga Academica
+sidebar_position: 5
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844:docs/Administrativos/Carga_Academica.md
 ---
 
 <style>
@@ -18,17 +23,29 @@ pagination_next: Administrativos/Carga_Academica/index
     --sidebar-bg: var(--umma-white);
     --text-global: var(--umma-blue);
     --navbar-bg: #1A3867;
+<<<<<<< HEAD:docs/Administrativos/Carga_Academica/Supervision.md
 
+=======
+    
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844:docs/Administrativos/Carga_Academica.md
     --card-bg: var(--umma-blue);
     --card-text: var(--umma-white);
     --card-hover-bg: var(--umma-blue-hover);
     --card-border: transparent;
+<<<<<<< HEAD:docs/Administrativos/Carga_Academica/Supervision.md
 
+=======
+    
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844:docs/Administrativos/Carga_Academica.md
     --umma-shadow-card: rgba(0, 0, 0, 0.2);
     --umma-shadow-hover: rgba(0, 0, 0, 0.3);
     --umma-bg-hover: rgba(26, 56, 103, 0.1);
     --umma-bg-active: #a5bfe9;
+<<<<<<< HEAD:docs/Administrativos/Carga_Academica/Supervision.md
 
+=======
+    
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844:docs/Administrativos/Carga_Academica.md
     --icon-filter: brightness(0) invert(1);
 
     /* Paginación */
@@ -41,12 +58,21 @@ pagination_next: Administrativos/Carga_Academica/index
     --sidebar-bg: #262624;
     --text-global: #e3e3e3;
     --navbar-bg: #1a2a3f;
+<<<<<<< HEAD:docs/Administrativos/Carga_Academica/Supervision.md
 
     --card-bg: #1e1f20;
     --card-text: #ffffff;
     --card-hover-bg: #2d2e30;
     --card-border: #30363d;
 
+=======
+    
+    --card-bg: #1e1f20; 
+    --card-text: #ffffff;
+    --card-hover-bg: #2d2e30;
+    --card-border: #30363d;
+    
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844:docs/Administrativos/Carga_Academica.md
     --umma-bg-hover: rgba(255, 255, 255, 0.05);
     --umma-bg-active: #1A3867;
 
@@ -57,6 +83,7 @@ pagination_next: Administrativos/Carga_Academica/index
   /* ============================================================
       2. PAGINACIÓN (PURO TEXTO)
      ============================================================ */
+<<<<<<< HEAD:docs/Administrativos/Carga_Academica/Supervision.md
   .pagination-nav__link {
     background-color: transparent !important;
     border: none !important;
@@ -73,6 +100,24 @@ pagination_next: Administrativos/Carga_Academica/index
   .pagination-nav__link:hover .pagination-nav__sublabel,
   .pagination-nav__link:hover .pagination-nav__label {
     color: var(--nav-color-hover) !important;
+=======
+  .pagination-nav__link { 
+    background-color: transparent !important; 
+    border: none !important; 
+    box-shadow: none !important; 
+    padding: 0 !important;
+  }
+
+  .pagination-nav__sublabel, 
+  .pagination-nav__label { 
+    color: var(--nav-color-normal) !important; 
+    transition: color 0.2s ease;
+  }
+
+  .pagination-nav__link:hover .pagination-nav__sublabel, 
+  .pagination-nav__link:hover .pagination-nav__label { 
+    color: var(--nav-color-hover) !important; 
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844:docs/Administrativos/Carga_Academica.md
     background-color: transparent !important;
     text-decoration: none !important;
   }
@@ -140,6 +185,7 @@ pagination_next: Administrativos/Carga_Academica/index
   `}
 </style>
 
+<<<<<<< HEAD:docs/Administrativos/Carga_Academica/Supervision.md
 {/*Estructura de Texto + Imagen Estática*/}
 <div style={{
   display: 'grid',
@@ -166,3 +212,5 @@ pagination_next: Administrativos/Carga_Academica/index
   </div>
 
 </div>
+=======
+>>>>>>> ae248ce7a225970165465cd1ee98050b514d6844:docs/Administrativos/Carga_Academica.md
