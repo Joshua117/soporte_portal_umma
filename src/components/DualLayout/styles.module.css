@@ -1,0 +1,43 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px; /* Texto a la izquierda, imagen a la derecha */
+  gap: 40px;
+  align-items: start;
+}
+
+.content {
+  display: flex;
+  flex-direction: column; /* FUERZA A QUE TODO SE APILE HACIA ABAJO */
+  align-items: flex-start; /* FUERZA A QUE TODO ESTÉ A LA IZQUIERDA */
+  text-align: left;
+  gap: 20px; /* Espacio vertical entre tus subtítulos y párrafos */
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Esto hace que todos los enlaces dentro de tu componente DualLayout se vean distintos */
+.content a {
+  color: var(--umma-blue); /* El color verde oficial de Docusaurus o el que prefieras */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.content a:hover {
+  color: var(--umma-bg-active); /* Cambio de color al pasar el mouse */
+}
+
+/* Añade esto al final de tu archivo styles.module.css */
+.sticky {
+  position: sticky;
+  top: 100px; /* Ajusta según la altura de tu barra de navegación fija */
+  align-self: flex-start;
+}

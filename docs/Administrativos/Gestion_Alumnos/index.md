@@ -93,11 +93,7 @@ pagination_prev: null
   .menu__link--active { background-color: var(--umma-bg-active) !important; color: var(--text-global) !important; font-weight: bold !important; }
 
   /* ============================================================
-<<<<<<< HEAD
       4. DISEÑO DE TARJETAS 
-=======
-      4. DISEÑO DE TARJETAS (GRID ACORDE A EVENTOS)
->>>>>>> ae248ce7a225970165465cd1ee98050b514d6844
      ============================================================ */
   .grid-gestion-total {
     display: grid;
@@ -161,5 +157,4 @@ pagination_prev: null
     <img src={require('@site/src/components/Icons/Gruups.png').default} className="icon-admin-svg" />
     <h3>Lista de Estudiantes</h3>
   </a>
-
 </div>

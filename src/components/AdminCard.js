@@ -1,15 +1,19 @@
 import React from 'react';
 
-export default function AdminCard({ title, href, iconPath }) {
+// Intentamos requerir el icono, pero con una gestión de errores básica
+export default function AdminCard({ title, iconName, link }) {
+  let icon = null;
+  try {
+    // Usamos el alias @site para asegurar que siempre encuentre la carpeta
+    icon = require(`@site/src/components/Icons/${iconName}`).default;
+  } catch (e) {
+    console.error(`No se encontró el icono: ${iconName}`);
+  }
+  
   return (
-    <a href={href} className="card-total">
-      {/* La ruta coincide exactamente con @site/src/components/Icons/ + el nombre del archivo */}
-      <img 
-        src={require(`@site/src/components/Icons/${iconPath}`).default} 
-        className="icon-admin-svg" 
-        alt={title}
-      />
+    <div className="card-total" onClick={() => window.location.href = link}>
+      {icon && <img src={icon} alt={title} className="icon-admin-svg" />}
       <h3>{title}</h3>
-    </a>
+    </div>
   );
 }

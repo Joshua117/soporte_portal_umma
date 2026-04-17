@@ -163,5 +163,4 @@ title: Alumnos Ausentes
       alt="Descripción de imagen" 
     />
   </div>
-
 </div>
