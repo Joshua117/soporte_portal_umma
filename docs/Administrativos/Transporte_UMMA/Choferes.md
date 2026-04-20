@@ -1,12 +1,21 @@
+---
+title: Choferes
+hide_table_of_contents: true
+---
+
 import DualLayout from '@site/src/components/DualLayout';
+import ImageSwitcher from '@site/src/components/ImageSwitcher';
 
-<DualLayout imageSrc="/img/Transporte/Agregar Servicio.png" altText="Agregar Servicio">
+<DualLayout stickyImage={true} rightContent={
+  <ImageSwitcher images={["/img/Transporte/PanelChof.jpg", "/img/Transporte/AgregarChof.jpg"]} />
+}>
 
-# Selecciona el tipo de servicio
+# Choferes
 
-<p>
-  Si haces clic en el título de arriba, irás al índice principal. 
-  También puedes hacer clic en [Horarios](/docs/Administrativos/Transporte_UMMA/Horarios) para ir a otro módulo.
-</p>
+## Boletos
+Para poder agregar los [Boletos](/docs/Administrativos/Transporte_UMMA/Boletos) para ir a otro módulo.
+
+## Choferes
+Para poder agregar los [Choferes](/docs/Administrativos/Transporte_UMMA/Choferes) para ir a otro módulo.
 
 </DualLayout>

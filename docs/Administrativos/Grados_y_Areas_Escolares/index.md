@@ -128,19 +128,13 @@ pagination_prev: null
   `}
 </style>
 
-# Administrativos
+# Grados y Areas Escolares
 
-<div className="grid-admin-total">
-  <a href="./Agregar_Personal" className="card-total">
-    <img src={require('@site/src/components/Icons/person add.png').default} className="icon-admin-svg" />
-    <h3>Agregar Personal</h3>
-  </a>
-  <a href="./Asistencia_Faltas" className="card-total">
-    <img src={require('@site/src/components/Icons/CalendarClock.png').default} className="icon-admin-svg" />
-    <h3>Asistencia y Faltas</h3>
-  </a>
-  <a href="./Lista_Personal" className="card-total">
-    <img src={require('@site/src/components/Icons/Gruups.png').default} className="icon-admin-svg" />
-    <h3>Lista de Personal</h3>
-  </a>
+<div className="grid-gestion-total">
+  {(() => {
+    const AdminCard = require('@site/src/components/AdminCard').default;
+    return (
+      <AdminCard title="Añadir / Editar" iconName="Inventory.png" link="./Añadir_Editar" />
+    );
+  })()}
 </div>

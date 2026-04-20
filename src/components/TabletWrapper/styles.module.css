@@ -1,0 +1,23 @@
+.tabletFrame {
+  border: 10px solid #2d2d2d; /* Marco grueso */
+  border-radius: 20px;       /* Bordes redondeados */
+  padding: 5px;              /* Espacio interno */
+  background: #000;          /* Fondo negro */
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 850px;          /* Más ancho que un teléfono */
+  aspect-ratio: 4 / 3;       /* Relación de aspecto de Tablet */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;         /* Centrado */
+}
+
+/* Para que la imagen se ajuste bien */
+.tabletFrame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}

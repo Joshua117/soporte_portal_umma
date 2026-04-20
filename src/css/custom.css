@@ -107,3 +107,61 @@ html[data-theme='dark'] .hero::before { content: ""; display: block; width: 350p
 [data-theme='dark'] .menu__link { color: #e3e3e3 !important; }
 
 [data-theme='dark'] .menu__link--active { background-color: var(--internal-bg) !important; color: #ffffff !important; }
+
+
+/* --- Iconos flechas --- */
+
+/* Ocultar iconos de modo oscuro cuando estamos en modo claro */
+html[data-theme='light'] .dark-only {
+  display: none !important;
+}
+
+/* Ocultar iconos de modo claro cuando estamos en modo oscuro */
+html[data-theme='dark'] .light-only {
+  display: none !important;
+}
+
+/* Esto hace que el botón se vea atenuado cuando está deshabilitado */
+button:disabled {
+  opacity: 0;
+  cursor: not-allowed;
+}
+/* --- Iconos flechas --- */
+
+
+
+/* --- Telefono --- */
+.iphone-frame {
+  border: 10px solid #0d1b2e;
+}
+
+/* Estilo específico para Modo Oscuro */
+html[data-theme='dark'] .iphone-frame {
+  border: 10px solid #535353  ;
+}
+/* --- Telefono --- */
+
+
+/* --- LINKS --- */
+.link-destacado {
+  color: #1A3867 !important; 
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.link-destacado:hover {
+  color: #1A3867 !important; 
+  text-decoration: underline;
+}
+
+/* --- ESTILO MODO OSCURO --- */
+html[data-theme='dark'] .link-destacado {
+  color: #ffffff !important; 
+}
+
+html[data-theme='dark'] .link-destacado:hover {
+  color: #ffffff !important; 
+  text-decoration: underline;
+}
+
+/* --- LINKS --- */

@@ -1,16 +1,24 @@
 .container {
   display: grid;
-  grid-template-columns: 1fr 300px; /* Texto a la izquierda, imagen a la derecha */
+  grid-template-columns: 1fr 300px; 
   gap: 40px;
   align-items: start;
+  
+  /* --- ESTILO FLAT (LIMPIO) --- */
+  padding: 10px;                /* Sin espacio interno adicional */
+  margin: 20px 0;            /* Solo margen exterior para separar bloques */
+  background-color: transparent; /* Sin color de fondo */
+  border: none;              /* Sin bordes */
+  box-shadow: none;          /* Sin sombras */
 }
 
 .content {
   display: flex;
-  flex-direction: column; /* FUERZA A QUE TODO SE APILE HACIA ABAJO */
-  align-items: flex-start; /* FUERZA A QUE TODO ESTÉ A LA IZQUIERDA */
+  flex-direction: column; 
+  align-items: flex-start; 
   text-align: left;
-  gap: 20px; /* Espacio vertical entre tus subtítulos y párrafos */
+  gap: 20px; 
+  padding-right: 20px;
 }
 
 .imageWrapper {
@@ -24,20 +32,36 @@
   border-radius: 8px;
 }
 
-/* Esto hace que todos los enlaces dentro de tu componente DualLayout se vean distintos */
 .content a {
-  color: var(--umma-blue); /* El color verde oficial de Docusaurus o el que prefieras */
+  color: var(--umma-blue); 
   font-weight: bold;
   cursor: pointer;
 }
 
 .content a:hover {
-  color: var(--umma-bg-active); /* Cambio de color al pasar el mouse */
+  color: var(--umma-bg-active); 
 }
 
-/* Añade esto al final de tu archivo styles.module.css */
 .sticky {
   position: sticky;
-  top: 100px; /* Ajusta según la altura de tu barra de navegación fija */
+  top: 100px; 
   align-self: flex-start;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px; 
+  gap: 40px;
+  align-items: start;
+  
+  /* --- AJUSTE DE ESPACIADO --- */
+  /* El primer valor (40px) es margen arriba/abajo */
+  /* El segundo valor (20px) es margen izquierda/derecha */
+  margin: 20px 60px; 
+  
+  padding: 0; 
+  background-color: transparent; 
+  border: none;
+  box-shadow: none;
+}
+
