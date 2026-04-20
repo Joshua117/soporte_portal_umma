@@ -163,5 +163,17 @@ html[data-theme='dark'] .link-destacado:hover {
   color: #ffffff !important; 
   text-decoration: underline;
 }
+/* --- LINKS --- */
 
+
+/* --- Margenes --- */
+/* Asegura que el layout tenga un respiro lateral */
+.dual-layout-container {
+  display: flex;
+  flex-wrap: wrap; /* Para que se vea bien en móviles */
+  padding: 20px;   /* Esto da aire en todos los lados */
+  gap: 30px;       /* Esto separa el texto de la imagen */
+  max-width: 1200px; /* Evita que se estire demasiado en pantallas gigantes */
+  margin: 0 auto;  /* Centra todo en la pantalla */
+}
 /* --- LINKS --- */

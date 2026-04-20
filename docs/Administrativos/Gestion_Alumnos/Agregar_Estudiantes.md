@@ -47,5 +47,3 @@ Para poder agregar los [Grados y Areas Escolares](/docs/Administrativos/Grados_y
   </div>
 
 </div>
-
-{/* Aquí puedes mantener tus <style> globales o moverlos a un archivo .css */}

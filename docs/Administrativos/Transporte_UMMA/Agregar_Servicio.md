@@ -14,25 +14,30 @@ import Link from '@docusaurus/Link';
 
 # Agregar Servicios
 
-## Boletos
-Para poder agregar los <Link to="/docs/Administrativos/Transporte_UMMA/Boletos" className="link-destacado">Boletos</Link> para ir a otro módulo.
+## Boleto
+El administrador tiene la facultad de crear un <Link to="/docs/Administrativos/Transporte_UMMA/Boletos" className="link-destacado">Boleto</Link> mediante la matrícula del alumno. Al generar el boleto, se asigna automáticamente un asiento y se selecciona el horario de salida disponible. Estos boletos pueden validarse directamente desde el dispositivo del encargado o mediante el escaneo de su código QR. Esta función permite generar accesos manualmente, saltando las restricciones habituales del <Link to="/docs/Alumnos/Transporte_UMMA" className="link-destacado">Boleto alumno</Link>.
 
 ## Choferes
-Para poder agregar los <Link to="/docs/Administrativos/Transporte_UMMA/Choferes" className="link-destacado">Choferes</Link> para ir a otro módulo.
+En este apartado de <Link to="/docs/Administrativos/Transporte_UMMA/Choferes" className="link-destacado">Choferes</Link>, puedes gestionar el catálogo de conductores. Es posible agregar, editar o eliminar registros de manera manual. Es responsabilidad de los choferes escanear los boletos de los alumnos para registrar su acceso al transporte.
 
 ## Horarios
-Para poder agregar los <Link to="/docs/Administrativos/Transporte_UMMA/Horarios" className="link-destacado">Horarios</Link> para ir a otro módulo.
+Desde el módulo de <Link to="/docs/Administrativos/Transporte_UMMA/Horarios" className="link-destacado">Horarios</Link>, puedes visualizar, crear, modificar o eliminar los horarios de salida programados para las rutas de transporte.
 
 ## Tiempos
-Para poder agregar los <Link to="/docs/Administrativos/Transporte_UMMA/Tiempos" className="link-destacado">Tiempos</Link> para ir a otro módulo.
+En <Link to="/docs/Administrativos/Transporte_UMMA/Tiempos" className="link-destacado">Tiempos</Link>, se definen las reglas de configuración para la emisión de boletos. Aquí puedes establecer el margen de tolerancia y el tiempo límite (en minutos) previo a la salida para gestionar la disponibilidad. Una vez fuera de este rango, el sistema bloqueará automáticamente la creación de nuevos boletos.
+
 
 ## Tipo de Servicio
-olas
+Existen dos clasificaciones de servicio: "Normal" y "Especial". Aunque ambos tienen el objetivo de transportar a los alumnos, cumplen funciones distintas:
+
+Normal: Corresponde a la operación diaria al finalizar la jornada académica.
+
+Especial: Se destina a salidas fuera de la rutina, como actividades extracurriculares o necesidades específicas de la institución.
 
 ## Vehiculos
-Para poder agregar los <Link to="/docs/Administrativos/Transporte_UMMA/Vehiculos" className="link-destacado">Vehiculos</Link> para ir a otro módulo.
+El módulo de <Link to="/docs/Administrativos/Transporte_UMMA/Vehiculos" className="link-destacado">Vehículos</Link> permite administrar la flotilla. Puedes registrar, actualizar o eliminar unidades especificando los siguientes datos: modelo, matrícula, capacidad total (incluyendo al chofer), estado (uso o reposo) y una imagen de referencia.
+
 
 ## Grado Escolar
-Para poder agregar los <Link to="/docs/Administrativos/Grados_y_Areas_Escolares/Añadir_Editar" className="link-destacado">Grados y Areas Escolares</Link> para ir a otro módulo.
-
+En la sección de <Link to="/docs/Administrativos/Grados_y_Areas_Escolares/Añadir_Editar" className="link-destacado">Grados y Areas Escolares</Link>, se definen los niveles educativos asociados al transporte (Bachillerato, Licenciatura y Posgrado). Esta configuración es esencial para asegurar que los servicios se asignen correctamente según el perfil del estudiante, evitando confusiones en la logística.
 </DualLayout>
