@@ -31,15 +31,49 @@ export const RegistroSlider = () => {
   );
 };
 
-# Registro
+# Estudiantes
 
 <div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '70px', paddingLeft: '50px', alignItems: 'start' }}>
   
   <div> 
     
-## Grado Escolar
+## Agregar Estudiantes
 
-Para poder agregar los [Grados y Areas Escolares](/docs/Administrativos/Grados_y_Areas_Escolares/Añadir_Editar) para ir a otro módulo.
+Aquí tienes la documentación para el módulo de Inscripción de Nuevos Alumnos. He organizado el flujo para que quede claro qué pasos realiza el usuario y qué procesos gestiona automáticamente el sistema.
+
+Inscripción de Nuevos Alumnos
+Este módulo está diseñado para formalizar el ingreso de estudiantes a la institución, garantizando que cada alumno sea clasificado correctamente dentro de la oferta académica y cuente con su identidad digital desde el primer día.
+
+### Proceso de Registro
+El sistema sigue una lógica estructurada para asegurar la integridad de los datos académicos:
+
+Selección de Grado Escolar: El proceso inicia definiendo el nivel académico del aspirante.
+
+Determinación del Área: Una vez seleccionado el grado, el sistema identifica automáticamente el área correspondiente, permitiendo visualizar únicamente las opciones académicas válidas para ese nivel.
+
+Selección de Licenciatura: Se elige el programa académico específico que cursará el estudiante.
+
+Captura de Datos Personales: El usuario ingresa la información básica del alumno:
+
+Nombre(s)
+
+Apellidos
+
+### Automatización y Asignación de Identidad
+Una vez completada la captura, el sistema realiza la gestión administrativa de forma automática, eliminando errores de formato y agilizando la creación del perfil:
+
+Matrícula: Se genera una clave única especial para el alumno, la cual servirá como su identificador dentro de toda la institución.
+
+Correo Institucional: Se crea automáticamente la cuenta de correo personal del alumno basada en su nueva matrícula, facilitando su acceso inmediato a las plataformas digitales institucionales.
+
+### Propósito del Módulo
+La estandarización de este proceso permite:
+
+Orden Administrativo: Asegurar que ningún alumno sea registrado sin una licenciatura o grado asignado.
+
+Agilidad Operativa: Crear la identidad digital (matrícula y correo) en un solo paso, permitiendo al alumno integrarse rápidamente a sus actividades escolares.
+
+Consistencia de Datos: Mantener la relación correcta entre Grado, Área y Licenciatura para facilitar reportes y estadísticas posteriores.
   </div>
 
   <div style={{ width: '300px' }}>

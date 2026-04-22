@@ -9,8 +9,8 @@ pagination_prev: null
     return (
       <>
         <AdminCard title="Carga Académica" iconName="Stack Book.png" link="./Carga_Academica" />
-        <AdminCard title="Agregar Carga" iconName="person add.png" link="./Agregar_Carga" />
-        <AdminCard title="Generar Carga" iconName="Settings.png" link="./Generar_Carga" />
+        <AdminCard title="Agregar Carga" iconName="Add_Book.png" link="./Agregar_Carga" />
+        <AdminCard title="Generar Carga" iconName="Add_Documents.png" link="./Generar_Carga" />
       </>
     );
   })()}

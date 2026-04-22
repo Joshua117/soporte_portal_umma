@@ -13,8 +13,5 @@ import ImageSwitcher from '@site/src/components/ImageSwitcher';
 
 # Control de Asistencia
 
-## 
-
-## 
 
 </DualLayout>

@@ -12,12 +12,6 @@ import DualLayout from '@site/src/components/DualLayout';
   stickyImage={true}
 >
 
-# Lista Docentes
-
-## Boletos
-
-Para poder agregar los [Boletos](/docs/Administrativos/Transporte_UMMA/Boletos) para ir a otro módulo.
-
-
+## 
 
 </DualLayout>

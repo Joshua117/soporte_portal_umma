@@ -1,8 +1,10 @@
 ---
+title: Ajustes Visita
 hide_table_of_contents: true
 ---
 
 import React, { useState, useEffect } from 'react';
+import Link from '@docusaurus/Link';
 import IphoneWrapper from '@site/src/components/IphoneWrapper';
 
 export const RegistroSlider = () => {
@@ -38,9 +40,9 @@ export const RegistroSlider = () => {
     
     {/* Columna de texto */}
     <div className="col col--7"> 
-      ## Grado Escolar
+      ## Configurar Areas de Visita
       <p>
-        Para poder agregar los <a href="/docs/Administrativos/Nada/Nada">Nada</a> para ir a otro módulo.
+      Este módulo optimiza la recepción y canalización de visitantes o personas que acuden a realizar trámites administrativos a áreas específicas de la institución. Al registrar el ingreso, se especifica el motivo de la visita (por ejemplo: pagos, solicitudes de información, entre otros), lo que permite al sistema enviar una notificación automática al empleado responsable del área correspondiente. El proceso se gestiona a través del <Link to="/docs/Administrativos/Seguridad/Modo_Tablet" className="link-destacado">Modo Tablet</Link>, garantizando un control preciso y una bitácora detallada del flujo de personas que ingresan a las instalaciones.
       </p>
     </div>
 
