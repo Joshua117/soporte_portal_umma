@@ -19,7 +19,7 @@ pagination_prev: null
     <h3>Gestión Docentes</h3>
   </a>
   <a href="./Gestion_Personal/" className="card-total">
-    <img src={require('@site/src/components/Icons/person add.png').default} className="icon-admin-svg" />
+    <img src={require('@site/src/components/Icons/person_add.png').default} className="icon-admin-svg" />
     <h3>Gestión Personal</h3>
   </a>
   <a href="./Carga_Academica/" className="card-total">
