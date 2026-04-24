@@ -9,7 +9,7 @@ pagination_prev: null
 <div className="grid-gestion-total">
 
   <a href="./Agregar_Estudiantes" className="card-total">
-    <img src={require('@site/src/components/Icons/person add.png').default} className="icon-admin-svg" />
+    <img src={require('@site/src/components/Icons/person_add.png').default} className="icon-admin-svg" />
     <h3>Agregar Estudiantes</h3>
   </a>
 
