@@ -10,7 +10,7 @@ pagination_prev: null
     const AdminCard = require('@site/src/components/AdminCard').default;
     return (
       <>
-        <AdminCard title="Agregar Docente" iconName="person add.png" link="./Agregar_Docente" />
+        <AdminCard title="Agregar Docente" iconName="person_add.png" link="./Agregar_Docente" />
         <AdminCard title="Control Asistencia" iconName="calendar.png" link="./Control_Asistencia" />
         <AdminCard title="Formatos Docente" iconName="Folder.png" link="./Formatos_Docente" />
         <AdminCard title="Gafetes Docentes" iconName="Card.png" link="./Gafetes_Docentes" />
