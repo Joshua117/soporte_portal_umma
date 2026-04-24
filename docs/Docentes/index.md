@@ -11,7 +11,7 @@ title: Sección Docentes
         <AdminCard title="Control Asistencias" iconName="Date range.png" link="./Control_asistencias" />
         <AdminCard title="Formatos" iconName="Forms.png" link="./Formatos" />
         <AdminCard title="Horario de Clases" iconName="Clock.png" link="./Horario_Clases" />
-        <AdminCard title="Horarios" iconName="CalendarClock.png" link="./Horarios" />
+        <AdminCard title="Materias" iconName="Book2.png" link="./Materias" />
       </>
     );
   })()}
