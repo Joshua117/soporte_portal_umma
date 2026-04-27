@@ -11,30 +11,23 @@ Este módulo es la herramienta principal para el monitoreo de la puntualidad y e
 ### Detalle de los Registros
 Cada entrada en este módulo proporciona una radiografía completa de la actividad docente en cada sesión de clase:
 
-Información General: Fecha de la clase y Asignatura impartida.
+* **Información General:** Fecha de la clase y Asignatura impartida.
+* **Estado de Asistencia:** Indica si el docente Asistió o Faltó a la sesión programada.
 
-Estado de Asistencia: Indica si el docente Asistió o Faltó a la sesión programada.
-
-#### Control Horario:
-
-Horario Asignado: El bloque de tiempo estipulado para la materia.
-
-Registro de Entrada y Salida: Tiempos reales en los que el docente marcó su actividad.
-
-Retardos: Registro automático en caso de que el docente exceda el tiempo de tolerancia para el inicio de la clase.
+#### Control Horario
+* **Horario Asignado:** El bloque de tiempo estipulado para la materia.
+* **Registro de Entrada y Salida:** Tiempos reales en los que el docente marcó su actividad.
+* **Retardos:** Registro automático en caso de que el docente exceda el tiempo de tolerancia para el inicio de la clase.
 
 ### Gestión de Reposiciones
 El sistema ofrece un apartado especial para la recuperación de clases, permitiendo dar seguimiento a la cobertura total del temario:
 
-Fecha de Reposición: Fecha exacta en la que se llevará a cabo la sesión recuperada.
-
-Modalidad: Indicador de si la clase de reposición se impartirá de forma Presencial o Virtual, facilitando la logística de espacios o recursos digitales necesarios.
+* **Fecha de Reposición:** Fecha exacta en la que se llevará a cabo la sesión recuperada.
+* **Modalidad:** Indicador de si la clase de reposición se impartirá de forma Presencial o Virtual, facilitando la logística de espacios o recursos digitales necesarios.
 
 ### Propósito del Módulo
 La centralización de estos datos permite a la institución:
 
-Auditoría Académica: Verificar que todas las horas de clase programadas sean cubiertas.
-
-Transparencia: Mantener un historial objetivo sobre faltas y retardos.
-
-Flexibilidad Administrativa: Coordinar de manera ordenada las clases de reposición, asegurando que los alumnos reciban la totalidad de los contenidos del programa.
+* **Auditoría Académica:** Verificar que todas las horas de clase programadas sean cubiertas.
+* **Transparencia:** Mantener un historial objetivo sobre faltas y retardos.
+* **Flexibilidad Administrativa:** Coordinar de manera ordenada las clases de reposición, asegurando que los alumnos reciban la totalidad de los contenidos del programa.

@@ -1,24 +1,27 @@
 ---
-title: Choferes
+title: Boletos
+sidebar_class_name: hidden
 hide_table_of_contents: true
 ---
 
 import DualLayout from '@site/src/components/DualLayout';
-import ImageSwitcher from '@site/src/components/ImageSwitcher';
 
-<DualLayout stickyImage={true} rightContent={
-  <ImageSwitcher images={["/img/Transporte/PanelChof.jpg", "/img/Transporte/AgregarChof.jpg"]} />
-}>
+<DualLayout 
+  imageSrc="/img/Transporte/AgregarServ.jpg" 
+  altText="Agregar Servicio" 
+  stickyImage={true}
+>
 
-# Choferes
-El personal de choferes es responsable de la operación y supervisión de las unidades de transporte. Cada conductor tiene asignada una unidad específica, siendo responsable de su cuidado preventivo y del mantenimiento del orden dentro del vehículo.
+## Boletos
 
-Funciones y responsabilidades:
-Validación de acceso: Tienen la responsabilidad crítica de escanear los boletos de los alumnos al abordar, asegurando un registro preciso de los pasajeros que ingresan a la unidad.
+El sistema permite la emisión de boletos vinculados directamente a la matrícula del alumno. Al momento de generar un acceso, el sistema valida la disponibilidad en tiempo real, permitiendo al administrador asignar un asiento específico y seleccionar el horario correspondiente, garantizando así una ocupación organizada y sin conflictos.
 
-Consulta de información: A través de la interfaz del sistema, pueden consultar los horarios programados y la disponibilidad de asientos en tiempo real.
+### Funcionalidades Destacadas
 
-Restricciones del sistema: Por motivos de seguridad y control administrativo, los choferes cuentan con acceso de solo lectura. Esto significa que no tienen permisos para modificar horarios, asignar asientos ni generar nuevos boletos; su capacidad operativa se limita exclusivamente a la validación de accesos.
+* **Emisión y Corrección:** El administrador cuenta con la flexibilidad de emitir boletos de manera recurrente o realizar ajustes manuales en caso de cambios operativos, asegurando que siempre exista un registro vigente para el usuario.
+* **Gestión de Asientos Bloqueados:** Es posible inhabilitar lugares específicos mediante un bloqueo de asiento. Esta funcionalidad es crítica para dos escenarios:
+    * **Mantenimiento:** Inhabilitar lugares dañados o en reparación para evitar su asignación.
+    * **Reservas Especiales:** Reservar espacios exclusivos para personal, invitados o necesidades operativas, garantizando que estos asientos no sean ocupados por el flujo regular de alumnos.
+* **Automatización del Ciclo de Vida:** Para optimizar la administración diaria, el sistema ejecuta un proceso de reset automático al finalizar la jornada. Este proceso limpia el registro de boletos y libera todos los asientos, asegurando que la plataforma esté lista y configurada correctamente para el inicio del siguiente día, eliminando el riesgo de errores humanos por olvidos en la limpieza manual.
 
-Programación: Cada chofer opera bajo un esquema de rutas, horarios y días asignados previamente por la administración para garantizar la cobertura del servicio.
 </DualLayout>

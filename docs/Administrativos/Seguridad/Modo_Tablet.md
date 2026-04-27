@@ -1,5 +1,6 @@
 ---
 title: Modo Tablet
+sidebar_position: 1
 hide_table_of_contents: true
 ---
 
@@ -34,26 +35,20 @@ export const RegistroSlider = () => {
   );
 };
 
-{/* --- ESTRUCTURA RESPONSIVA FINAL --- */}
 <div className="container margin-vert--lg padding-horiz--lg">
   <div className="row">
     
     {/* Columna de texto */}
     <div className="col col--7"> 
       ## Modo Tablet
-      <p>
-      Nos sirve para el ingreso a las instalaciones mediante el Modo Tablet que sigue un flujo estructurado para garantizar la seguridad y agilizar la atención. Para completar el registro, el visitante deberá realizar los siguientes pasos:
+      
+      El acceso a las instalaciones mediante el Modo Tablet sigue un flujo estructurado diseñado para garantizar la seguridad y agilizar la atención. Para completar el registro de manera correcta, el visitante deberá seguir estos pasos:
 
-Captura de identidad: Se requiere la toma de una fotografía para el registro del visitante.
-
-Datos personales: Ingreso de nombre y apellidos completos en los campos correspondientes.
-
-Destino y Notificación: Selección del área de visita. El sistema notificará automáticamente al departamento correspondiente mediante la configuración establecida en <Link to="/docs/Administrativos/Seguridad/Ajustes" className="link-destacado">Ajustes Visita</Link>, permitiendo brindar una atención más eficiente.
-
-Contacto: Provisión de un número telefónico para cualquier comunicación necesaria.
-
-Vehículo: En caso de arribar en vehículo, se deberán registrar los datos del mismo en el campo habilitado para ello.
-      </p>
+      * **Captura de identidad:** Se requiere la toma de una fotografía para el registro gráfico del visitante.
+      * **Datos personales:** Ingreso de nombre y apellidos completos en los campos correspondientes.
+      * **Destino y Notificación:** Selección del área de visita. El sistema notificará automáticamente al departamento correspondiente mediante la configuración establecida en <Link to="/docs/Administrativos/Seguridad/Ajustes" className="link-destacado">Ajustes Visita</Link>, permitiendo brindar una atención más eficiente.
+      * **Contacto:** Provisión de un número telefónico para cualquier comunicación necesaria.
+      * **Vehículo:** En caso de arribar en vehículo, se deberán registrar los datos del mismo en el campo habilitado para ello.
     </div>
 
     {/* Columna del slider */}

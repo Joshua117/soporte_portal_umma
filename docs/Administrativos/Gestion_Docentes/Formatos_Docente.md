@@ -4,32 +4,56 @@ sidebar_position: 3
 hide_table_of_contents: true
 ---
 
-import DualLayout from '@site/src/components/DualLayout';
-import ImageSwitcher from '@site/src/components/ImageSwitcher';
+import React, { useState, useEffect } from 'react';
+import IphoneWrapper from '@site/src/components/IphoneWrapper';
 
-<DualLayout stickyImage={true} rightContent={
-  <ImageSwitcher images={["/img/DocentesPanel/FormatosDoc.jpg", "/img/DocentesPanel/AgregarFor.jpg"]} />
-}>
+export const RegistroSlider = () => {
+  const [index, setIndex] = useState(0);
+  const imagenes = [
+    '/img/DocentesPanel/FormatosDoc.jpg', 
+    '/img/DocentesPanel/AgregarFor.jpg'
+  ];
 
-# Formatos
-Este módulo actúa como el repositorio centralizado de toda la documentación esencial del profesorado. Su objetivo es estandarizar la recopilación, almacenamiento y consulta de la información necesaria para el ciclo de vida laboral del docente, desde su etapa de contratación hasta su evaluación continua.
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev === imagenes.length - 1 ? 0 : prev + 1));
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
 
-Catálogo de Documentación
-El sistema gestiona una variedad de formatos que permiten obtener una visión integral del perfil y la labor docente:
+  return (
+    <IphoneWrapper>
+      <img 
+        src={imagenes[index]} 
+        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'opacity 0.5s ease-in-out' }} 
+        alt="Formatos" 
+      />
+    </IphoneWrapper>
+  );
+};
 
-Curriculum Vitae (CV): Registro detallado de la trayectoria profesional, formación académica y experiencia previa del docente.
+<div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '70px', paddingLeft: '50px', alignItems: 'start' }}>
+  
+  <div> 
+    ## Formatos
 
-Planes Programáticos: Documentos que detallan los contenidos, objetivos y metodologías que el docente impartirá, asegurando la alineación con los requerimientos institucionales.
+    Este módulo actúa como el repositorio centralizado de toda la documentación esencial del profesorado. Su objetivo es estandarizar la recopilación, el almacenamiento y la consulta de la información necesaria para el ciclo de vida laboral del docente, desde su contratación hasta su evaluación continua.
 
-Reportes de Desempeño: Historial de evaluaciones y métricas sobre la labor del docente en el aula, permitiendo un seguimiento constante de la calidad académica.
+    ### Catálogo de Documentación
+    El sistema gestiona diversos formatos que permiten obtener una visión integral del perfil y la labor docente:
 
-Propósito del Módulo
-La digitalización de estos formatos en una plataforma accesible permite:
+    * **Curriculum Vitae (CV):** Registro detallado de la trayectoria profesional, la formación académica y la experiencia previa del docente.
+    * **Planes Programáticos:** Documentos que detallan los contenidos, objetivos y metodologías de enseñanza, asegurando la alineación con los requerimientos institucionales.
+    * **Reportes de Desempeño:** Historial de evaluaciones y métricas sobre la labor del docente en el aula, permitiendo un seguimiento constante de la calidad académica.
 
-Agilidad en la Contratación: Centralizar la información para que el área de Recursos Humanos pueda consultar y validar perfiles de manera rápida durante los procesos de reclutamiento.
+    > **Propósito del Módulo:** La digitalización de estos formatos permite optimizar procesos críticos:
+    > * **Agilidad en la Contratación:** Centraliza la información para que Recursos Humanos pueda validar perfiles rápidamente.
+    > * **Inducción Efectiva:** Facilita el acceso a políticas y estándares institucionales desde el primer día.
+    > * **Eficiencia en la Búsqueda:** Elimina el uso de archivos físicos dispersos, creando un proceso digital ordenado y consultable en segundos.
+  </div>
 
-Inducción Efectiva: Facilitar el acceso del docente a los documentos oficiales de la escuela, asegurando que conozca los planes, políticas y estándares que la institución exige desde su primer día.
+<div style={{ width: '300px', position: 'sticky', top: '100px' }}>
+    <RegistroSlider />
+  </div>
 
-Eficiencia en la Búsqueda: Eliminar el uso de archivos físicos dispersos, convirtiendo la gestión docente en un proceso digital ordenado y fácil de consultar.
-
-</DualLayout>
+</div>

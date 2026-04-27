@@ -1,4 +1,5 @@
 ---
+title: Alumnos Ausentes
 sidebar_label: Alumnos Ausentes
 sidebar_position: 1
 hide_table_of_contents: true
@@ -14,13 +15,8 @@ En este apartado, el docente puede visualizar de manera clara el historial de al
 ## Registrar una nueva falta
 El sistema permite anexar inasistencias de manera rápida mediante un formulario simplificado. Para registrar una falta, siga estos pasos:
 
-Acceso: Ingrese al apartado de "Registro de Faltas".
-
-Selección de la Clase: Elija la materia/clase correspondiente de su carga académica donde ocurrió la inasistencia.
-
-Definición de Fecha: Seleccione en el calendario el día exacto en el que el alumno no se presentó.
-
-Identificación del Alumno: Ingrese la matrícula del alumno correspondiente. Al introducirla, el sistema validará que el estudiante pertenezca a la clase seleccionada.
-
-Confirmación: Haz clic en "Agregar Falta" o "Guardar" para registrar el evento en el historial del alumno.
-
+1. **Acceso:** Ingrese al apartado de "Registro de Faltas".
+2. **Selección de la Clase:** Elija la materia/clase correspondiente de su carga académica donde ocurrió la inasistencia.
+3. **Definición de Fecha:** Seleccione en el calendario el día exacto en el que el alumno no se presentó.
+4. **Identificación del Alumno:** Ingrese la matrícula del alumno correspondiente. Al introducirla, el sistema validará que el estudiante pertenezca a la clase seleccionada.
+5. **Confirmación:** Haz clic en "Agregar Falta" o "Guardar" para registrar el evento en el historial del alumno.

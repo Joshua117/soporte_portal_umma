@@ -38,34 +38,27 @@ export const RegistroSlider = () => {
     
 ## Agregar Personal Administrativo
 
-Este módulo permite el alta eficiente del personal administrativo dentro del sistema, garantizando la centralización de su información y la correcta asignación de permisos operativos. El registro estructurado facilita la integración rápida de nuevos colaboradores a la estructura institucional.
+    Este módulo permite el alta eficiente del personal administrativo dentro del sistema, garantizando la centralización de su información y la correcta asignación de permisos operativos. El registro estructurado facilita la integración rápida de nuevos colaboradores a la estructura institucional.
 
-### Datos Requeridos para el Alta
-Para completar el registro de un administrativo, es necesario capturar la siguiente información:
+    ### Datos Requeridos para el Alta
+    Para completar el registro de un administrativo, es necesario capturar la siguiente información:
 
-#### Información de Identidad:
+    * **Información de Identidad:**
+        * **Nombre y Apellidos:** Identificación completa del colaborador.
+        * **Fecha de Nacimiento:** Dato esencial para el expediente personal.
+        * **Teléfono:** Número de contacto directo para comunicación interna.
 
-Nombre y Apellidos: Identificación completa del colaborador.
-
-Fecha de Nacimiento: Dato esencial para el expediente personal.
-
-Teléfono: Número de contacto directo para comunicación interna.
-
-#### Información Institucional:
-
-Campus: Sede o campus al cual se asignará al colaborador.
-
-Área / Departamento: Unidad de trabajo específica donde desempeñará sus funciones.
-
-Correo Institucional: Dirección de correo electrónico oficial de la institución.
-
-Usuario de Acceso: Nombre de usuario único para ingresar a los módulos y herramientas especiales del sistema administrativo.
+    * **Información Institucional:**
+        * **Campus:** Sede o campus al cual se asignará al colaborador.
+        * **Área / Departamento:** Unidad de trabajo específica donde desempeñará sus funciones.
+        * **Correo Institucional:** Dirección de correo electrónico oficial de la institución.
+        * **Usuario de Acceso:** Nombre de usuario único para ingresar a los módulos y herramientas especiales del sistema administrativo.
   </div>
 
-  <div style={{ width: '300px' }}>
+  {/* Columna del Slider */}
+  <div style={{ flex: '0 0 300px' }}>
     <RegistroSlider />
   </div>
 
 </div>
 
-{/* Aquí puedes mantener tus <style> globales o moverlos a un archivo .css */}

@@ -12,24 +12,19 @@ import Link from '@docusaurus/Link';
   stickyImage={true}
 >
 
-# Agregar Servicios
+## Agregar Servicio
 
-## <Link to="/docs/Administrativos/Transporte_UMMA/Choferes" className="link-destacado">Choferes</Link>
-En este apartado de choferes, puedes gestionar el catálogo de conductores.
+Para configurar un nuevo servicio, el sistema requiere la interacción con diversos módulos que aseguran una gestión integral del transporte:
 
-## <Link to="/docs/Administrativos/Transporte_UMMA/Horarios" className="link-destacado">Horarios</Link>
-Módulo de Horarios
+* **<Link to="/docs/Administrativos/Transporte_UMMA/Choferes" className="link-destacado">Choferes</Link>:** Gestión y consulta del catálogo de conductores disponibles.
+* **<Link to="/docs/Administrativos/Transporte_UMMA/Horarios" className="link-destacado">Horarios</Link>:** Configuración de los tiempos de operación y rutas.
+* **<Link to="/docs/Administrativos/Transporte_UMMA/Vehiculos" className="link-destacado">Vehículos</Link>:** Administración completa de la flotilla.
+* **<Link to="/docs/Administrativos/Grados_y_Areas_Escolares/Añadir_Editar" className="link-destacado">Grados y Áreas Escolares</Link>:** Definición de los niveles educativos (Bachillerato, Licenciatura y Posgrado) vinculados al servicio.
 
-## <Link to="/docs/Administrativos/Transporte_UMMA/Vehiculos" className="link-destacado">Vehículos</Link>
-El módulo de Vehiculos permite administrar la flotilla. 
+### Tipo de Servicio
+El sistema permite dos clasificaciones de servicio, dependiendo del objetivo del traslado:
 
-## <Link to="/docs/Administrativos/Grados_y_Areas_Escolares/Añadir_Editar" className="link-destacado">Grados y Areas Escolares</Link>
-En la sección de Grados y Areas Escolares, se definen los niveles educativos asociados al transporte (Bachillerato, Licenciatura y Posgrado). 
+* **Normal:** Corresponde a la operación diaria al finalizar la jornada académica, programada de lunes a sábados.
+* **Especial:** Destinado a salidas fuera de la rutina, como actividades extracurriculares o necesidades específicas de la institución, permitiendo una programación flexible por día.
 
-## Tipo de Servicio
-Existen dos clasificaciones de servicio: "Normal" y "Especial". Aunque ambos tienen el objetivo de transportar a los alumnos, cumplen funciones distintas:
-
-Normal: Corresponde a la operación diaria al finalizar la jornada académica. Estos van de Lunes a Sabados.
-
-Especial: Se destina a salidas fuera de la rutina, como actividades extracurriculares o necesidades específicas de la institución. Se programa un dia
 </DualLayout>

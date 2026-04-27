@@ -34,16 +34,19 @@ export const RegistroSlider = () => {
   );
 };
 
-{/* --- ESTRUCTURA RESPONSIVA FINAL --- */}
 <div className="container margin-vert--lg padding-horiz--lg">
   <div className="row">
     
     {/* Columna de texto */}
     <div className="col col--7"> 
-      ## Configurar Areas de Visita
-      <p>
-      Este módulo optimiza la recepción y canalización de visitantes o personas que acuden a realizar trámites administrativos a áreas específicas de la institución. Al registrar el ingreso, se especifica el motivo de la visita (por ejemplo: pagos, solicitudes de información, entre otros), lo que permite al sistema enviar una notificación automática al empleado responsable del área correspondiente. El proceso se gestiona a través del <Link to="/docs/Administrativos/Seguridad/Modo_Tablet" className="link-destacado">Modo Tablet</Link>, garantizando un control preciso y una bitácora detallada del flujo de personas que ingresan a las instalaciones.
-      </p>
+      ## Configurar Áreas de Visita
+
+      Este módulo optimiza la recepción y canalización de visitantes o personas que acuden a realizar trámites administrativos a áreas específicas de la institución. Al registrar el ingreso, se especifica el motivo de la visita (por ejemplo: pagos, solicitudes de información, entre otros), lo que permite al sistema enviar una notificación automática al empleado responsable del área correspondiente.
+
+      ### Características del Módulo
+      * **Gestión por Modo Tablet:** El proceso se centraliza a través del <Link to="/docs/Administrativos/Seguridad/Modo_Tablet" className="link-destacado">Modo Tablet</Link>, permitiendo un registro rápido y autónomo.
+      * **Notificaciones en Tiempo Real:** Aviso automático al empleado responsable del área visitada al momento del registro.
+      * **Control y Trazabilidad:** Bitácora detallada del flujo de personas que ingresan a las instalaciones, garantizando seguridad y orden administrativo.
     </div>
 
     {/* Columna de la imagen */}
