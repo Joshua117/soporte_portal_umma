@@ -12,8 +12,6 @@ import DualLayout from '@site/src/components/DualLayout';
   stickyImage={true}
 >
 
-## Listado de Docentes
-
 Este módulo funciona como el directorio principal y base de datos operativa del profesorado que colabora en la institución. Permite visualizar, gestionar y mantener actualizado el expediente de cada docente, garantizando que la información administrativa y académica sea precisa.
 
 ### Estructura del Registro

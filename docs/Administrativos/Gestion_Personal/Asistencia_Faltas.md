@@ -24,7 +24,6 @@ import PageLayout from '@site/src/components/PageLayout';
       }} 
     />
 
-## Asistencias y Faltas
 
     Este módulo es la herramienta central para el monitoreo, control y verificación de la asistencia de todo el personal de la institución. Su objetivo es garantizar la integridad del registro mediante el uso de tecnología de reconocimiento biométrico, asegurando que la identidad del usuario coincida con su entrada o salida.
 

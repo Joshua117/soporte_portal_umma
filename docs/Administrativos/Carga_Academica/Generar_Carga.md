@@ -22,7 +22,6 @@ import PageLayout from '@site/src/components/PageLayout';
     }} 
   />
 
-## Generar Listado
 
 El módulo de **Generar Listado** es la herramienta clave para filtrar y visualizar la oferta académica de forma precisa. Su objetivo es brindarte una visión clara y organizada de las actividades que se imparten en la institución, facilitando la toma de decisiones basada en datos específicos.
 

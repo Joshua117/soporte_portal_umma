@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import IphoneWrapper from '../IphoneWrapper';
+import styles from './styles.module.css';
 
 const Iz1 = require('../Icons/Iz1.png').default;
 const De1 = require('../Icons/De1.png').default;
@@ -17,61 +18,43 @@ export default function ImageSwitcher({ images }: ImageSwitcherProps) {
   const prevImage = () => setCurrentIndex((prev) => Math.max(prev - 1, 0));
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px' }}>
+    <div className={styles.container}>
       
-      <IphoneWrapper>
-        <img 
-          src={images[currentIndex]} 
-          alt={`Vista ${currentIndex + 1}`} 
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-        />
-      </IphoneWrapper>
+      {/* El teléfono se queda arriba por el flujo del container */}
+      <div className={styles.phoneSection}>
+        <IphoneWrapper>
+          <img 
+            src={images[currentIndex]} 
+            alt={`Vista ${currentIndex + 1}`} 
+            className={styles.carouselImage}
+          />
+        </IphoneWrapper>
+      </div>
 
-      <div style={{ display: 'flex', gap: '15px', alignItems: 'center', justifyContent: 'center' }}>
-        
-        {/* Botón Anterior: Deshabilitado si es la imagen 0 */}
+      {/* Los controles aparecen siempre debajo */}
+      <div className={styles.controls}>
         <button 
           onClick={prevImage} 
-          style={btnStyle}
+          className={styles.navButton}
           disabled={currentIndex === 0}
         >
-          <img className="light-only" src={Iz1} alt="Anterior" style={iconStyle} />
-          <img className="dark-only" src={Iz} alt="Anterior" style={iconStyle} />
+          <img className={`light-only ${styles.navIcon}`} src={Iz1} alt="Anterior" />
+          <img className={`dark-only ${styles.navIcon}`} src={Iz} alt="Anterior" />
         </button>
         
-        <span style={{ fontSize: '1rem', fontWeight: 'bold', color: 'var(--ifm-color-emphasis-700)', minWidth: '40px', textAlign: 'center' }}>
+        <span className={styles.counter}>
           {currentIndex + 1} / {images.length}
         </span>
 
-        {/* Botón Siguiente: Deshabilitado si es la última imagen */}
         <button 
           onClick={nextImage} 
-          style={btnStyle}
+          className={styles.navButton}
           disabled={currentIndex === images.length - 1}
         >
-          <img className="light-only" src={De1} alt="Siguiente" style={iconStyle} />
-          <img className="dark-only" src={De} alt="Siguiente" style={iconStyle} />
+          <img className={`light-only ${styles.navIcon}`} src={De1} alt="Siguiente" />
+          <img className={`dark-only ${styles.navIcon}`} src={De} alt="Siguiente" />
         </button>
-        
       </div>
     </div>
   );
 }
-
-const btnStyle = {
-  background: 'none',
-  border: 'none',
-  cursor: 'pointer',
-  padding: '8px',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  borderRadius: '50%',
-  transition: 'background-color 0.2s ease',
-};
-
-const iconStyle = { 
-  width: '24px', 
-  height: '24px', 
-  display: 'block' 
-};

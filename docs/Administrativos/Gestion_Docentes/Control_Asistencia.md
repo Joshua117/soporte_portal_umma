@@ -26,18 +26,24 @@ export const RegistroSlider = () => {
     <IphoneWrapper>
       <img 
         src={imagenes[index]} 
-        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'opacity 0.5s ease-in-out' }} 
+        style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
         alt="Control Asistencia" 
       />
     </IphoneWrapper>
   );
 };
 
-<div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '70px', paddingLeft: '50px', alignItems: 'start' }}>
+{/* Contenedor Adaptable: Texto izquierda, Teléfono derecha (y arriba en móvil) */}
+<div style={{ 
+  display: 'flex', 
+  flexWrap: 'wrap-reverse', 
+  gap: '40px', 
+  padding: '10px 20px',
+  alignItems: 'flex-start'
+}}>
   
   {/* Columna de Texto */}
-  <div> 
-    ## Control de Asistencia
+  <div style={{ flex: '1 1 400px' }}> 
 
     Este módulo permite el seguimiento integral de la actividad académica del profesorado. Su función es centralizar el registro de asistencia, gestionar los horarios de clase y administrar las incidencias o reposiciones de manera eficiente, garantizando que la operatividad académica esté siempre documentada.
 
@@ -46,21 +52,25 @@ export const RegistroSlider = () => {
 
     * **Información del Docente:** Identificación del profesor y asignatura impartida.
     * **Registro de Tiempo:** Horarios asignados, hora de entrada y hora de salida real.
-    * **Estado de Asistencia:** Verificación de presencia. En caso de presentarse un retardo, el sistema calcula y registra automáticamente el tiempo exacto de demora.
-    * **Asignación de Área:** Vinculación directa con el <Link to="/docs/Administrativos/Grados_y_Areas_Escolares/Añadir_Editar" className="link-destacado">Área</Link> de especialidad del maestro, permitiendo una mejor organización administrativa.
+    * **Estado de Asistencia:** Verificación de presencia. En caso de presentarse un retardo, el sistema calcula automáticamente el tiempo exacto de demora.
+    * **Asignación de Área:** Vinculación directa con el <Link to="/docs/Administrativos/Grados_y_Areas_Escolares/Añadir_Editar" className="link-destacado">Área</Link> de especialidad del maestro.
 
     ### Gestión de Reposición de Clases
-    Cuando un docente no puede asistir a una sesión programada, el sistema ofrece una herramienta de gestión de incidencias para asegurar que el programa académico no se vea afectado:
+    Cuando un docente no puede asistir a una sesión programada, el sistema ofrece una herramienta de gestión de incidencias:
 
     * **Programación de Reposición:** Permite asignar una nueva fecha para recuperar la clase perdida.
-    * **Modalidad de Impartición:** Se especifica el entorno de la clase de reposición, permitiendo elegir entre formato Virtual o Presencial.
-    * **Control de Ubicación:** Selección del salón o espacio digital donde se llevará a cabo la sesión de recuperación.
+    * **Modalidad de Impartición:** Se especifica el entorno, permitiendo elegir entre formato Virtual o Presencial.
+    * **Control de Ubicación:** Selección del salón o espacio digital para la sesión de recuperación.
 
-    > **Propósito del Módulo:** Esta centralización de datos es esencial para la administración, ya que permite generar reportes precisos sobre el cumplimiento de los horarios, evaluar la puntualidad y asegurar que todos los contenidos curriculares se impartan, facilitando la toma de decisiones ante cualquier eventualidad en el calendario escolar.
+    > **Propósito del Módulo:** Esta centralización de datos es esencial para la administración, ya que permite generar reportes precisos sobre el cumplimiento de horarios, evaluar la puntualidad y asegurar que todos los contenidos curriculares se impartan.
   </div>
 
-  {/* Columna del Slider (Sticky) */}
-  <div style={{ width: '300px', position: 'sticky', top: '100px' }}>
+  {/* Columna del Slider - Estática y Centrada en móvil */}
+  <div style={{ 
+    flex: '0 0 auto', 
+    margin: '0 auto',
+    position: 'relative' /* Estático para que no flote al hacer scroll */
+  }}>
     <RegistroSlider />
   </div>
 

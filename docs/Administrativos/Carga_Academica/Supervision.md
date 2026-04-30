@@ -22,7 +22,6 @@ import PageLayout from '@site/src/components/PageLayout';
     }} 
   />
 
-## Supervisión de Clases
 
 Este módulo funciona como el panel central de control diario, permitiendo a la administración tener una visión clara y en tiempo real de todas las actividades académicas programadas para el día. Su objetivo es centralizar la información operativa para facilitar el seguimiento de la puntualidad y el cumplimiento del programa escolar.
 

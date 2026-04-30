@@ -5,6 +5,14 @@ sidebar_position: 3
 hide_table_of_contents: true
 ---
 
+import DualLayout from '@site/src/components/DualLayout';
+
+<DualLayout 
+  imageSrc="/img/Alumnos/Transporte.png" 
+  altText="Agregar Servicio" 
+  stickyImage={true}
+>
+
 ## Transporte 
 
 Este módulo funciona como la interfaz principal para gestionar el transporte institucional. En él, podrás consultar todas las unidades disponibles, visualizar si tienen disponibilidad o si ya están llenas para el día en curso.
@@ -22,3 +30,5 @@ Es muy importante tener claros los lineamientos para evitar problemas al momento
 * **Límite por alumno:** Solo se permite solicitar un boleto por día. Al ser una oportunidad única por jornada, es fundamental que planifiques bien tu viaje y aproveches tu lugar.
 * **Cancelaciones e imprevistos:** Si llegaras a cancelar tu boleto o, por algún motivo, perdieras tu oportunidad única del día, el sistema no te permitirá generar otro por tu cuenta.
 * **Asistencia administrativa:** En caso de haber perdido tu oportunidad, deberás acudir directamente con el personal administrativo. Ellos son los únicos que pueden gestionar la creación de un nuevo boleto. Esta medida se aplica con la finalidad de asegurar que el servicio sea equitativo y que todos los alumnos tengan la posibilidad de obtener un lugar.
+
+</DualLayout>

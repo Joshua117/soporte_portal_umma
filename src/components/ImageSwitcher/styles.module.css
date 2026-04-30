@@ -1,0 +1,86 @@
+/* --- CONTENEDOR PRINCIPAL --- */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* Forzamos que sea estático para que no se mueva raro en móvil */
+  position: static !important; 
+  gap: 15px;
+}
+
+/* --- SECCIÓN DEL TELÉFONO --- */
+.phoneSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: static !important;
+}
+
+/* Esta es la imagen que va DENTRO del iPhone */
+.carouselImage {
+  width: 100%;
+  height: 100%;
+  /* 'cover' para que llene todo el marco del celular profesionalmente */
+  object-fit: cover; 
+  display: block;
+}
+
+/* --- CONTROLES (Flechas y Contador) --- */
+.controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.navButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.navButton:active {
+  background-color: rgba(0,0,0,0.05); /* Feedback al tocar en móvil */
+}
+
+.navButton:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.navIcon {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+.counter {
+  font-size: 1rem;
+  font-weight: bold;
+  min-width: 45px;
+  text-align: center;
+}
+
+/* --- AJUSTES PARA CELULAR --- */
+@media (max-width: 850px) {
+  .container {
+    gap: 10px;
+  }
+
+  .navButton {
+    padding: 15px; /* Más fácil de picar con el dedo */
+  }
+  
+  .navIcon {
+    width: 35px;
+    height: 35px;
+  }
+}

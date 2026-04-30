@@ -1,23 +1,30 @@
 .tabletFrame {
-  border: 10px solid #2d2d2d; /* Marco grueso */
-  border-radius: 20px;       /* Bordes redondeados */
-  padding: 5px;              /* Espacio interno */
-  background: #000;          /* Fondo negro */
+  border: 10px solid #2d2d2d; /* Marco de la tablet */
+  border-radius: 25px;
+  padding: 10px;
+  background: #000;
   overflow: hidden;
   box-shadow: 0 15px 35px rgba(0,0,0,0.4);
   width: 100%;
-  max-width: 850px;          /* Más ancho que un teléfono */
-  aspect-ratio: 4 / 3;       /* Relación de aspecto de Tablet */
+  max-width: 850px;
+  aspect-ratio: 4 / 3;
+  
+  /* --- ALINEACIÓN --- */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px auto;         /* Centrado */
+  /* flex-start hace que el contenido NO esté centrado horizontalmente (lo manda a la izquierda) */
+  justify-content: flex-start; 
+  /* Mantiene el centrado de arriba a abajo */
+  align-items: center; 
+  
+  margin: 10px auto;
+  position: relative;
 }
 
-/* Para que la imagen se ajuste bien */
+/* Si pasas una imagen directamente como children */
 .tabletFrame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 12px;
+  display: block;
 }

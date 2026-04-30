@@ -23,7 +23,7 @@ pagination_prev: null
     <h3>Gestión Personal</h3>
   </a>
   <a href="./Carga_Academica/" className="card-total">
-    <img src={require('@site/src/components/Icons/Books.png').default} className="icon-admin-svg" />
+    <img src={require('@site/src/components/Icons/collections bookmark.png').default} className="icon-admin-svg" />
     <h3>Carga Académica</h3>
   </a>
   <a href="./Ciclo/" className="card-total">

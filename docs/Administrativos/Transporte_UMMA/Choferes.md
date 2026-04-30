@@ -1,18 +1,15 @@
 ---
-title: Boletos
+title: Choferes
 sidebar_class_name: hidden
 hide_table_of_contents: true
 ---
 
 import DualLayout from '@site/src/components/DualLayout';
+import ImageSwitcher from '@site/src/components/ImageSwitcher';
 
-<DualLayout 
-  imageSrc="/img/Transporte/AgregarServ.jpg" 
-  altText="Agregar Servicio" 
-  stickyImage={true}
->
-
-## Boletos
+<DualLayout stickyImage={true} rightContent={
+  <ImageSwitcher images={["/img/Transporte/PanelChof.jpg", "/img/Transporte/AgregarChof.jpg"]} />
+}>
 
 El sistema permite la emisión de boletos vinculados directamente a la matrícula del alumno. Al momento de generar un acceso, el sistema valida la disponibilidad en tiempo real, permitiendo al administrador asignar un asiento específico y seleccionar el horario correspondiente, garantizando así una ocupación organizada y sin conflictos.
 

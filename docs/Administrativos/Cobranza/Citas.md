@@ -1,6 +1,6 @@
 ---
 title: Citas
-sidebar_position: 1
+sidebar_position: 2
 hide_table_of_contents: true
 pagination_next: Administrativos/Cobranza/index
 ---
@@ -23,9 +23,7 @@ import PageLayout from '@site/src/components/PageLayout';
     }} 
   />
 
- 
-    ## Citas
-    Este módulo centraliza la administración de los servicios de atención programada en la institución. Su función principal es organizar y visualizar todas las citas agendadas, permitiendo al personal administrativo llevar un control preciso de los flujos de atención en los diferentes módulos o "cajas" disponibles.
+  Este módulo centraliza la administración de los servicios de atención programada en la institución. Su función principal es organizar y visualizar todas las citas agendadas, permitiendo al personal administrativo llevar un control preciso de los flujos de atención en los diferentes módulos o "cajas" disponibles.
 
     ### Visualización y Búsqueda
     La interfaz permite gestionar la demanda de atención mediante las siguientes herramientas:

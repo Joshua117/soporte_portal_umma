@@ -1,19 +1,31 @@
 import React from 'react';
+import Link from '@docusaurus/Link';
 
-// Intentamos requerir el icono, pero con una gestión de errores básica
 export default function AdminCard({ title, iconName, link }) {
   let icon = null;
+  
   try {
-    // Usamos el alias @site para asegurar que siempre encuentre la carpeta
     icon = require(`@site/src/components/Icons/${iconName}`).default;
   } catch (e) {
-    console.error(`No se encontró el icono: ${iconName}`);
+    console.error(`Error cargando icono: ${iconName}`, e);
   }
-  
+
   return (
-    <div className="card-total" onClick={() => window.location.href = link}>
-      {icon && <img src={icon} alt={title} className="icon-admin-svg" />}
-      <h3>{title}</h3>
-    </div>
+    <Link to={link} className="card-total" style={{ textDecoration: 'none' }}>
+      {/* Añadimos card-content para manejar el alineamiento interno */}
+      <div className="card-content" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+        {icon ? (
+          <img 
+            src={icon} 
+            alt={title} 
+            className="icon-admin-svg" 
+            loading="lazy"
+          />
+        ) : (
+          <div className="icon-placeholder" style={{ width: '45px', height: '45px' }} />
+        )}
+        <h3>{title}</h3>
+      </div>
+    </Link>
   );
 }

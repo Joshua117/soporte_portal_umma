@@ -9,8 +9,8 @@ import IphoneWrapper from '@site/src/components/IphoneWrapper';
 export const RegistroSlider = () => {
   const [index, setIndex] = useState(0);
   const imagenes = [
-    '/img/AdministrativosPanel/Registro1.jpg', 
-    '/img/AdministrativosPanel/Registro2.jpg'
+    '/img/AdministrativosPanel/Registro1.png', 
+    '/img/AdministrativosPanel/Registro2.png'
   ];
 
   useEffect(() => {
@@ -24,19 +24,24 @@ export const RegistroSlider = () => {
     <IphoneWrapper>
       <img 
         src={imagenes[index]} 
-        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'opacity 0.5s ease-in-out' }} 
+        style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
         alt="Registro" 
       />
     </IphoneWrapper>
   );
 };
 
-
-<div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '70px', paddingLeft: '50px', alignItems: 'start' }}>
+{/* Contenedor Adaptable: Texto a la izquierda, Teléfono a la derecha (y arriba en móvil) */}
+<div style={{ 
+  display: 'flex', 
+  flexWrap: 'wrap-reverse', 
+  gap: '40px', 
+  padding: '10px 20px',
+  alignItems: 'flex-start'
+}}>
   
-  <div> 
-    
-## Agregar Personal Administrativo
+  {/* Columna de Texto */}
+  <div style={{ flex: '1 1 400px' }}> 
 
     Este módulo permite el alta eficiente del personal administrativo dentro del sistema, garantizando la centralización de su información y la correcta asignación de permisos operativos. El registro estructurado facilita la integración rápida de nuevos colaboradores a la estructura institucional.
 
@@ -55,10 +60,13 @@ export const RegistroSlider = () => {
         * **Usuario de Acceso:** Nombre de usuario único para ingresar a los módulos y herramientas especiales del sistema administrativo.
   </div>
 
-  {/* Columna del Slider */}
-  <div style={{ flex: '0 0 300px' }}>
+  {/* Columna del Slider - Estática y Centrada en móvil */}
+  <div style={{ 
+    flex: '0 0 auto', 
+    margin: '0 auto',
+    position: 'relative' 
+  }}>
     <RegistroSlider />
   </div>
 
 </div>
-

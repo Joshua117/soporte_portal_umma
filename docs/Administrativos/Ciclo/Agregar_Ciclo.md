@@ -13,8 +13,6 @@ import DualLayout from '@site/src/components/DualLayout';
   stickyImage={true}
 >
 
-## Ciclos
-
 Este módulo funciona como el eje temporal de la institución. Aquí se centraliza la administración de todos los ciclos académicos, permitiendo visualizar el historial y definir los periodos vigentes con total claridad.
 
 ### Listado de Ciclos

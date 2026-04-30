@@ -25,8 +25,6 @@ import PageLayout from '@site/src/components/PageLayout';
       }} 
     />
 
-## Seguimiento Docente
-
 Este módulo constituye el núcleo de auditoría y control de la institución. Su propósito es verificar el cumplimiento de la carga horaria, monitorear la asistencia docente y analizar el rendimiento académico para asegurar que el programa de estudios se ejecute conforme a lo planeado.
 
 ### Horas de Clase: Ciclo Escolar

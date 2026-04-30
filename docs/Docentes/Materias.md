@@ -5,7 +5,13 @@ hide_table_of_contents: true
 pagination_next: Docentes/index
 ---
 
-## Materias
+import DualLayout from '@site/src/components/DualLayout';
+
+<DualLayout 
+  imageSrc="/img/Docentes/Materias.png" 
+  altText="Agregar Servicio" 
+  stickyImage={true}
+>
 
 Este apartado está diseñado para proporcionar una consulta detallada y organizada de las materias. Su objetivo es permitir que el docente conozca a profundidad la estructura y el contenido de cada asignatura, facilitando la comprensión de lo que comprende cada una.
 
@@ -22,3 +28,5 @@ La finalidad de esta sección es proporcionar una referencia clara para que el d
 * **Identificar contenidos:** Visualizar con precisión qué temas y objetivos abarca cada materia.
 * **Consultar datos técnicos:** Tener acceso rápido a la clave y nombre oficial de las asignaturas.
 * **Analizar la estructura:** Comprender la composición académica de las materias mediante el acceso al plan de estudio correspondiente.
+
+</DualLayout>

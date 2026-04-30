@@ -4,7 +4,13 @@ sidebar_position: 2
 hide_table_of_contents: true
 ---
 
-## Permisos
+import DualLayout from '@site/src/components/DualLayout';
+
+<DualLayout 
+  imageSrc="/img/Configuracion/Permisos.jpg" 
+  altText="Agregar Servicio" 
+  stickyImage={true}
+>
 
 Este módulo es el núcleo de seguridad y control de acceso del **PortaLUMMA**. Su objetivo es definir con precisión qué acciones pueden ejecutar los distintos departamentos dentro del sistema, garantizando que cada área trabaje únicamente con las herramientas y datos necesarios para sus funciones.
 
@@ -24,3 +30,5 @@ La implementación de permisos y restricciones es vital para mantener la integri
 
 ### Configuración de Permisos
 La administración de permisos es dinámica, permitiendo adaptar el sistema a medida que la institución crece o las funciones de los departamentos evolucionan, asegurando siempre un entorno de trabajo organizado y seguro.
+
+</DualLayout>

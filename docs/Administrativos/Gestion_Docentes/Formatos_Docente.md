@@ -1,5 +1,5 @@
 ---
-sidebar_label: Formatos Docentes
+title: Formatos Docentes
 sidebar_position: 3
 hide_table_of_contents: true
 ---
@@ -25,34 +25,46 @@ export const RegistroSlider = () => {
     <IphoneWrapper>
       <img 
         src={imagenes[index]} 
-        style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'opacity 0.5s ease-in-out' }} 
+        style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
         alt="Formatos" 
       />
     </IphoneWrapper>
   );
 };
 
-<div style={{ display: 'grid', gridTemplateColumns: '1fr 300px', gap: '70px', paddingLeft: '50px', alignItems: 'start' }}>
+{/* Contenedor Adaptable: Texto a la izquierda, Teléfono a la derecha (y arriba en móvil) */}
+<div style={{ 
+  display: 'flex', 
+  flexWrap: 'wrap-reverse', 
+  gap: '40px', 
+  padding: '10px 20px',
+  alignItems: 'flex-start'
+}}>
   
-  <div> 
-    ## Formatos
+  {/* Columna de Texto */}
+  <div style={{ flex: '1 1 400px' }}> 
 
-    Este módulo actúa como el repositorio centralizado de toda la documentación esencial del profesorado. Su objetivo es estandarizar la recopilación, el almacenamiento y la consulta de la información necesaria para el ciclo de vida laboral del docente, desde su contratación hasta su evaluación continua.
+    Este módulo actúa como el repositorio centralizado de toda la documentación esencial del profesorado. Su objetivo es estandarizar la recopilación, el almacenamiento y la consulta de la información necesaria para el ciclo de vida laboral del docente.
 
     ### Catálogo de Documentación
     El sistema gestiona diversos formatos que permiten obtener una visión integral del perfil y la labor docente:
 
-    * **Curriculum Vitae (CV):** Registro detallado de la trayectoria profesional, la formación académica y la experiencia previa del docente.
-    * **Planes Programáticos:** Documentos que detallan los contenidos, objetivos y metodologías de enseñanza, asegurando la alineación con los requerimientos institucionales.
-    * **Reportes de Desempeño:** Historial de evaluaciones y métricas sobre la labor del docente en el aula, permitiendo un seguimiento constante de la calidad académica.
+    * **Curriculum Vitae (CV):** Registro detallado de la trayectoria profesional y formación académica.
+    * **Planes Programáticos:** Documentos que detallan los contenidos, objetivos y metodologías de enseñanza.
+    * **Reportes de Desempeño:** Historial de evaluaciones y métricas sobre la labor del docente en el aula.
 
     > **Propósito del Módulo:** La digitalización de estos formatos permite optimizar procesos críticos:
-    > * **Agilidad en la Contratación:** Centraliza la información para que Recursos Humanos pueda validar perfiles rápidamente.
-    > * **Inducción Efectiva:** Facilita el acceso a políticas y estándares institucionales desde el primer día.
-    > * **Eficiencia en la Búsqueda:** Elimina el uso de archivos físicos dispersos, creando un proceso digital ordenado y consultable en segundos.
+    > * **Agilidad en la Contratación:** Centraliza la información para validación rápida de perfiles.
+    > * **Inducción Efectiva:** Facilita el acceso a políticas institucionales.
+    > * **Eficiencia en la Búsqueda:** Elimina archivos físicos dispersos, creando un proceso digital ordenado.
   </div>
 
-<div style={{ width: '300px', position: 'sticky', top: '100px' }}>
+  {/* Columna del Slider - Estática y Centrada en móvil */}
+  <div style={{ 
+    flex: '0 0 auto', 
+    margin: '0 auto',
+    position: 'relative' /* Estático para evitar que flote */
+  }}>
     <RegistroSlider />
   </div>
 

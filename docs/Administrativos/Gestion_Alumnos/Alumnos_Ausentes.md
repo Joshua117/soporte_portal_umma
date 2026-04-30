@@ -6,12 +6,11 @@ hide_table_of_contents: true
 import DualLayout from '@site/src/components/DualLayout';
 
 <DualLayout 
-  imageSrc="/img/EstudiantesPanel/AlumnosAus.jpg" 
+  imageSrc="/img/EstudiantesPanel/AlumnosAus.png" 
   altText="Agregar Servicio" 
   stickyImage={true}
 >
 
-## Alumnos Ausentes
 
     Este módulo permite el monitoreo y gestión de la inasistencia tanto de alumnos como de docentes. Su objetivo es proporcionar visibilidad total sobre las faltas registradas, facilitando el seguimiento académico y administrativo.
 

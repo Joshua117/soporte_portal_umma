@@ -12,7 +12,7 @@ import PageLayout from '@site/src/components/PageLayout';
 
     {/* Imagen centrada con estilo profesional */}
     <img 
-      src="/img/AdministrativosPanel/CapturaDatosBio.png" 
+      src="/img/AdministrativosPanel/ListaPer.png" 
       alt="Lista de personal" 
       style={{ 
         width: '100%', 
@@ -24,7 +24,6 @@ import PageLayout from '@site/src/components/PageLayout';
       }} 
     />
 
-    ## Lista Personal
 
     Este módulo actúa como el repositorio central de información de todo el capital humano de la institución. Su objetivo es consolidar un expediente digital completo para cada colaborador, permitiendo una administración eficiente y una gestión precisa del talento humano.
 

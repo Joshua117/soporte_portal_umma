@@ -1,15 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
-import IphoneWrapper from '../IphoneWrapper'; 
-
-interface DualLayoutProps {
-  children: React.ReactNode;
-  rightContent?: React.ReactNode; // Nuevo prop opcional
-  imageSrc?: string;
-  altText?: string;
-  textWidth?: string;
-  stickyImage?: boolean;
-}
+import IphoneWrapper from '../IphoneWrapper';
 
 export default function DualLayout({ 
   children, 
@@ -18,23 +9,30 @@ export default function DualLayout({
   altText, 
   textWidth = '100%',
   stickyImage = false 
-}: DualLayoutProps) {
+}: any) {
   
   return (
-    <div className={styles.container}>  
-      <div className={styles.content} style={{ maxWidth: textWidth }}>
-        {children}
-      </div>
+    <div className={styles.container}> 
       
-      <div className={`${styles.imageWrapper} ${stickyImage ? styles.sticky : ''}`}>
-        {/* Lógica inteligente: Si pasas rightContent, lo renderiza directo. 
-            Si NO pasas rightContent, aplica el marco clásico automáticamente. */}
+      {/* 1. IMAGEN/TELÉFONO: Aparecerá arriba en móvil */}
+      <div className={`${styles.imageColumn} ${stickyImage ? styles.sticky : ''}`}>
         {rightContent ? rightContent : (
           <IphoneWrapper>
-            <img src={imageSrc} alt={altText} className={styles.image} />
+            {/* Usamos objectFit para que la imagen siempre quede perfecta dentro del iPhone */}
+            <img 
+              src={imageSrc} 
+              alt={altText} 
+              style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} 
+            />
           </IphoneWrapper>
         )}
       </div>
+
+      {/* 2. TEXTO: Aparecerá debajo en móvil */}
+      <div className={styles.textColumn} style={{ maxWidth: textWidth }}>
+        {children}
+      </div>
+      
     </div>
   );
 }

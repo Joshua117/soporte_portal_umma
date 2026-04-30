@@ -22,7 +22,6 @@ import PageLayout from '@site/src/components/PageLayout';
     }} 
   />
 
-  ## Lista
   <p>
     Este módulo funciona como el hub de consulta principal para visualizar la población estudiantil de la institución. 
     Su objetivo es proporcionar una vista integral y organizada de todos los alumnos, facilitando la búsqueda rápida, 

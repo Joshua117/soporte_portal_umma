@@ -5,7 +5,6 @@ hide_table_of_contents: true
 pagination_next: Administrativos/Ciclo/index
 ---
 
-## Categorización del Calendario
 
 Para maximizar la claridad visual y la eficiencia en la consulta de fechas clave, el sistema permite crear y gestionar **Categorías Personalizadas**. Esta funcionalidad permite organizar los eventos del calendario mediante etiquetas y colores distintivos, facilitando la identificación rápida de periodos críticos.
 

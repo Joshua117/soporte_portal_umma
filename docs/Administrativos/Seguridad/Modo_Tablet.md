@@ -11,8 +11,8 @@ import IphoneWrapper from '@site/src/components/IphoneWrapper';
 export const RegistroSlider = () => {
   const [index, setIndex] = useState(0);
   const imagenes = [
-    '/img/Seguridad/ModoTab.jpg', 
-    '/img/Seguridad/ModoTab1.jpg'
+    '/img/Seguridad/ModoTab.png',
+    '/img/Seguridad/ModoTab1.png'
   ];
 
   useEffect(() => {

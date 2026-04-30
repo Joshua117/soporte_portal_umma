@@ -6,6 +6,14 @@ hide_table_of_contents: true
 
 import Link from '@docusaurus/Link'; 
 
+import DualLayout from '@site/src/components/DualLayout';
+
+<DualLayout 
+  imageSrc="/img/PanelEstudio/Plan.jpg" 
+  altText="Agregar Servicio" 
+  stickyImage={true}
+>
+
 ## Planes de Estudio
 
 Los planes de estudio son los documentos rectores que definen la estructura, objetivos, contenidos, metodologías y criterios de evaluación de un programa educativo. Estos actúan como la guía esencial tanto para estudiantes como para docentes, asegurando una hoja de ruta clara para el desarrollo académico.
@@ -18,3 +26,5 @@ En el sistema, los planes de estudio están estrechamente vinculados a los <Link
 * **Coherencia institucional:** Reflejar las aspiraciones educativas de la institución y responder activamente a las necesidades del mercado laboral.
 
 Su diseño busca garantizar una formación académica de calidad, adaptándose constantemente a los cambios sociales y profesionales para asegurar que los egresados posean las competencias necesarias para enfrentar los desafíos del entorno actual.
+
+</DualLayout>

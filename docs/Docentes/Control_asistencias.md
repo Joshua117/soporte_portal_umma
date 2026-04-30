@@ -4,7 +4,13 @@ sidebar_position: 2
 hide_table_of_contents: true
 ---
 
-## Asistencias
+import DualLayout from '@site/src/components/DualLayout';
+
+<DualLayout 
+  imageSrc="/img/Docentes/AsistenciaDoc.png" 
+  altText="Agregar Servicio" 
+  stickyImage={true}
+>
 
 Este módulo es la herramienta principal para el monitoreo de la puntualidad y el cumplimiento de la carga horaria del profesorado. Permite a la administración tener un registro detallado de la operatividad diaria en las aulas, garantizando que el servicio educativo se imparta conforme a la planeación.
 
@@ -31,3 +37,5 @@ La centralización de estos datos permite a la institución:
 * **Auditoría Académica:** Verificar que todas las horas de clase programadas sean cubiertas.
 * **Transparencia:** Mantener un historial objetivo sobre faltas y retardos.
 * **Flexibilidad Administrativa:** Coordinar de manera ordenada las clases de reposición, asegurando que los alumnos reciban la totalidad de los contenidos del programa.
+
+</DualLayout>

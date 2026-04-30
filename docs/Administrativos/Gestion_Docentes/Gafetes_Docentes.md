@@ -25,8 +25,6 @@ import PageLayout from '@site/src/components/PageLayout';
       }} 
     />
 
-    ## Gafetes de Docentes
-
     Este módulo automatiza la emisión de identificaciones oficiales para el personal docente. Más allá de ser una simple credencial, el gafete funciona como una herramienta de comunicación dinámica que integra información esencial, asegurando que el profesorado esté siempre al tanto de fechas clave y actividades institucionales.
 
     ### Proceso de Generación

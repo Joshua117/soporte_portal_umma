@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useSwipeable } from 'react-swipeable';
-import IphoneWrapper from '@site/src/components/IphoneWrapper';
+import IphoneWrapper from './IphoneWrapper';
+import styles from './styles.module.css';
 
 const iconIzq = require('../Icons/Iz.png').default;
 const iconDer = require('../Icons/De.png').default;
@@ -12,23 +13,16 @@ interface ImageSwitcherProps {
 export default function ImageSwitcher({ images }: ImageSwitcherProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // Funciones de navegación manual
   const nextImage = () => setCurrentIndex((prev) => (prev + 1) % images.length);
   const prevImage = () => setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
 
-  // --- LÓGICA AUTOMÁTICA MEJORADA ---
   useEffect(() => {
-    // Usamos el actualizador funcional 'prev' dentro del intervalo
-    // Esto evita que React capture el valor inicial y siempre use el más nuevo
     const timer = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 3000);
-    
-    // Limpiamos el intervalo al desmontar para evitar errores
     return () => clearInterval(timer);
-  }, [images.length]); // Solo se reinicia si cambia la lista de imágenes
+  }, [images.length]);
 
-  // Configuración de los gestos de swipe
   const handlers = useSwipeable({
     onSwipedLeft: nextImage,
     onSwipedRight: prevImage,
@@ -36,49 +30,35 @@ export default function ImageSwitcher({ images }: ImageSwitcherProps) {
     trackMouse: true 
   });
 
-  const iconStyle = { 
-    width: '100px', 
-    height: '100px', 
-    filter: 'invert(34%) sepia(97%) saturate(2474%) hue-rotate(204deg) brightness(98%) contrast(92%)' 
-  };
-
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '15px' }}>
+    /* El contenedor ahora maneja el flujo estático y el orden superior para móvil */
+    <div className={styles.container}>
       
-      {/* Contenedor del iPhone con Swipe */}
-      <div {...handlers}> 
+      {/* 1. Imagen del teléfono (Siempre arriba en móvil gracias a flex-direction: column) */}
+      <div {...handlers} className={styles.imageColumn}> 
         <IphoneWrapper>
           <img 
             src={images[currentIndex]} 
             alt={`Vista ${currentIndex + 1}`} 
-            style={{ width: '100%', height: '100%', objectFit: 'cover', pointerEvents: 'none' }} 
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', pointerEvents: 'none' }} 
           />
         </IphoneWrapper>
       </div>
 
-      {/* Controles */}
-      <div style={{ display: 'flex', gap: '25px', alignItems: 'center', justifyContent: 'center' }}>
-        <button onClick={prevImage} style={btnStyle}>
-          <img src={iconIzq} alt="Anterior" style={iconStyle} />
+      {/* 2. Controles (Aparecen debajo en móvil) */}
+      <div className={styles.controls}>
+        <button onClick={prevImage} className={styles.navButton}>
+          <img src={iconIzq} alt="Anterior" className={styles.navIcon} />
         </button>
         
-        <span style={{ fontSize: '1.1rem', fontWeight: 'bold', color: 'var(--ifm-color-emphasis-700)' }}>
+        <span className={styles.counter}>
           {currentIndex + 1} / {images.length}
         </span>
 
-        <button onClick={nextImage} style={btnStyle}>
-          <img src={iconDer} alt="Siguiente" style={iconStyle} />
+        <button onClick={nextImage} className={styles.navButton}>
+          <img src={iconDer} alt="Siguiente" className={styles.navIcon} />
         </button>
       </div>
     </div>
   );
 }
-
-const btnStyle = {
-  background: 'none',
-  border: 'none',
-  cursor: 'pointer',
-  padding: '5px',
-  display: 'flex',
-  alignItems: 'center'
-};

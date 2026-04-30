@@ -7,7 +7,7 @@ hide_table_of_contents: true
 import DualLayout from '@site/src/components/DualLayout';
 
 <DualLayout 
-  imageSrc="/img/Transporte/AgregarServ.jpg" 
+  imageSrc="/img/Transporte/Boletos.png" 
   altText="Agregar Servicio" 
   stickyImage={true}
 >
