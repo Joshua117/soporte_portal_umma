@@ -37,7 +37,6 @@ export const RegistroSlider = () => {
 <div className="container margin-vert--lg padding-horiz--lg">
   <div className="row">
     
-    {/* Columna de texto */}
     <div className="col col--7"> 
       ## Configurar Áreas de Visita
 

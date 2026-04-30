@@ -82,7 +82,6 @@ export default {
     }
   },
 
-  // Todo lo que daba error va aquí adentro exclusivamente
   "customFields": {
     "markdown": {
       "format": "mdx",

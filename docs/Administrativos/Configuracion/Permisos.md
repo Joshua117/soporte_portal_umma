@@ -2,6 +2,7 @@
 title: Permisos
 sidebar_position: 2
 hide_table_of_contents: true
+pagination_next: Administrativos/Configuracion/index
 ---
 
 import DualLayout from '@site/src/components/DualLayout';

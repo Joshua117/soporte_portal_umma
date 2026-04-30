@@ -7,7 +7,7 @@ pagination_prev: null
   {(() => {
     const AdminCard = require('@site/src/components/AdminCard').default;
     return (
-      <AdminCard title="Añadir / Editar" iconName="Classroom.png" link="./Añadir_Editar" />
+      <AdminCard title="Añadir / Editar" iconName="Add_Box.png" link="./Añadir_Editar" />
     );
   })()}
 </div>

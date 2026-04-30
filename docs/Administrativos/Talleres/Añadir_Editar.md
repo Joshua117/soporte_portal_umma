@@ -1,6 +1,7 @@
 ---
 title: Talleres (CREAR/AÑADIR)
 hide_table_of_contents: true
+pagination_next: Administrativos/Talleres/index
 ---
 
 import Link from '@docusaurus/Link'; 

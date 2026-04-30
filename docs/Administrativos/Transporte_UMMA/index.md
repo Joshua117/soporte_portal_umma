@@ -9,7 +9,7 @@ pagination_prev: null
     return (
       <>
         <AdminCard title="Agregar Servicio" iconName="person_add.png" link="./Agregar_Servicio" />
-        <AdminCard title="Boletos" iconName="calendar.png" link="./Boletos" />
+        <AdminCard title="Boletos" iconName="Mobile_Ticket.png" link="./Boletos" />
         <AdminCard title="Choferes" iconName="Gruups.png" link="./Choferes" />
         <AdminCard title="Historial" iconName="calendar.png" link="./Historial" />
         <AdminCard title="Horarios" iconName="Clock.png" link="./Horarios" />

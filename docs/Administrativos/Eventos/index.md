@@ -9,7 +9,7 @@ pagination_prev: null
 <div className="grid-gestion-total">
 
   <a href="./Eventos_Academicos" className="card-total">
-    <img src={require('@site/src/components/Icons/collections bookmark.png').default} className="icon-admin-svg" />
+    <img src={require('@site/src/components/Icons/Date range.png').default} className="icon-admin-svg" />
     <h3>Eventos Académicos</h3>
   </a>
 

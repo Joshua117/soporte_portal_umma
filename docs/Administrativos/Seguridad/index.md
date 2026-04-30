@@ -9,7 +9,7 @@ pagination_prev: null
     return (
       <>
         <AdminCard title="Ajustes" iconName="Security.png" link="./Ajustes" />
-        <AdminCard title="Modo Tablet" iconName="Settings.png" link="./Modo_Tablet" />
+        <AdminCard title="Modo Tablet" iconName="Tablet.png" link="./Modo_Tablet" />
         <AdminCard title="Panel" iconName="Stack.png" link="./Panel" />
         <AdminCard title="Registrar Visitas" iconName="person search.png" link="./Registrar_Visitas" />
       </>

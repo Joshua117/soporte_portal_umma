@@ -17,7 +17,7 @@ import PageLayout from '@site/src/components/PageLayout';
       alt="Lista de estudiantes" 
       style={{ 
         width: '100%', 
-        borderRadius: '10px',
+        borderRadius: '40px',
         boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
         marginTop: '20px'
       }} 

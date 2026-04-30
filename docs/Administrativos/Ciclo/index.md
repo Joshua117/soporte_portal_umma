@@ -8,7 +8,7 @@ pagination_prev: null
     const AdminCard = require('@site/src/components/AdminCard').default;
     return (
       <>
-        <AdminCard title="Agregar Ciclo" iconName="Add_Cicle.png" link="./Agregar_Ciclo" />
+        <AdminCard title="Agregar Ciclo" iconName="Add_Box.png" link="./Agregar_Ciclo" />
         <AdminCard title="Calendario" iconName="calendar.png" link="./Calendario" />
       </>
     );

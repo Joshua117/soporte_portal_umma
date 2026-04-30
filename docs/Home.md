@@ -4,13 +4,27 @@ sidebar_label: INICIO
 ---
 
 <p align="center">
-  <img src="/img/Umma_Azul.png" width="350" />
+  {/* Imagen para modo claro */}
+  <img src="/img/Umma_Azul.png" width="350" className="logo-light" />
+  {/* Imagen para modo oscuro */}
+  <img src="/img/Umma_Blanco.png" width="350" className="logo-dark" />
 </p>
 
 # UNIVERSIDAD MUNDO MAYA
 
 <style>
   {`
+  /* ============================================================
+      LÓGICA DE CAMBIO DE LOGO
+     ============================================================ */
+  /* Por defecto ocultamos el logo oscuro */
+  .logo-dark { display: none !important; }
+  .logo-light { display: block !important; }
+
+  /* Cuando el tema es oscuro, invertimos la visibilidad */
+  [data-theme='dark'] .logo-dark { display: block !important; }
+  [data-theme='dark'] .logo-light { display: none !important; }
+
   /* ============================================================
       1. VARIABLES Y MODO CLARO
      ============================================================ */
@@ -46,7 +60,7 @@ sidebar_label: INICIO
     --text-global: #e3e3e3;
     --navbar-bg: #1a2a3f;
     
-    --card-bg: #1e1f20; 
+    --card-bg: #30363d; 
     --card-text: #ffffff;
     --card-hover-bg: #2d2e30;
     --card-border: #30363d;
@@ -84,7 +98,7 @@ sidebar_label: INICIO
   .menu__link--active { background-color: var(--umma-bg-active) !important; color: var(--text-global) !important; font-weight: bold !important; }
 
   /* ============================================================
-      4. NAVEGACIÓN LIMPIA (Paginación Corregida)
+      4. NAVEGACIÓN LIMPIA
      ============================================================ */
   html body nav.pagination-nav {
     border: none !important;

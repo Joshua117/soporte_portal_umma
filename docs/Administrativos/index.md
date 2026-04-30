@@ -6,6 +6,19 @@ pagination_prev: null
 # Panel Administrativo 
 
 <div className="grid-admin-total">
+
+  <a href="./Carga_Academica/" className="card-total">
+    <img src={require('@site/src/components/Icons/collections bookmark.png').default} className="icon-admin-svg" />
+    <h3>Carga Académica</h3>
+  </a>
+  <a href="./Ciclo/" className="card-total">
+    <img src={require('@site/src/components/Icons/CalendarClock.png').default} className="icon-admin-svg" />
+    <h3>Ciclo</h3>
+  </a>
+  <a href="./Cobranza/" className="card-total">
+    <img src={require('@site/src/components/Icons/paid.png').default} className="icon-admin-svg" />
+    <h3>Cobranza</h3>
+  </a>
   <a href="./Eventos/" className="card-total">
     <img src={require('@site/src/components/Icons/calendar.png').default} className="icon-admin-svg" />
     <h3>Eventos</h3>
@@ -22,20 +35,8 @@ pagination_prev: null
     <img src={require('@site/src/components/Icons/person_add.png').default} className="icon-admin-svg" />
     <h3>Gestión Personal</h3>
   </a>
-  <a href="./Carga_Academica/" className="card-total">
-    <img src={require('@site/src/components/Icons/collections bookmark.png').default} className="icon-admin-svg" />
-    <h3>Carga Académica</h3>
-  </a>
-  <a href="./Ciclo/" className="card-total">
-    <img src={require('@site/src/components/Icons/CalendarClock.png').default} className="icon-admin-svg" />
-    <h3>Ciclo</h3>
-  </a>
-  <a href="./Cobranza/" className="card-total">
-    <img src={require('@site/src/components/Icons/paid.png').default} className="icon-admin-svg" />
-    <h3>Cobranza</h3>
-  </a>
   <a href="./Grados_y_Areas_Escolares/" className="card-total">
-    <img src={require('@site/src/components/Icons/Classroom.png').default} className="icon-admin-svg" />
+    <img src={require('@site/src/components/Icons/School.png').default} className="icon-admin-svg" />
     <h3>Grados y Áreas</h3>
   </a>
   <a href="./Inventario/" className="card-total">
@@ -43,7 +44,7 @@ pagination_prev: null
     <h3>Inventario</h3>
   </a>
   <a href="./Materias/" className="card-total">
-    <img src={require('@site/src/components/Icons/Stack Book.png').default} className="icon-admin-svg" />
+    <img src={require('@site/src/components/Icons/MenuBook.png').default} className="icon-admin-svg" />
     <h3>Materias</h3>
   </a>
   <a href="./Mobiliario/" className="card-total">
@@ -70,4 +71,5 @@ pagination_prev: null
     <img src={require('@site/src/components/Icons/Bus.png').default} className="icon-admin-svg" />
     <h3>Transporte UMMA</h3>
   </a>
+
 </div>

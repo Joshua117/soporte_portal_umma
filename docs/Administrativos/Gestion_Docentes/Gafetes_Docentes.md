@@ -20,7 +20,7 @@ import PageLayout from '@site/src/components/PageLayout';
         maxWidth: '700px', 
         margin: '0px auto 10px auto', 
         display: 'block',
-        borderRadius: '10px',
+        borderRadius: '40px',
         boxShadow: '0 0px 20px rgba(0,0,0,0.15)'
       }} 
     />

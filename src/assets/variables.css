@@ -15,6 +15,7 @@
   --home-icon-color: #1A3867;
   --home-title-color: #1A3867;
   --home-desc-color: #1A3867;
+  --car-total-bg: #1A3867;;
   --home-icon-size: 64px;
 
   /* Variables UI */
@@ -26,7 +27,7 @@
   --card-border: transparent;
   --umma-shadow-card: rgba(0, 0, 0, 0.2);
   --umma-shadow-hover: rgba(0, 0, 0, 0.3);
-  --umma-bg-hover: #ffffff;
+  --umma-bg-hover: #a6c2e4;
   --umma-bg-active: #a6c2e4;
   --icon-filter: brightness(0) invert(1);
   --nav-color-normal: #1A3867;
@@ -42,7 +43,7 @@
   --umma-white: #1b1b1d;
   --umma-hero: #1A3867;
   --umma-hero2: #ffffff;
-  --umma-navbar: #1A3867;
+  --umma-navbar: #1a2a3f;
   --internal-bg: #1b1b1d;
   --card-bg-color: #242526;
   --card-text: #ffffff;
@@ -63,4 +64,5 @@
   --home-icon-color: #1A3867;
   --home-title-color: #1A3867;
   --home-desc-color: #1A3867;
+  --car-total-bg: #242526;;
 }
