@@ -87,23 +87,21 @@ export const ArrowSlider = () => {
 
   <div style={{ flex: '1 1 400px' }}>
 
+<div>
 Este módulo constituye la herramienta central para que el personal docente ejecute un seguimiento personalizado y riguroso del cumplimiento escolar. La interfaz implementa un filtro inteligente de seguridad que despliega únicamente las materias vinculadas al perfil del docente dentro del ciclo escolar activo, asegurando que la gestión administrativa sea precisa y esté restringida a su carga académica autorizada.
 
-Panel de Consulta de Inasistencias
-En este apartado, se presenta un historial consolidado de los alumnos con incidencias de inasistencia. Esta vista centralizada está diseñada para facilitar el análisis de datos, permitiendo a los docentes detectar patrones de ausentismo de forma temprana y generar reportes para las estrategias de retención académica de la institución.
+### Panel de Consulta de Inasistencias
+En este apartado, se presenta un historial consolidado de los alumnos con incidencias de inasistencia. Esta vista centralizada está diseñada para facilitar el análisis de datos, permitiendo a los docentes detectar patrones de ausentismo de forma temprana y apoyar las estrategias de retención académica de la institución.
 
-Registro de Nueva Inasistencia
+### Registro de Nueva Inasistencia
 El sistema optimiza el flujo de captura mediante un formulario dinámico que garantiza la integridad de la información. Para efectuar un registro correcto, siga este procedimiento:
 
-Navegación: Acceda a la sección de "Registro de Faltas" desde el menú principal del módulo.
-
-Selección de Clase: Identifique y seleccione la materia específica dentro de su listado de cursos vigentes.
-
-Cronología del Evento: Defina en el calendario interactivo la fecha exacta de la ausencia. El sistema validará automáticamente que la fecha corresponda al ciclo lectivo en curso.
-
-Vinculación del Alumno: Ingrese la matrícula del estudiante. El sistema realizará una validación en tiempo real para confirmar que el alumno se encuentre inscrito y activo en la lista de asistencia del grupo seleccionado, evitando errores de duplicidad o registros cruzados.
-
-Finalización: Tras verificar los datos, presione el botón "Guardar" o "Agregar Falta". El registro se impactará de inmediato en el expediente académico del alumno y quedará disponible para consulta administrativa.
+* **Navegación:** Acceda a la sección de **"Registro de Faltas"** desde el menú principal del módulo.
+* **Selección de Clase:** Identifique y seleccione la materia específica dentro de su listado de cursos vigentes.
+* **Cronología del Evento:** Defina en el calendario interactivo la fecha exacta de la ausencia. El sistema validará automáticamente que la fecha corresponda al ciclo lectivo en curso.
+* **Vinculación del Alumno:** Ingrese la **matrícula** del estudiante. El sistema realizará una validación en tiempo real para confirmar que el alumno se encuentre inscrito y activo en la lista de asistencia del grupo seleccionado, evitando errores de duplicidad o registros cruzados.
+* **Finalización:** Tras verificar los datos, presione el botón **"Guardar"** o **"Agregar Falta"**. El registro se impactará de inmediato en el expediente académico del alumno y quedará disponible para consulta administrativa.
+</div>
   </div>
 
   {/* Columna del Slider - Estática y Arriba en móvil */}

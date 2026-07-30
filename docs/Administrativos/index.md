@@ -19,6 +19,14 @@ pagination_prev: null
     <img src={require('@site/src/components/Icons/paid.png').default} className="icon-admin-svg" />
     <h3>Cobranza</h3>
   </a>
+  <a href="./Deportes/" className="card-total">
+    <img src={require('@site/src/components/Icons/Ball.png').default} className="icon-admin-svg" />
+    <h3>Deportes</h3>
+  </a>
+  <a href="./Enfermeria/" className="card-total">
+    <img src={require('@site/src/components/Icons/Medical.png').default} className="icon-admin-svg" />
+    <h3>Enfermeria</h3>
+  </a>
   <a href="./Eventos/" className="card-total">
     <img src={require('@site/src/components/Icons/calendar.png').default} className="icon-admin-svg" />
     <h3>Eventos</h3>
@@ -42,6 +50,10 @@ pagination_prev: null
   <a href="./Inventario/" className="card-total">
     <img src={require('@site/src/components/Icons/Inventory.png').default} className="icon-admin-svg" />
     <h3>Inventario</h3>
+  </a>
+  <a href="./Justificantes/" className="card-total">
+    <img src={require('@site/src/components/Icons/Justificante.png').default} className="icon-admin-svg" />
+    <h3>Justificantes</h3>
   </a>
   <a href="./Materias/" className="card-total">
     <img src={require('@site/src/components/Icons/MenuBook.png').default} className="icon-admin-svg" />

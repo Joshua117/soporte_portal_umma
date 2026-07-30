@@ -1,0 +1,8 @@
+{
+  "label": "Deportes",
+  "position": 5,
+  "link": {
+    "type": "doc",
+    "id": "Administrativos/Deportes/index"
+  }
+}
