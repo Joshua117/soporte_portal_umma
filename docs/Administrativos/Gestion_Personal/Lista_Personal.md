@@ -24,39 +24,37 @@ import PageLayout from '@site/src/components/PageLayout';
       }} 
     />
 
+    <p>Este módulo actúa como el repositorio central de información de todo el capital humano de la institución. Su objetivo es consolidar un expediente digital completo para cada colaborador, permitiendo una administración eficiente y una gestión precisa del talento humano.</p>
 
-    Este módulo actúa como el repositorio central de información de todo el capital humano de la institución. Su objetivo es consolidar un expediente digital completo para cada colaborador, permitiendo una administración eficiente y una gestión precisa del talento humano.
-
-    {/* Usamos h3 en lugar de ### para asegurar que renderice bien dentro del div */}
-    <h3 style={{ marginTop: '30px' }}>
-      <span style={{backgroundColor: '#e3f2fd', color: '#1976d2', padding: '2px 10px', borderRadius: '15px', fontSize: '0.8em', marginRight: '10px'}}>📋 INFORMACIÓN</span> 
-      Estructura de la Información
-    </h3>
+    <h3 style={{ marginTop: '30px' }}>Estructura de la Información</h3>
     
-    El registro de cada trabajador se compone de los siguientes campos esenciales, los cuales facilitan tanto la identificación unívoca como la comunicación directa:
+    <p>El registro de cada trabajador se compone de los siguientes campos esenciales, los cuales facilitan tanto la identificación unívoca como la comunicación directa:</p>
 
-    **Datos de Identidad:**
-    * **ID:** Identificador interno del sistema.
-    * **Matrícula:** Clave única de identificación laboral asignada al trabajador.
-    * **Nombre y Apellidos:** Identificación completa del colaborador.
-    * **Fecha de Nacimiento:** Dato fundamental para el expediente personal.
+    <p style={{ marginBottom: '5px' }}><strong>Datos de Identidad:</strong></p>
+    <ul>
+      <li><strong>ID:</strong> Identificador interno del sistema.</li>
+      <li><strong>Matrícula:</strong> Clave única de identificación laboral asignada al trabajador.</li>
+      <li><strong>Nombre y Apellidos:</strong> Identificación completa del colaborador.</li>
+      <li><strong>Fecha de Nacimiento:</strong> Dato fundamental para el expediente personal.</li>
+    </ul>
 
-    **Datos de Contacto y Ubicación:**
-    * **Correo Institucional:** Dirección de correo oficial para la comunicación formal.
-    * **Teléfono Personal:** Contacto directo para situaciones operativas o de emergencia.
-    * **Área / Departamento:** Unidad operativa donde desempeña sus funciones.
-    * **Campus:** Clasificación geográfica del trabajador, permitiendo filtrar y gestionar el personal asignado a Carmen o Campeche.
+    <p style={{ marginTop: '10px', marginBottom: '5px' }}><strong>Datos de Contacto y Ubicación:</strong></p>
+    <ul>
+      <li><strong>Correo Institucional:</strong> Dirección de correo oficial para la comunicación formal.</li>
+      <li><strong>Teléfono Personal:</strong> Contacto directo para situaciones operativas o de emergencia.</li>
+      <li><strong>Área / Departamento:</strong> Unidad operativa donde desempeña sus funciones.</li>
+      <li><strong>Campus:</strong> Clasificación geográfica del trabajador, permitiendo filtrar y gestionar el personal asignado a Carmen o Campeche.</li>
+    </ul>
 
-    <h3 style={{ marginTop: '30px' }}>
-      <span style={{backgroundColor: '#f3e5f5', color: '#7b1fa2', padding: '2px 10px', borderRadius: '15px', fontSize: '0.8em', marginRight: '10px'}}>🎯 PROPÓSITO</span> 
-      Propósito del Módulo
-    </h3>
+    <h3 style={{ marginTop: '30px' }}>Propósito del Módulo</h3>
     
-    La centralización de estos datos permite a la administración:
+    <p>La centralización de estos datos permite a la administración:</p>
 
-    * **Gestión Multisede:** Filtrar y visualizar al personal de manera eficiente según el campus de adscripción, garantizando que la información esté organizada por ubicación física.
-    * **Agilidad Operativa:** Localizar rápidamente los datos de cualquier colaborador para facilitar la coordinación entre departamentos.
-    * **Integridad de Datos:** Mantener una base de datos actualizada que sirve de soporte crítico para otros módulos del sistema.
+    <ul>
+      <li><strong>Gestión Multisede:</strong> Filtrar y visualizar al personal de manera eficiente según el campus de adscripción, garantizando que la información esté organizada por ubicación física.</li>
+      <li><strong>Agilidad Operativa:</strong> Localizar rápidamente los datos de cualquier colaborador para facilitar la coordinación entre departamentos.</li>
+      <li><strong>Integridad de Datos:</strong> Mantener una base de datos actualizada que sirve de soporte crítico para otros módulos del sistema.</li>
+    </ul>
 
   </div>
 

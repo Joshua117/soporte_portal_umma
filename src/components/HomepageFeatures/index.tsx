@@ -13,7 +13,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: 'Alumno',
-    iconName: 'school', // Birrete de Google
+    iconName: 'school', 
     description: (
       <>
         Accede a tu historial académico, horarios y recursos diseñados 
