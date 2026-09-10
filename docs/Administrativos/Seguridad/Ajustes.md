@@ -1,6 +1,6 @@
 ---
 title: Ajustes Visita
-pagination_next: Administrativos/Seguridad/Modo_Tablet/index
+pagination_next: Administrativos/Seguridad/Modo_Tablet
 hide_table_of_contents: true
 ---
 

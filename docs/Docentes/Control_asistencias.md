@@ -93,15 +93,12 @@ export const ArrowSlider = () => {
   );
 };
 
-{/* Contenedor Adaptable */}
 <div className="responsive-container">
 
-  {/* Columna del Slider */}
   <div className="slider-column">
     <ArrowSlider />
   </div>
 
-  {/* Columna de Texto con HTML puro para listas */}
   <div className="text-column">
 
 <p>Este módulo es la herramienta principal para el monitoreo de la puntualidad y el cumplimiento de la carga horaria del profesorado. Permite a la administración tener un registro detallado de la operatividad diaria en las aulas, garantizando que el servicio educativo se imparta conforme a la planeación.</p>
@@ -144,7 +141,6 @@ export const ArrowSlider = () => {
 
 </div>
 
-{/* CSS Responsivo */}
 <style>{`
   .responsive-container {
     display: flex;
