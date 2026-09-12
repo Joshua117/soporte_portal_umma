@@ -13,7 +13,7 @@ import PageLayout from '@site/src/components/PageLayout';
   {/* 1. IMAGEN PRIMERO: Esto hace que en celular se vea arriba */}
   <div style={{ flex: '1 1 300px', order: 1 }}>
     <img 
-      src="/img/CargaAcademica/CargaAcad.png" 
+      src="/img/CargaAcademica/CargaAcad.webp" 
       alt="Lista de estudiantes" 
       style={{ 
         width: '100%', 

@@ -10,7 +10,7 @@ import PageLayout from '@site/src/components/PageLayout';
 
   {/* Imagen centrada con estilo profesional */}
   <img 
-    src="/img/CargaAcademica/ControlCarga.png" 
+    src="/img/CargaAcademica/ControlCarga.webp" 
     alt="Lista de estudiantes" 
     style={{ 
       width: '100%', 

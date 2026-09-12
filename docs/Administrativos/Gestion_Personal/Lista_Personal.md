@@ -12,7 +12,7 @@ import PageLayout from '@site/src/components/PageLayout';
 
     {/* Imagen centrada con estilo profesional */}
     <img 
-      src="/img/AdministrativosPanel/ListaPer.png" 
+      src="/img/AdministrativosPanel/ListaPer.webp" 
       alt="Lista de personal" 
       style={{ 
         width: '100%', 

@@ -9,8 +9,8 @@ import IphoneWrapper from '@site/src/components/IphoneWrapper';
 export const RegistroSlider = () => {
   const [index, setIndex] = useState(0);
   const imagenes = [
-    '/img/EstudiantesPanel/Registro1.png', 
-    '/img/EstudiantesPanel/Registro2.png'
+    '/img/EstudiantesPanel/Registro1.webp', 
+    '/img/EstudiantesPanel/Registro2.webp'
   ];
 
   useEffect(() => {
@@ -42,21 +42,22 @@ export const RegistroSlider = () => {
   
   {/* Columna de Texto */}
   <div style={{ flex: '1 1 400px' }}> 
-    Este módulo está diseñado para formalizar el ingreso de estudiantes a la institución, garantizando que cada alumno sea clasificado correctamente dentro de la oferta académica y cuente con su identidad digital desde el primer día.
+    Este módulo está diseñado para **formalizar de manera ágil y precisa el ingreso de estudiantes** a la institución, garantizando que cada alumno sea clasificado correctamente dentro de la oferta académica y cuente con su **identidad digital** desde el primer día de su trayectoria universitaria.
 
-    ### Proceso de Registro
-    El sistema sigue una lógica estructurada para asegurar la integridad de los datos académicos:
+### Proceso de Registro
 
-    * **Selección de Grado Escolar:** El proceso inicia definiendo el nivel académico del aspirante.
-    * **Determinación del Área:** Una vez seleccionado el grado, el sistema identifica automáticamente el área correspondiente.
-    * **Selección de Licenciatura:** Se elige el programa académico específico.
-    * **Captura de Datos Personales:** Registro básico de la información del alumno.
+* **Selección de Grado Escolar:** El proceso inicia definiendo el nivel académico del aspirante (licenciatura, maestría o posgrado).
+* **Determinación del Área:** Una vez seleccionado el grado, el sistema identifica y despliega automáticamente las áreas de conocimiento correspondientes.
+* **Selección de Licenciatura:** Se elige el programa académico específico en el que se inscribirá el estudiante.
+* **Captura de Datos Personales:** Registro detallado de la información general del alumno para su expediente digital oficial.
 
-    ### Automatización y Asignación de Identidad
-    * **Matrícula:** Se genera una clave única institucional.
-    * **Correo Institucional:** Se crea automáticamente la cuenta oficial.
+### Automatización y Asignación de Identidad
+Al completar el registro, el sistema ejecuta **procesos automatizados** para integrar de inmediato al estudiante a la plataforma:
 
-    > **Propósito del Módulo:** La estandarización permite asegurar el orden administrativo y mantener la consistencia de los datos para reportes y estadísticas.
+* **Matrícula:** Se genera de forma automática una clave única institucional para trámites académicos y administrativos.
+* **Correo Institucional:** Se crea automáticamente la cuenta oficial de correo electrónico, otorgándole acceso inmediato a las herramientas de la plataforma.
+
+> **Propósito del Módulo:** Agiliza el flujo de inscripción.  
   </div>
 
   {/* Columna del Slider - Se ajusta al ancho del iPhone */}
