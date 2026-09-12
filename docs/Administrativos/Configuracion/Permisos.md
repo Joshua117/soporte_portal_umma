@@ -8,7 +8,7 @@ pagination_next: Administrativos/Configuracion/index
 import DualLayout from '@site/src/components/DualLayout';
 
 <DualLayout 
-  imageSrc="/img/Configuracion/Permisos.jpg" 
+  imageSrc="/img/Configuracion/Permisos.webp" 
   altText="Agregar Servicio" 
   stickyImage={true}
 >

@@ -9,8 +9,8 @@ import IphoneWrapper from '@site/src/components/IphoneWrapper';
 export const RegistroSlider = () => {
   const [index, setIndex] = useState(0);
   const imagenes = [
-    '/img/AdministrativosPanel/Registro1.png', 
-    '/img/AdministrativosPanel/Registro2.png'
+    '/img/AdministrativosPanel/Registro1.webp', 
+    '/img/AdministrativosPanel/Registro2.webp'
   ];
 
   useEffect(() => {

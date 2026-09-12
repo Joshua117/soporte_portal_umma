@@ -8,7 +8,7 @@ import Link from '@docusaurus/Link';
 import DualLayout from '@site/src/components/DualLayout';
 
 <DualLayout 
-  imageSrc="/img/Ciclo/PanelCiclo.jpg" 
+  imageSrc="/img/Ciclo/PanelCiclo.webp" 
   altText="Agregar Servicio" 
   stickyImage={true}
 >

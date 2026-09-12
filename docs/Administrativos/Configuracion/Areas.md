@@ -11,8 +11,8 @@ export const ArrowSlider = () => {
   const [index, setIndex] = useState(0);
   
   const media = [
-    { type: 'image', src: '/img/Configuracion/Areas.jpg' },
-    { type: 'image', src: '/img/Configuracion/AgregarAreas.jpg' },
+    { type: 'image', src: '/img/Configuracion/Areas.webp' },
+    { type: 'image', src: '/img/Configuracion/AgregarAreas.webp' },
 
   ];
 
