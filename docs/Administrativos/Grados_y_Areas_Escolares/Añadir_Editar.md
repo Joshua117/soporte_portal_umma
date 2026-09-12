@@ -10,7 +10,7 @@ import IphoneWrapper from '@site/src/components/IphoneWrapper';
 export const RegistroSlider = () => {
   const [index, setIndex] = useState(0);
   const imagenes = [
-    '/img/GradoEscolar/Grado.jpg',
+    '/img/GradoEscolar/Grado.webp',
   ];
 
   useEffect(() => {

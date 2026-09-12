@@ -10,8 +10,8 @@ import IphoneWrapper from '@site/src/components/IphoneWrapper';
 export const RegistroSlider = () => {
   const [index, setIndex] = useState(0);
   const imagenes = [
-    '/img/DocentesPanel/AgregarDoc1.png', 
-    '/img/DocentesPanel/AgregarDoc2.png'
+    '/img/DocentesPanel/AgregarDoc1.webp', 
+    '/img/DocentesPanel/AgregarDoc2.webp'
   ];
 
   useEffect(() => {

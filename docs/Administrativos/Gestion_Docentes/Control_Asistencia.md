@@ -11,7 +11,7 @@ import IphoneWrapper from '@site/src/components/IphoneWrapper';
 export const RegistroSlider = () => {
   const [index, setIndex] = useState(0);
   const imagenes = [
-    '/img/DocentesPanel/AsistenciaDoc.jpg', 
+    '/img/DocentesPanel/AsistenciaDoc.webp', 
     '/img/DocentesPanel/ConfDiHa.jpg'
   ];
 

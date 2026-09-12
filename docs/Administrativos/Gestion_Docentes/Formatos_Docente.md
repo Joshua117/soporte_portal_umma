@@ -10,8 +10,8 @@ import IphoneWrapper from '@site/src/components/IphoneWrapper';
 export const RegistroSlider = () => {
   const [index, setIndex] = useState(0);
   const imagenes = [
-    '/img/DocentesPanel/FormatosDoc.jpg', 
-    '/img/DocentesPanel/AgregarFor.jpg'
+    '/img/DocentesPanel/FormatosDoc.webp', 
+    '/img/DocentesPanel/AgregarFor.webp'
   ];
 
   useEffect(() => {
@@ -44,19 +44,20 @@ export const RegistroSlider = () => {
   {/* Columna de Texto */}
   <div style={{ flex: '1 1 400px' }}> 
 
-    Este módulo actúa como el repositorio centralizado de toda la documentación esencial del profesorado. Su objetivo es estandarizar la recopilación, el almacenamiento y la consulta de la información necesaria para el ciclo de vida laboral del docente.
+    Este módulo actúa como el **repositorio centralizado de toda la documentación esencial del profesorado**, garantizando un control integral, seguro y estructurado de los expedientes digitales. Su objetivo principal es **estandarizar la recopilación, el almacenamiento y la consulta continua** de la información indispensable a lo largo de todo el ciclo de vida laboral e institucional del docente.
 
-    ### Catálogo de Documentación
-    El sistema gestiona diversos formatos que permiten obtener una visión integral del perfil y la labor docente:
+### Catálogo de Documentación
+El sistema gestiona diversos formatos que permiten obtener una visión detallada y actualizada del perfil, la capacidad pedagógica y la labor docente:
 
-    * **Curriculum Vitae (CV):** Registro detallado de la trayectoria profesional y formación académica.
-    * **Planes Programáticos:** Documentos que detallan los contenidos, objetivos y metodologías de enseñanza.
-    * **Reportes de Desempeño:** Historial de evaluaciones y métricas sobre la labor del docente en el aula.
+* **Curriculum Vitae (CV):** Registro detallado y estructurado de la trayectoria profesional, formación académica, certificaciones y especializaciones del docente.
+* **Planes Programáticos:** Documentos académicos que detallan los contenidos temáticos, objetivos de aprendizaje, criterios de evaluación y metodologías de enseñanza aplicadas en cada asignatura.
+* **Reportes de Desempeño:** Historial de evaluaciones docentes, métricas de cumplimiento y retroalimentación sobre la labor pedagógica en el aula para asegurar la calidad académica.
 
-    > **Propósito del Módulo:** La digitalización de estos formatos permite optimizar procesos críticos:
-    > * **Agilidad en la Contratación:** Centraliza la información para validación rápida de perfiles.
-    > * **Inducción Efectiva:** Facilita el acceso a políticas institucionales.
-    > * **Eficiencia en la Búsqueda:** Elimina archivos físicos dispersos, creando un proceso digital ordenado.
+> **Propósito del Módulo:** La digitalización y centralización de estos formatos optimiza significativamente los procesos administrativos y académicos:
+> * **Agilidad en la Contratación:** Centraliza la información del expediente para la validación rápida, eficiente y oportuna de los perfiles solicitados.
+> * **Inducción Efectiva:** Facilita el acceso directo del personal de nuevo ingreso a las políticas, guías y lineamientos institucionales.
+> * **Eficiencia en la Búsqueda:** Elimina la dependencia de archivos físicos dispersos, consolidando un entorno de consulta digital rápido, accesible y ordenado.
+
   </div>
 
   {/* Columna del Slider - Estática y Centrada en móvil */}

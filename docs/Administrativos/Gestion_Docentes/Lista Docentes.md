@@ -7,7 +7,7 @@ sidebar_position: 5
 import DualLayout from '@site/src/components/DualLayout';
 
 <DualLayout 
-  imageSrc="/img/DocentesPanel/ListaDoc.jpg" 
+  imageSrc="/img/DocentesPanel/ListaDoc.webp" 
   altText="Lista de Docentes" 
   stickyImage={true}
 >
