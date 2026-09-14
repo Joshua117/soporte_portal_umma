@@ -6,7 +6,7 @@ hide_table_of_contents: true
 import DualLayout from '@site/src/components/DualLayout';
 
 <DualLayout 
-  imageSrc="/img/Transporte/Tiempos.jpg" 
+  imageSrc="/img/Transporte/Tiempos.webp" 
   altText="Agregar Servicio" 
   stickyImage={true}
 >
