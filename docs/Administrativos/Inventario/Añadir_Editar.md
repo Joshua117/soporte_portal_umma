@@ -11,9 +11,9 @@ export const ArrowSlider = () => {
   const [index, setIndex] = useState(0);
   
   const media = [
-    { type: 'image', src: '/img/Inventario/Inventario.jpg' },
-    { type: 'image', src: '/img/Inventario/AgregarInv1.jpg' },
-    { type: 'image', src: '/img/Inventario/AgregarInv2.jpg' },
+    { type: 'image', src: '/img/Inventario/Inventario.webp' },
+    { type: 'image', src: '/img/Inventario/AgregarInv1.webp' },
+    { type: 'image', src: '/img/Inventario/AgregarInv2.webp' },
   ];
 
   const siguienteImagen = () => {

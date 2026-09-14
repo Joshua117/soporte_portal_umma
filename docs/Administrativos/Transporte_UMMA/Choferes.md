@@ -8,7 +8,7 @@ import DualLayout from '@site/src/components/DualLayout';
 import ImageSwitcher from '@site/src/components/ImageSwitcher';
 
 <DualLayout stickyImage={true} rightContent={
-  <ImageSwitcher images={["/img/Transporte/PanelChof.jpg", "/img/Transporte/AgregarChof.jpg"]} />
+  <ImageSwitcher images={["/img/Transporte/PanelChof.webp", "/img/Transporte/AgregarChof.webp"]} />
 }>
 
 El sistema permite la emisión de boletos vinculados directamente a la matrícula del alumno. Al momento de generar un acceso, el sistema valida la disponibilidad en tiempo real, permitiendo al administrador asignar un asiento específico y seleccionar el horario correspondiente, garantizando así una ocupación organizada y sin conflictos.

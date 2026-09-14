@@ -7,7 +7,7 @@ import DualLayout from '@site/src/components/DualLayout';
 import ImageSwitcher from '@site/src/components/ImageSwitcher';
 
 <DualLayout stickyImage={true} rightContent={
-  <ImageSwitcher images={["/img/Transporte/HistoriaAlum.jpg", "/img/Transporte/HistorialPers.jpg"]} />
+  <ImageSwitcher images={["/img/Transporte/HistoriaAlum.webp", "/img/Transporte/HistorialPers.webp"]} />
 }>
 
 ## Historial

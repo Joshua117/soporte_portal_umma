@@ -13,9 +13,9 @@ export const ArrowSlider = () => {
   const [index, setIndex] = useState(0);
   
   const media = [
-    { type: 'image', src: '/img/Salon/PanelSalon.jpg' },
-    { type: 'image', src: '/img/Salon/AgregarSal1.jpg' },
-    { type: 'image', src: '/img/Salon/AgregarSal2.jpg' },
+    { type: 'image', src: '/img/Salon/PanelSalon.webp' },
+    { type: 'image', src: '/img/Salon/AgregarSal1.webp' },
+    { type: 'image', src: '/img/Salon/AgregarSal2.webp' },
    ];
 
   const siguienteImagen = () => {
@@ -104,6 +104,9 @@ El Panel de Salones permite consultar el catálogo de espacios disponibles para 
 
 ### Crear un Salón
 Para registrar un nuevo salón, defina la modalidad (presencial o virtual), asigne un nombre identificativo y establezca la capacidad máxima de alumnos. Durante el proceso de creación, podrá configurar el mobiliario y el equipamiento tecnológico del espacio, incluyendo elementos como televisores y proyectores, asegurando que cada salón cuente con los recursos necesarios para su operación.
+
+###
+Podremos ver tambien como esta designado el mobiliario indicado de cada salon mediante una vista simulativa para poder ver el acomodamiento adecuado y ver mas facilmente que clase de mobilirio hay
 
   </div>
 

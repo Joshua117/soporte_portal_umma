@@ -9,7 +9,7 @@ import Link from '@docusaurus/Link';
 import DualLayout from '@site/src/components/DualLayout';
 
 <DualLayout 
-  imageSrc="/img/PanelEstudio/Plan.jpg" 
+  imageSrc="/img/PanelEstudio/Plan.webp" 
   altText="Agregar Servicio" 
   stickyImage={true}
 >
