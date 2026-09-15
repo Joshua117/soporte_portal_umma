@@ -19,6 +19,10 @@ pagination_prev: null
     <img src={require('@site/src/components/Icons/paid.png').default} className="icon-admin-svg" />
     <h3>Cobranza</h3>
   </a>
+  <a href="./Configuracion/" className="card-total">
+    <img src={require('@site/src/components/Icons/paid.png').default} className="icon-admin-svg" />
+    <h3>Configuracion</h3>
+  </a>
   <a href="./Deportes/" className="card-total">
     <img src={require('@site/src/components/Icons/Ball.png').default} className="icon-admin-svg" />
     <h3>Deportes</h3>
@@ -62,6 +66,10 @@ pagination_prev: null
   <a href="./Mobiliario/" className="card-total">
     <img src={require('@site/src/components/Icons/Chair.png').default} className="icon-admin-svg" />
     <h3>Mobiliario</h3>
+  </a>
+  <a href="./Pase_Vehicular/" className="card-total">
+    <img src={require('@site/src/components/Icons/Vehicle.png').default} className="icon-admin-svg" />
+    <h3>Pase Vehicular</h3>
   </a>
   <a href="./Planes_de_Estudio/" className="card-total">
     <img src={require('@site/src/components/Icons/collections bookmark.png').default} className="icon-admin-svg" />
