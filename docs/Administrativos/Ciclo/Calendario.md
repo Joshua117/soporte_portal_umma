@@ -5,6 +5,13 @@ hide_table_of_contents: true
 pagination_next: Administrativos/Ciclo/index
 ---
 
+import DualLayout from '@site/src/components/DualLayout';
+
+<DualLayout 
+  imageSrc="/img/Ciclo/CatCalendario.webp" 
+  altText="Agregar Servicio" 
+  stickyImage={true}
+>
 
 Para maximizar la claridad visual y la eficiencia en la consulta de fechas clave, el sistema permite crear y gestionar **Categorías Personalizadas**. Esta funcionalidad permite organizar los eventos del calendario mediante etiquetas y colores distintivos, facilitando la identificación rápida de periodos críticos.
 
@@ -31,3 +38,5 @@ La gestión de estas categorías es sencilla y directa:
 * **Visibilidad Inmediata:** Al asignar colores distintos, el calendario se convierte en un mapa visual intuitivo donde el usuario puede distinguir, con un solo vistazo, el tipo de evento que está ocurriendo en una fecha determinada.
 * **Comprensión del Ciclo:** Reduce la carga cognitiva al estandarizar la información, ayudando tanto a docentes como a administrativos a ubicar rápidamente los tiempos del ciclo escolar.
 * **Personalización:** Adaptabilidad total a las necesidades de la institución, permitiendo crear etiquetas según las políticas internas de comunicación.
+
+</DualLayout>
