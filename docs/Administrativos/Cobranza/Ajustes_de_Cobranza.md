@@ -1,6 +1,6 @@
 ---
-title: Ajustes
-sidebar_position: 1
+title: Ajustes Cobranza
+sidebar_position: 2
 hide_table_of_contents: true
 ---
 
@@ -11,10 +11,9 @@ export const ArrowSlider = () => {
   const [index, setIndex] = useState(0);
   
   const media = [
-    { type: 'image', src: '/img/Cobranza/AgregarCaj.jpg' },
-    { type: 'image', src: '/img/Cobranza/Cajas.jpg' },
-    { type: 'image', src: '/img/Cobranza/TipoTra.jpg' },
-    { type: 'image', src: '/img/Cobranza/TipoPag.jpg' },
+    { type: 'image', src: '/img/Cobranza/Cajas.webp' },
+    { type: 'image', src: '/img/Cobranza/TipoTra.webp' },
+    { type: 'image', src: '/img/Cobranza/TipoPag.webp' },
   ];
 
   const siguienteImagen = () => {
@@ -77,52 +76,43 @@ export const ArrowSlider = () => {
   );
 };
 
-{/* Contenedor Adaptable */}
-<div style={{ 
-  display: 'flex', 
-  flexWrap: 'wrap-reverse', 
-  gap: '40px', 
-  padding: '10px 20px',
-  alignItems: 'flex-start'
-}}>
+<div className="container margin-vert--lg padding-horiz--lg">
+  <div className="row">
 
-  <div style={{ flex: '1 1 400px' }}> 
+    {/* Columna de Texto */}
+    <div className="col col--7">
+      Este apartado agrupa las funciones clave para **administrar la operatividad financiera y la atención al cliente** dentro de la institución, centralizando los servicios, canales de cobro y puntos de atención.
 
-    Este apartado agrupa las funciones necesarias para administrar la operatividad financiera y de atención al cliente de la institución.
+      ### Tipos de Trámites
+      Este módulo permite gestionar el **catálogo de servicios institucionales**, facilitando la clasificación, identificación y control de cada solicitud realizada por los usuarios:
 
-    ### Tipos de Trámites
-    Este módulo permite gestionar el catálogo de servicios que la institución ofrece.
+      * **Gestión de Estados:** Permite habilitar o deshabilitar servicios de forma dinámica según la disponibilidad operativa o temporada académica.
+      * **Creación de Trámites:** Facilita el alta de nuevos conceptos mediante la captura del nombre oficial del trámite y su correspondiente subtipo.
 
-    * **Gestión de Estados:** Permite habilitar o deshabilitar servicios según la temporada.
-    * **Creación de Trámites:** Captura el nombre del trámite y su subtipo.
+      ---
 
-    ---
+      ### Métodos de Pago
+      Define las distintas **opciones de cobro disponibles**, adaptándose a las necesidades de los usuarios y a los requerimientos de cada trámite:
 
-    ### Métodos de Pago
-    Define las formas en que los usuarios pueden realizar sus pagos.
+      * **Flexibilidad:** Incluye opciones base como *Efectivo* y *Tarjeta*, con la posibilidad de incorporar rápidamente nuevas alternativas de pago.
+      * **Integración Operativa:** Los métodos activos se reflejan de forma automática al momento de agendar citas o procesar solicitudes.
 
-    * **Flexibilidad:** Incluye Efectivo y Tarjeta por defecto, pero permite agregar nuevos métodos fácilmente.
-    * **Integración:** Se reflejan automáticamente al agendar citas.
+      ---
 
-    ---
+      ### Administración de Cajas
+      Garantiza que cada punto de atención opere de manera estructurada, eficiente y supervisada mediante la asignación de:
 
-    ### Administración de Cajas
-    Asegura que cada punto de atención esté correctamente estructurado asignando: personal, horarios y capacidades de trámite.
+      * **Personal y Horarios:** Identificación clara de las cajeras o cajeros en turno y sus horarios de atención establecidos.
+      * **Disponibilidad en Tiempo Real:** Monitoreo del estatus activo de cada caja y control del flujo de usuarios atendidos.
+      * **Capacidad de Trámites:** Configuración específica de los tipos de trámites y pagos habilitados para procesarse en cada ventanilla.
 
-    ---
+      > **Propósito del Módulo:** Optimizar la gestión de ingresos, reducir tiempos de espera en ventanilla y mantener la trazabilidad completa del flujo financiero y de atención al usuario.
+    </div>
 
-    ### Ajustes de Citas
-    Configura la lógica de flujo de las citas y la experiencia en la sala de espera (contenido multimedia y mensajes).
+    {/* Columna del Slider - Con Sticky para acompañar el scroll */}
+    <div className="col col--5" style={{ position: 'sticky', top: '100px', height: 'fit-content' }}>
+      <ArrowSlider />
+    </div>
 
   </div>
-
-  {/* Columna del Slider - Estática y Arriba en móvil */}
-  <div style={{ 
-    flex: '0 0 auto', 
-    margin: '0 auto 40px auto', /* Margen inferior para que no pegue con el texto en móvil */
-    position: 'relative' 
-  }}>
-    <ArrowSlider />
-  </div>
-
 </div>
