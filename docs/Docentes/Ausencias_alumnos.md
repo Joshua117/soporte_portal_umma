@@ -12,7 +12,7 @@ export const ArrowSlider = () => {
   const [index, setIndex] = useState(0);
   
   const media = [
-    { type: 'image', src: '/img/Docentes/AlumnosAus.png' },
+    { type: 'image', src: '/img/Docentes/AlumnosAus.webp' },
     { type: 'image', src: '/img/Alumnos/RegistrarFala.png' },
   ];
 

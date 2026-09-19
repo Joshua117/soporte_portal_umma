@@ -4,7 +4,30 @@ hide_table_of_contents: true
 pagination_next: Administrativos/Talleres/index
 ---
 
-import Link from '@docusaurus/Link'; 
+import Link from '@docusaurus/Link';
+import PageLayout from '@site/src/components/PageLayout';
+
+<PageLayout>
+
+<div style={{ display: 'flex', flexWrap: 'wrap', gap: '40px', alignItems: 'start' }}>
+
+  {/* 1. IMAGEN PRIMERO: Esto hace que en celular se vea arriba */}
+  <div style={{ flex: '1 1 300px', order: 1 }}>
+    <img 
+      src="/img/CargaAcademica/CargaAcad.webp" 
+      alt="Lista de estudiantes" 
+      style={{ 
+        width: '100%', 
+        borderRadius: '40px',
+        boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+        marginTop: '20px'
+      }} 
+    />
+  </div>
+
+  {/* 2. TEXTO DESPUÉS: Esto hace que en celular quede abajo */}
+  <div style={{ flex: '2 1 400px', order: 2 }}>
+
 
 ## Talleres
 
@@ -16,3 +39,9 @@ El módulo de Talleres permite consultar la oferta académica disponible, la cua
 * **Vinculación Institucional:** Algunos de estos talleres están integrados directamente en las actividades de evaluación y exhibición de fin de semestre. Por tanto, la correcta configuración y asignación en este módulo es fundamental para el desarrollo de los eventos institucionales de cierre.
 
 Esta estructura facilita una administración eficiente de los recursos académicos, asegurando que la oferta de talleres esté siempre alineada con los objetivos curriculares de cada nivel educativo.
+
+</div>
+
+</div>
+
+</PageLayout>
