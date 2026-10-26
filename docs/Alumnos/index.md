@@ -1,5 +1,5 @@
 ---
-title: Alumnos
+title: 🎓 Alumnos
 ---
 
 <div className="grid-gestion-total">

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: INICIO
+sidebar_label: 🏠 INICIO
 ---
 
 <p align="center">
@@ -17,11 +17,9 @@ sidebar_label: INICIO
   /* ============================================================
       LÓGICA DE CAMBIO DE LOGO
      ============================================================ */
-  /* Por defecto ocultamos el logo oscuro */
   .logo-dark { display: none !important; }
   .logo-light { display: block !important; }
 
-  /* Cuando el tema es oscuro, invertimos la visibilidad */
   [data-theme='dark'] .logo-dark { display: block !important; }
   [data-theme='dark'] .logo-light { display: none !important; }
 
@@ -33,15 +31,16 @@ sidebar_label: INICIO
     --umma-blue-hover: #1e427d;
     --umma-white: #ffffff;
 
-    --bg-global: var(--umma-white);
-    --sidebar-bg: var(--umma-white);
-    --text-global: var(--umma-blue);
+    --bg-global: #FFFFFF;
+    --sidebar-bg: #FFFFFF;
+    --text-global: #1A3867;
+    --text-secondary: #D5DEEB;
     --navbar-bg: #1A3867;
     
-    --card-bg: var(--umma-blue);
-    --card-text: var(--umma-white);
-    --card-hover-bg: var(--umma-blue-hover);
-    --card-border: transparent;
+    --card-bg: #1A3867;
+    --card-text: #ffffff;
+    --card-hover-bg: #1e427d;
+    --card-border: rgba(26, 56, 103, 0.2);
     
     --umma-shadow-card: rgba(0, 0, 0, 0.2);
     --umma-shadow-hover: rgba(0, 0, 0, 0.3);
@@ -55,17 +54,18 @@ sidebar_label: INICIO
       2. CONFIGURACIÓN MODO OSCURO
      ============================================================ */
   [data-theme='dark'] {
-    --bg-global: #262624;
-    --sidebar-bg: #262624;
-    --text-global: #e3e3e3;
-    --navbar-bg: #1a2a3f;
+    --bg-global: #091828;
+    --sidebar-bg: #091828;
+    --text-global: #ffffff;
+    --text-secondary: #D5DEEB;
+    --navbar-bg: #091828;
     
-    --card-bg: #30363d; 
+    --card-bg: #1a2a3f; 
     --card-text: #ffffff;
-    --card-hover-bg: #2d2e30;
-    --card-border: #30363d;
+    --card-hover-bg: #243b59;
+    --card-border: rgba(61, 255, 255, 0.24);
     
-    --umma-blue: #262624;
+    --umma-blue: #091828;
     --umma-shadow-card: rgba(0, 0, 0, 0.5);
     --umma-shadow-hover: rgba(0, 0, 0, 0.7);
     --umma-bg-hover: rgba(255, 255, 255, 0.05);
@@ -85,10 +85,10 @@ sidebar_label: INICIO
   }
 
   .main-wrapper { background-color: var(--bg-global) !important; transition: background-color 0.3s ease; }
-  .navbar { background-color: var(--navbar-bg) !important; border-bottom: 1px solid #30363d !important; transition: background-color 0.3s ease; }
-  .navbar__link, .navbar__title { color: var(--umma-white) !important; }
+  .navbar { background-color: var(--navbar-bg) !important; border-bottom: 1px solid var(--card-border) !important; transition: background-color 0.3s ease; }
+  .navbar__link, .navbar__title { color: #ffffff !important; }
   
-  .theme-doc-sidebar-container { background-color: var(--sidebar-bg) !important; border-right: 1px solid var(--umma-blue) !important; }
+  .theme-doc-sidebar-container { background-color: var(--sidebar-bg) !important; border-right: 1px solid var(--card-border) !important; }
   .menu__link { color: var(--text-global) !important; }
   .breadcrumbs__link, .breadcrumb-home-icon, .breadcrumbs__item--active .breadcrumbs__link { color: var(--text-global) !important; }
   

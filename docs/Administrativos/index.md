@@ -1,9 +1,7 @@
 ---
-title: Administrativos
+title: 👤 Administrativos
 pagination_prev: null
----
-
-# Panel Administrativo 
+--- 
 
 <div className="grid-admin-total">
 

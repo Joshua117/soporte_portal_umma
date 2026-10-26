@@ -1,37 +1,54 @@
 :root {
-  /* Variables UMMA */
+  /* ==========================================
+     VARIABLES INSTITUCIONALES UMMA (MODO CLARO)
+     ================================---------- */
   --umma-blue: #1A3867;
-  --umma-blue-hover: #1e427d;
+  --umma-blue-hover: #162f55;
   --umma-white: #ffffff;
   --umma-hero: #fdfdfd;
   --umma-hero2: #ffffff;
   --umma-navbar: #1A3867;
   --internal-bg: #ffffff;
+  
+  /* Tarjetas y Contenedores */
   --card-bg-color: #1A3867;
   --card-text: #ffffff;
   --hero-text: #1A3867;
   --nav-text: #ffffff;
   --internal-title-color: #1A3867;
+  
+  /* Elementos de Inicio (Home) */
   --home-icon-color: #1A3867;
   --home-title-color: #1A3867;
   --home-desc-color: #1A3867;
-  --car-total-bg: #1A3867;;
+  --car-total-bg: #1A3867;
   --home-icon-size: 64px;
 
-  /* Variables UI */
-  --bg-global: var(--umma-white);
-  --sidebar-bg: var(--umma-white);
-  --text-global: var(--umma-blue);
-  --navbar-bg: #1A3867;
+  /* ==========================================
+     VARIABLES UI & COMPONENTES (MODO CLARO)
+     ================================---------- */
+  --bg-global: #FFFFFF; /* Fondo principal claro */
+  --sidebar-bg: #FFFFFF;
+  --text-global: #1A3867; /* Texto principal institucional */
+  --text-secondary: #D5DEEB; /* Texto secundario definido */
+  --text-secondary-alpha: rgba(179, 255, 255, 0.7); /* Transparencia solicitada */
+  
+  --navbar-bg: #1A3867; /* Menú de navegación */
   --card-bg: #1A3867;
-  --card-border: transparent;
-  --umma-shadow-card: rgba(0, 0, 0, 0.2);
-  --umma-shadow-hover: rgba(0, 0, 0, 0.3);
-  --umma-bg-hover: #a6c2e4;
-  --umma-bg-active: #a6c2e4;
+  --card-border: rgba(26, 56, 103, 0.2); /* Bordes basados en azul institucional al 20% */
+  
+  --umma-shadow-card: rgba(0, 0, 0, 0.1);
+  --umma-shadow-hover: rgba(0, 0, 0, 0.2);
+  --umma-bg-hover: rgba(26, 56, 103, 0.08);
+  --umma-bg-active: rgba(26, 56, 103, 0.15);
+  
   --icon-filter: brightness(0) invert(1);
   --nav-color-normal: #1A3867;
   --nav-color-hover: #1e427d;
+  
+  /* Elementos interactivos y barras */
+  --slider-thumb: #1A3867; /* Círculo deslizante */
+  --scrollbar-bg: rgba(98, 255, 255, 0.38); /* Barra de desplazamiento */
   
   /* Reset Paginación */
   --ifm-pagination-nav-card-bg: transparent !important;
@@ -39,30 +56,49 @@
 }
 
 [data-theme='dark'] {
-  --umma-blue: #0d1b2e;
-  --umma-white: #1b1b1d;
-  --umma-hero: #1A3867;
+  /* ==========================================
+     VARIABLES INSTITUCIONALES UMMA (MODO OSCURO)
+     ================================---------- */
+  --umma-blue: #091828; /* Fondo principal oscuro solicitado */
+  --umma-white: #091828;
+  --umma-hero: #091828;
   --umma-hero2: #ffffff;
-  --umma-navbar: #1a2a3f;
-  --internal-bg: #1b1b1d;
-  --card-bg-color: #242526;
+  --umma-navbar: #091828;
+  --internal-bg: #091828;
+  
+  /* Tarjetas y Contenedores */
+  --card-bg-color: #1a2a3f;
   --card-text: #ffffff;
-  --hero-text: #1A3867;
+  --hero-text: #ffffff;
   --internal-title-color: #58a6ff;
   
-  --bg-global: #262624;
-  --sidebar-bg: #262624;
-  --text-global: #e3e3e3;
-  --navbar-bg: #1a2a3f;
-  --card-bg: #1e1f20;
-  --card-hover-bg: #2d2e30;
-  --card-border: #30363d;
-  --umma-bg-hover: rgba(255, 255, 255, 0.05);
-  --umma-bg-active: #1A3867;
+  /* Elementos de Inicio (Home) */
+  --home-icon-color: #ffffff;
+  --home-title-color: #ffffff;
+  --home-desc-color: #D5DEEB;
+  --car-total-bg: #1a2a3f;
+
+  /* ==========================================
+     VARIABLES UI & COMPONENTES (MODO OSCURO)
+     ================================---------- */
+  --bg-global: #091828; /* Fondo principal oscuro global */
+  --sidebar-bg: #091828;
+  --text-global: #ffffff; /* Texto principal blanco para alto contraste */
+  --text-secondary: #D5DEEB;
+  --text-secondary-alpha: rgba(255, 255, 255, 0.7);
+  
+  --navbar-bg: #091828; /* Menú de navegación oscuro */
+  --card-bg: #1a2a3f;
+  --card-hover-bg: #243b59;
+  --card-border: #091828; /* Bordes optimizados para modo oscuro (#3DFFFFFF al 24%) */
+  
+  --umma-bg-hover: rgba(255, 255, 255, 0.08);
+  --umma-bg-active: rgba(255, 255, 255, 0.15);
   --nav-color-normal: #ffffff;
-  --nav-color-hover: #ffffff;
-  --home-icon-color: #1A3867;
-  --home-title-color: #1A3867;
-  --home-desc-color: #1A3867;
-  --car-total-bg: #242526;;
+  --nav-color-hover: #D5DEEB;
+  
+  /* Elementos interactivos y barras en modo oscuro */
+  --slider-thumb: #ffffff; /* Círculo deslizante en modo oscuro */
+  --scrollbar-bg: rgba(98, 255, 255, 0.38);
+  --car-total-bg: #1a2a3f;
 }

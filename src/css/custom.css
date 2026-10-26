@@ -121,7 +121,7 @@ html[data-theme='dark'] .hero::before {
   gap: 20px; 
   margin-top: 20px; 
   margin-bottom: 20px; 
-  padding: 20px !important; /* Añadido margen interno para las tarjetas */
+  padding: 20px !important; 
 }
 
 .grid-admin-total .card-total {
@@ -151,7 +151,7 @@ html[data-theme='dark'] .hero::before {
   grid-template-columns: repeat(3, 1fr) !important; 
   gap: 20px !important; 
   margin-top: 20px !important; 
-  padding: 20px !important; /* Añadido margen interno para las tarjetas */
+  padding: 20px !important; 
 }
 
 .grid-gestion-total .card-total {
@@ -172,6 +172,7 @@ html[data-theme='dark'] .hero::before {
 .grid-gestion-total .card-total:hover { transform: translateY(-5px) !important; filter: brightness(1.2); }
 .grid-gestion-total .card-total .icon-admin-svg { width: 60px !important; height: 60px !important; margin-bottom: 15px !important; filter: brightness(0) invert(1) !important; }
 .grid-gestion-total .card-total h3 { color: #ffffff !important; font-size: 1.1rem !important; margin: 0 !important; font-weight: 600 !important; text-align: center; }
+
 /* ============================================================
    4. NAVEGACIÓN Y TEXTOS
    ============================================================ */
@@ -184,36 +185,32 @@ html[data-theme='dark'] .hero::before {
 .breadcrumbs__link { color: #1A3867 !important; }
 [data-theme='dark'] .breadcrumbs__link { color: #ffffff !important; }
 
-.icon-admin-svg, [class*='colorModeToggle'] button { filter: brightness(0) invert(1); }
+.icon-admin-svg { filter: brightness(0) invert(1); }
 
 /* ============================================================
    5. CONTROL ABSOLUTO: SIDEBAR
    ============================================================ */
-
 .theme-doc-sidebar-container { 
   background-color: var(--sidebar-bg) !important; 
   border-right: none !important; 
   padding: 10px !important; 
 }
 
-/* Aplicamos margen y radio a links y botones de categoría (colapsables) */
 .menu__link, 
 .menu__list-item-collapsible { 
   color: var(--text-global) !important; 
   font-weight: 500 !important; 
   border-radius: 10px !important; 
   transition: all 0.2s ease !important; 
-  margin: 2px 5px 0px 0px !important; /* Mantiene el respiro a la derecha */
+  margin: 2px 5px 0px 0px !important; 
 }
 
-/* Estado Hover unificado */
 .menu__link:hover,
 .menu__list-item-collapsible:hover { 
   background-color: var(--umma-bg-hover) !important; 
   color: var(--text-global) !important; 
 }
 
-/* Estado Activo: Se aplica al link o a la categoría cuando su ruta está activa */
 .menu__link--active,
 .menu__list-item--active > .menu__list-item-collapsible { 
   background-color: var(--umma-bg-active) !important; 
@@ -222,12 +219,9 @@ html[data-theme='dark'] .hero::before {
 }
 
 .menu__caret { color: var(--text-global) !important; }
-
 .menu__list-item--collapsed .menu__link { color: var(--text-global) !important; }
 
-/* Ajustes específicos para Modo Oscuro */
 [data-theme='dark'] .menu__link { color: #e3e3e3 !important; }
-
 [data-theme='dark'] .menu__link--active,
 [data-theme='dark'] .menu__list-item--active > .menu__list-item-collapsible { 
   background-color: var(--internal-bg) !important; 
@@ -235,37 +229,21 @@ html[data-theme='dark'] .hero::before {
 }
 
 /* --- Iconos flechas --- */
+html[data-theme='light'] .dark-only { display: none !important; }
+html[data-theme='dark'] .light-only { display: none !important; }
 
-/* Ocultar iconos de modo oscuro cuando estamos en modo claro */
-html[data-theme='light'] .dark-only {
-  display: none !important;
-}
-
-/* Ocultar iconos de modo claro cuando estamos en modo oscuro */
-html[data-theme='dark'] .light-only {
-  display: none !important;
-}
-
-/* Esto hace que el botón se vea atenuado cuando está deshabilitado */
 button:disabled {
   opacity: 0;
   cursor: not-allowed;
 }
-/* --- Iconos flechas --- */
 
-
-
-/* --- Telefono --- */
+/* --- Teléfono --- */
 .iphone-frame {
   border: 10px solid #0d1b2e;
 }
-
-/* Estilo específico para Modo Oscuro */
 html[data-theme='dark'] .iphone-frame {
-  border: 10px solid #535353  ;
+  border: 10px solid #535353;
 }
-/* --- Telefono --- */
-
 
 /* --- LINKS --- */
 .link-destacado {
@@ -273,40 +251,30 @@ html[data-theme='dark'] .iphone-frame {
   font-weight: bold;
   text-decoration: none;
 }
-
 .link-destacado:hover {
   color: #1A3867 !important; 
   text-decoration: underline;
 }
-
-/* --- ESTILO MODO OSCURO --- */
 html[data-theme='dark'] .link-destacado {
   color: #ffffff !important; 
 }
-
 html[data-theme='dark'] .link-destacado:hover {
   color: #ffffff !important; 
   text-decoration: underline;
 }
-/* --- LINKS --- */
 
-
-/* --- Margenes --- */
-/* Asegura que el layout tenga un respiro lateral */
+/* --- Márgenes --- */
 .dual-layout-container {
   display: flex;
-  flex-wrap: wrap; /* Para que se vea bien en móviles */
-  padding: 20px;   /* Esto da aire en todos los lados */
-  gap: 30px;       /* Esto separa el texto de la imagen */
-  max-width: 1200px; /* Evita que se estire demasiado en pantallas gigantes */
-  margin: 0 auto;  /* Centra todo en la pantalla */
+  flex-wrap: wrap; 
+  padding: 20px;   
+  gap: 30px;       
+  max-width: 1200px; 
+  margin: 0 auto;  
 }
-/* --- LINKS --- */
-
 
 /* --- PARA EL CELULAR TARJETAS --- */
 @media (max-width: 768px) {
-  /* Aplicamos las dos columnas a ambos tipos de grid */
   .grid-admin-total, 
   .grid-gestion-total {
     grid-template-columns: repeat(2, 1fr) !important; 
@@ -314,24 +282,21 @@ html[data-theme='dark'] .link-destacado:hover {
     padding: 10px !important;
   }
 
-  /* Ajuste general para todas las tarjetas en móvil */
   .grid-admin-total .card-total,
   .grid-gestion-total .card-total {
     padding: 20px 10px !important;
     min-height: 130px !important;
   }
 
-  /* El tamaño de icono que querías para todas */
   .grid-admin-total .card-total img.icon-admin-svg,
   .grid-gestion-total .card-total img.icon-admin-svg,
   .grid-gestion-total .card-total .icon-admin-svg {
     width: 70px !important; 
     height: 75px !important;
     margin-bottom: 8px !important;
-    filter: var(--icon-filter) !important; /* Mantiene el color según el modo claro/oscuro */
+    filter: var(--icon-filter) !important; 
   }
 
-  /* Texto ajustable para que no se amontone */
   .grid-admin-total .card-total h3,
   .grid-gestion-total .card-total h3 {
     font-size: 0.85rem !important; 
@@ -339,37 +304,31 @@ html[data-theme='dark'] .link-destacado:hover {
     text-align: center !important;
   }
 }
-/* --- PARA EL CELULAR TARJETAS --- */
 
 /* ============================================================
    6. OPTIMIZACIÓN RESPONSIVA Y MODO OSCURO (MÓVIL)
    ============================================================ */
-
 @media (max-width: 768px) {
-  /* Ocultar la pirámide/logo en celular */
   html[data-theme='light'] .hero::before,
   html[data-theme='dark'] .hero::before {
     display: none !important;
   }
 
-  /* Ajustar espacio del banner hero sin el logo */
   .hero, [class*="heroBanner"] { 
     padding: 30px 15px 25px 15px !important; 
   }
 
-  /* Texto del encabezado más grande para móvil */
   .hero__title {
-    font-size: 3.0 rem !important; /* Incrementado de 2.1rem */
+    font-size: 3.0rem !important;
     line-height: 1.25 !important;
     margin-top: 0 !important;
   }
 
   .hero__subtitle {
-    font-size: 2.0 rem !important; /* Incrementado de 1.3rem */
+    font-size: 2.0rem !important;
     margin-top: 8px !important;
   }
 
-  /* Fondo ajustado para dar cabida al texto más grande */
   .main-wrapper:not(:has(.theme-doc-sidebar-container)) {
     background: linear-gradient(
       to bottom, 
@@ -381,3 +340,80 @@ html[data-theme='dark'] .link-destacado:hover {
   }
 }
 
+/* ============================================================
+   7. ESTILO DE PÍLDORA (CAPSULE TOGGLE) Y SEPARACIÓN DOBLE
+   ============================================================ */
+
+/* 1. Separación desde el botón hacia la derecha */
+div[class*='colorModeToggle'],
+button.clean-btn[class*='colorModeToggle'],
+.navbar__items button[class*='colorModeToggle'] {
+  margin-right: 12px !important;
+}
+
+/* 2. Separación desde la barra de búsqueda hacia la izquierda */
+.navbar__items [class*='searchBox'],
+.navbar__items .navbar__search,
+.navbar__items .searchBarContainer_node_modules {
+  margin-left: 20px !important;
+}
+
+/* --- ESTILOS DE LA PÍLDORA --- */
+div[class*='colorModeToggle'] button,
+button.clean-btn[class*='colorModeToggle'],
+.navbar__items button[class*='colorModeToggle'] {
+  width: 66px !important;
+  height: 32px !important;
+  border-radius: 20px !important;
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  padding: 0 3px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  position: relative !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Círculo deslizante (Modo Claro) */
+div[class*='colorModeToggle'] button::before,
+button.clean-btn[class*='colorModeToggle']::before {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #ffffff !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  top: 2px;
+  left: 3px;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+/* Círculo deslizante (Modo Oscuro) */
+[data-theme='dark'] div[class*='colorModeToggle'] button::before,
+[data-theme='dark'] button.clean-btn[class*='colorModeToggle']::before {
+  transform: translateX(34px);
+  background-color: #091828 !important;
+  border: 1px solid rgba(61, 255, 255, 0.3);
+}
+
+/* Iconos */
+div[class*='colorModeToggle'] svg,
+button.clean-btn[class*='colorModeToggle'] svg {
+  width: 15px !important;
+  height: 15px !important;
+  z-index: 3 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+div[class*='colorModeToggle'] svg path {
+  fill: #1A3867 !important;
+}
+
+[data-theme='dark'] div[class*='colorModeToggle'] svg path {
+  fill: #ffffff !important;
+}

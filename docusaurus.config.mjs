@@ -51,7 +51,7 @@ export default {
   "themeConfig": {
     "colorMode": {
       "defaultMode": "dark",
-      "respectPrefersColorScheme": true,
+      "respectPrefersColorScheme": false,
       "disableSwitch": false
     },
     "navbar": {
