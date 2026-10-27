@@ -1,5 +1,5 @@
 ---
-title: 📖 Docentes
+title: Docentes
 ---
 
 <div className="grid-gestion-total">

@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-sidebar_label: 🏠 INICIO
+sidebar_label: INICIO
 ---
 
 <p align="center">

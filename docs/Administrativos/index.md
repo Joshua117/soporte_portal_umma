@@ -1,5 +1,5 @@
 ---
-title: 👤 Administrativos
+title: Administrativos
 pagination_prev: null
 --- 
 
