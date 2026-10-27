@@ -3,14 +3,16 @@ title: Carga Académica
 pagination_prev: null
 ---
 
-import { CardGrid } from '@site/src/components/CardGrid';
-
-# Carga Académica
-
-<CardGrid 
-  items={[
-    { title: 'Carga Académica', to: '/Administrativos/Carga_Academica/Agregar_Carga' },
-    { title: 'Generar Carga', to: '/Administrativos/Carga_Academica/Generar_Carga' },
-    { title: 'Supervision', to: '/Administrativos/Carga_Academica/Supervision' },
-  ]}
-/>
+<div className="grid-gestion-total">
+  {(() => {
+    const AdminCard = require('@site/src/components/AdminCard').default;
+    return (
+      <>
+  <AdminCard title="Carga Académica" iconName="School.png" link="./Agregar_Carga" />
+  <AdminCard title="Generar Carga" iconName="Add_Box.png" link="./Generar_Carga" />
+  <AdminCard title="Supervision" iconName="School.png" link="./Supervision" />
+      </>
+    );
+  })()}
+</div>
+  

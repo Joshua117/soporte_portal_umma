@@ -4,7 +4,7 @@ import Link from '@docusaurus/Link';
 interface CardItem {
   title: string;
   to: string;
-  icon?: string;
+  icon?: any; // Permite recibir la imagen importada de React
 }
 
 interface CardGridProps {
@@ -18,7 +18,11 @@ export function CardGrid({ items }: CardGridProps) {
         <Link key={index} to={item.to} className="umma-card">
           <div className="umma-card-left">
             <div className="umma-icon-circle">
-              <img src={item.icon || '/Icons/School.png'} alt={item.title} className="icon-admin-svg" />
+              <img 
+                src={item.icon || '/Icons/School.png'} 
+                alt={item.title} 
+                className="icon-admin-svg" 
+              />
             </div>
             <span className="umma-card-title">{item.title}</span>
           </div>
