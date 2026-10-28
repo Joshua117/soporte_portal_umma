@@ -416,24 +416,22 @@ html[data-theme='dark'] .link-destacado:hover {
 }
 
 /* ============================================================
-7. ESTILO DE PÍLDORA (CAPSULE TOGGLE) Y SEPARACIÓN DOBLE
-============================================================ */
+   7. ESTILO DE PÍLDORA (CAPSULE TOGGLE) CON ICONO MÓVIL
+   ============================================================ */
 
-/* 1. Separación desde el botón hacia la derecha */
 div[class*='colorModeToggle'],
 button.clean-btn[class*='colorModeToggle'],
 .navbar__items button[class*='colorModeToggle'] {
   margin-right: 12px !important;
 }
 
-/* 2. Separación desde la barra de búsqueda hacia la izquierda */
 .navbar__items [class*='searchBox'],
 .navbar__items .navbar__search,
 .navbar__items .searchBarContainer_node_modules {
   margin-left: 20px !important;
 }
 
-/* --- ESTILOS DE LA PÍLDORA --- */
+/* 1. Contenedor principal de la píldora */
 div[class*='colorModeToggle'] button,
 button.clean-btn[class*='colorModeToggle'],
 .navbar__items button[class*='colorModeToggle'] {
@@ -442,17 +440,20 @@ button.clean-btn[class*='colorModeToggle'],
   border-radius: 20px !important;
   background-color: rgba(255, 255, 255, 0.15) !important;
   border: 1px solid rgba(255, 255, 255, 0.3) !important;
-  padding: 0 3px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
+  padding: 0 !important;
   position: relative !important;
   cursor: pointer !important;
-  transition: all 0.3s ease !important;
   box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+  overflow: hidden !important;
 }
 
-/* Círculo deslizante (Modo Claro) */
+/* 2. Ocultar por completo los iconos originales de Docusaurus */
+div[class*='colorModeToggle'] svg,
+button.clean-btn[class*='colorModeToggle'] svg {
+  display: none !important;
+}
+
+/* 3. La pelotita con el Sol adentro (Modo Claro) */
 div[class*='colorModeToggle'] button::before,
 button.clean-btn[class*='colorModeToggle']::before {
   content: '';
@@ -461,36 +462,26 @@ button.clean-btn[class*='colorModeToggle']::before {
   height: 26px;
   border-radius: 50%;
   background-color: #ffffff !important;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Icono de Sol centrado dentro de la pelotita */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231A3867' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='4'%3E%3C/circle%3E%3Cline x1='12' y1='2' x2='12' y2='4'%3E%3C/line%3E%3Cline x1='12' y1='20' x2='12' y2='22'%3E%3C/line%3E%3Cline x1='4.93' y1='4.93' x2='6.34' y2='6.34'%3E%3C/line%3E%3Cline x1='17.66' y1='17.66' x2='19.07' y2='19.07'%3E%3C/line%3E%3Cline x1='2' y1='12' x2='4' y2='12'%3E%3C/line%3E%3Cline x1='20' y1='12' x2='22' y2='12'%3E%3C/line%3E%3Cline x1='4.93' y1='19.07' x2='6.34' y2='17.66'%3E%3C/line%3E%3Cline x1='17.66' y1='6.34' x2='19.07' y2='4.93'%3E%3C/line%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: 14px 14px !important;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease, background-image 0.3s ease;
   top: 2px;
   left: 3px;
   z-index: 2;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
 }
 
-/* Círculo deslizante (Modo Oscuro) */
+/* 4. La pelotita con la Luna adentro (Modo Oscuro) */
 [data-theme='dark'] div[class*='colorModeToggle'] button::before,
 [data-theme='dark'] button.clean-btn[class*='colorModeToggle']::before {
   transform: translateX(34px);
   background-color: #091828 !important;
   border: 1px solid rgba(61, 255, 255, 0.3);
-}
-
-/* Iconos */
-div[class*='colorModeToggle'] svg,
-button.clean-btn[class*='colorModeToggle'] svg {
-  width: 15px !important;
-  height: 15px !important;
-  z-index: 3 !important;
-  transition: opacity 0.3s ease !important;
-}
-
-div[class*='colorModeToggle'] svg path {
-  fill: #1A3867 !important;
-}
-
-[data-theme='dark'] div[class*='colorModeToggle'] svg path {
-  fill: #ffffff !important;
+  /* Icono de Luna centrado dentro de la pelotita oscura */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'%3E%3C/path%3E%3C/svg%3E") !important;
 }
 
 /* ============================================================
@@ -532,22 +523,14 @@ div[class*='colorModeToggle'] svg path {
   gap: 16px !important;
 }
 
-.umma-icon-circle {
-  width: 48px !important;
-  height: 48px !important;
-  background-color: #1A3867 !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  flex-shrink: 0 !important;
-}
-
-.umma-icon-circle img, 
-.umma-icon-circle svg {
-  width: 22px !important;
-  height: 22px !important;
+/* Icono directo sin contenedor circular */
+.umma-card-left img, 
+.umma-card-left svg {
+  width: 26px !important;
+  height: 26px !important;
   filter: brightness(0) invert(1) !important;
+  flex-shrink: 0 !important;
+  display: block !important;
 }
 
 .umma-card-title {
