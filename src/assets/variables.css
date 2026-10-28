@@ -1,104 +1,467 @@
+/* ============================================================
+   1. VARIABLES GENERALES — MODO CLARO
+   ============================================================ */
+
 :root {
-  /* ==========================================
-     VARIABLES INSTITUCIONALES UMMA (MODO CLARO)
-     ================================---------- */
+
+  /* ----------------------------------------------------------
+     COLORES INSTITUCIONALES
+     ---------------------------------------------------------- */
+
   --umma-blue: #1A3867;
-  --umma-blue-hover: #162f55;
-  --umma-white: #ffffff;
-  --umma-hero: #fdfdfd;
-  --umma-hero2: #ffffff;
+  --umma-blue-hover: #162F55;
+  --umma-white: #FFFFFF;
+
+  --umma-hero: #FFFFFF;
+  --umma-hero2: #FFFFFF;
   --umma-navbar: #1A3867;
-  --internal-bg: #ffffff;
-  
-  /* Tarjetas y Contenedores */
-  --card-bg-color: #1A3867;
-  --card-text: #ffffff;
+
+  --internal-bg: #FFFFFF;
+
+
+  /* ----------------------------------------------------------
+     FONDOS GENERALES
+     ---------------------------------------------------------- */
+
+  --bg-global: #FFFFFF;
+  --sidebar-bg: #FFFFFF;
+  --navbar-bg: #1A3867;
+
+
+  /* ----------------------------------------------------------
+     TIPOGRAFÍA
+     ---------------------------------------------------------- */
+
+  --text-global: #1A3867;
+  --text-secondary: #526581;
+  --text-secondary-alpha: rgba(26, 56, 103, 0.70);
+
   --hero-text: #1A3867;
-  --nav-text: #ffffff;
+  --nav-text: #FFFFFF;
   --internal-title-color: #1A3867;
-  
-  /* Elementos de Inicio (Home) */
+
+
+  /* ----------------------------------------------------------
+     TARJETAS Y CONTENEDORES
+     ---------------------------------------------------------- */
+
+  --card-bg-color: #1A3867;
+  --card-bg: #1A3867;
+  --card-hover-bg: #21477F;
+
+  --card-text: #FFFFFF;
+
+  --card-border: rgba(26, 56, 103, 0.20);
+
+
+  /* ----------------------------------------------------------
+     ELEMENTOS DE INICIO (HOME)
+     ---------------------------------------------------------- */
+
   --home-icon-color: #1A3867;
   --home-title-color: #1A3867;
   --home-desc-color: #1A3867;
+
   --car-total-bg: #1A3867;
+
   --home-icon-size: 64px;
 
-  /* ==========================================
-     VARIABLES UI & COMPONENTES (MODO CLARO)
-     ================================---------- */
-  --bg-global: #FFFFFF; /* Fondo principal claro */
-  --sidebar-bg: #FFFFFF;
-  --text-global: #1A3867; /* Texto principal institucional */
-  --text-secondary: #D5DEEB; /* Texto secundario definido */
-  --text-secondary-alpha: rgba(179, 255, 255, 0.7); /* Transparencia solicitada */
-  
-  --navbar-bg: #1A3867; /* Menú de navegación */
-  --card-bg: #1A3867;
-  --card-border: rgba(26, 56, 103, 0.2); /* Bordes basados en azul institucional al 20% */
-  
-  --umma-shadow-card: rgba(0, 0, 0, 0.1);
-  --umma-shadow-hover: rgba(0, 0, 0, 0.2);
+
+  /* ----------------------------------------------------------
+     SOMBRAS
+     ---------------------------------------------------------- */
+
+  --umma-shadow-card: rgba(0, 0, 0, 0.10);
+  --umma-shadow-hover: rgba(0, 0, 0, 0.20);
+
+
+  /* ----------------------------------------------------------
+     ESTADOS INTERACTIVOS
+     ---------------------------------------------------------- */
+
   --umma-bg-hover: rgba(26, 56, 103, 0.08);
   --umma-bg-active: rgba(26, 56, 103, 0.15);
-  
-  --icon-filter: brightness(0) invert(1);
+
   --nav-color-normal: #1A3867;
-  --nav-color-hover: #1e427d;
-  
-  /* Elementos interactivos y barras */
-  --slider-thumb: #1A3867; /* Círculo deslizante */
-  --scrollbar-bg: rgba(98, 255, 255, 0.38); /* Barra de desplazamiento */
-  
-  /* Reset Paginación */
-  --ifm-pagination-nav-card-bg: transparent !important;
-  --ifm-pagination-nav-border-color: transparent !important;
+  --nav-color-hover: #1E427D;
+
+
+  /* ----------------------------------------------------------
+     SELECTOR DE TEMA
+     ---------------------------------------------------------- */
+
+  --slider-thumb: #1A3867;
+
+  --theme-toggle-bg: #FFFFFF;
+
+  --theme-toggle-border: rgba(26, 56, 103, 0.20);
+
+  --theme-toggle-active-bg: #1A3867;
+  --theme-toggle-active-icon: #FFFFFF;
+
+  --theme-toggle-inactive-icon: #1A3867;
+
+
+  /* ----------------------------------------------------------
+     ICONOS
+     ---------------------------------------------------------- */
+
+  --icon-filter: brightness(0) invert(1);
+
+
+  /* ----------------------------------------------------------
+     BARRA DE DESPLAZAMIENTO
+     ---------------------------------------------------------- */
+
+  --scrollbar-bg: rgba(26, 56, 103, 0.38);
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS / INFIMA — COLORES PRINCIPALES
+     ---------------------------------------------------------- */
+
+  --ifm-color-primary: #1A3867;
+  --ifm-color-primary-dark: #17325D;
+  --ifm-color-primary-darker: #162F57;
+  --ifm-color-primary-darkest: #122747;
+
+  --ifm-color-primary-light: #1D3E71;
+  --ifm-color-primary-lighter: #1E4177;
+  --ifm-color-primary-lightest: #234B87;
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS — FONDOS
+     ---------------------------------------------------------- */
+
+  --ifm-background-color: #FFFFFF;
+  --ifm-background-surface-color: #FFFFFF;
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS — TIPOGRAFÍA
+     ---------------------------------------------------------- */
+
+  --ifm-font-color-base: #1A3867;
+  --ifm-heading-color: #1A3867;
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS — NAVBAR
+     ---------------------------------------------------------- */
+
+  --ifm-navbar-background-color: #1A3867;
+  --ifm-navbar-link-color: #FFFFFF;
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS — SIDEBAR
+     ---------------------------------------------------------- */
+
+  --ifm-menu-color: #1A3867;
+  --ifm-menu-color-active: #1A3867;
+
+  --ifm-menu-color-background-active:
+    rgba(26, 56, 103, 0.10);
+
+  --ifm-menu-color-background-hover:
+    rgba(26, 56, 103, 0.06);
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS — PAGINACIÓN
+     ---------------------------------------------------------- */
+
+  --ifm-pagination-nav-card-bg: transparent;
+  --ifm-pagination-nav-border-color: transparent;
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS — BORDES
+     ---------------------------------------------------------- */
+
+  --ifm-color-emphasis-200: rgba(26, 56, 103, 0.15);
+  --ifm-color-emphasis-300: rgba(26, 56, 103, 0.20);
+
 }
+
+
+
+/* ============================================================
+   2. VARIABLES GENERALES — MODO OSCURO
+   ============================================================ */
 
 [data-theme='dark'] {
-  /* ==========================================
-     VARIABLES INSTITUCIONALES UMMA (MODO OSCURO)
-     ================================---------- */
-  --umma-blue: #091828; /* Fondo principal oscuro solicitado */
-  --umma-white: #091828;
-  --umma-hero: #091828;
-  --umma-hero2: #ffffff;
-  --umma-navbar: #091828;
-  --internal-bg: #091828;
-  
-  /* Tarjetas y Contenedores */
-  --card-bg-color: #1a2a3f;
-  --card-text: #ffffff;
-  --hero-text: #ffffff;
-  --internal-title-color: #58a6ff;
-  
-  /* Elementos de Inicio (Home) */
-  --home-icon-color: #ffffff;
-  --home-title-color: #ffffff;
-  --home-desc-color: #D5DEEB;
-  --car-total-bg: #1a2a3f;
 
-  /* ==========================================
-     VARIABLES UI & COMPONENTES (MODO OSCURO)
-     ================================---------- */
-  --bg-global: #091828; /* Fondo principal oscuro global */
-  --sidebar-bg: #091828;
-  --text-global: #ffffff; /* Texto principal blanco para alto contraste */
+  /* ----------------------------------------------------------
+     COLORES INSTITUCIONALES
+     ---------------------------------------------------------- */
+
+  --umma-blue: #091828;
+  --umma-blue-hover: #001838;
+  --umma-white: #FFFFFF;
+
+  --umma-hero: #091828;
+  --umma-hero2: #091828;
+  --umma-navbar: #001838;
+
+  --internal-bg: #091828;
+
+
+  /* ----------------------------------------------------------
+     FONDOS GENERALES
+     ---------------------------------------------------------- */
+
+  --bg-global: #091828;
+  --sidebar-bg: #001838;
+  --navbar-bg: #001838;
+
+
+  /* ----------------------------------------------------------
+     TIPOGRAFÍA
+     ---------------------------------------------------------- */
+
+  --text-global: #FFFFFF;
   --text-secondary: #D5DEEB;
-  --text-secondary-alpha: rgba(255, 255, 255, 0.7);
-  
-  --navbar-bg: #091828; /* Menú de navegación oscuro */
-  --card-bg: #1a2a3f;
-  --card-hover-bg: #243b59;
-  --card-border: #091828; /* Bordes optimizados para modo oscuro (#3DFFFFFF al 24%) */
-  
+  --text-secondary-alpha: rgba(255, 255, 255, 0.70);
+
+  --hero-text: #FFFFFF;
+  --nav-text: #FFFFFF;
+  --internal-title-color: #FFFFFF;
+
+
+  /* ----------------------------------------------------------
+     TARJETAS Y CONTENEDORES
+     ---------------------------------------------------------- */
+
+  --card-bg-color: #1A2A3F;
+  --card-bg: #1A2A3F;
+  --card-hover-bg: #243B59;
+
+  --card-text: #FFFFFF;
+
+  --card-border: rgba(255, 255, 255, 0.24);
+
+
+  /* ----------------------------------------------------------
+     ELEMENTOS DE INICIO (HOME)
+     ---------------------------------------------------------- */
+
+  --home-icon-color: #FFFFFF;
+  --home-title-color: #FFFFFF;
+  --home-desc-color: #D5DEEB;
+
+  --car-total-bg: #1A2A3F;
+
+  --home-icon-size: 64px;
+
+
+  /* ----------------------------------------------------------
+     SOMBRAS
+     ---------------------------------------------------------- */
+
+  --umma-shadow-card: rgba(0, 0, 0, 0.25);
+  --umma-shadow-hover: rgba(0, 0, 0, 0.40);
+
+
+  /* ----------------------------------------------------------
+     ESTADOS INTERACTIVOS
+     ---------------------------------------------------------- */
+
   --umma-bg-hover: rgba(255, 255, 255, 0.08);
   --umma-bg-active: rgba(255, 255, 255, 0.15);
-  --nav-color-normal: #ffffff;
+
+  --nav-color-normal: #FFFFFF;
   --nav-color-hover: #D5DEEB;
-  
-  /* Elementos interactivos y barras en modo oscuro */
-  --slider-thumb: #ffffff; /* Círculo deslizante en modo oscuro */
-  --scrollbar-bg: rgba(98, 255, 255, 0.38);
-  --car-total-bg: #1a2a3f;
+
+
+  /* ----------------------------------------------------------
+     SELECTOR DE TEMA
+     ---------------------------------------------------------- */
+
+  --slider-thumb: #1A3867;
+
+  --theme-toggle-bg: #091828;
+
+  --theme-toggle-border: rgba(255, 255, 255, 0.24);
+
+  --theme-toggle-active-bg: #1A3867;
+  --theme-toggle-active-icon: #FFFFFF;
+
+  --theme-toggle-inactive-icon: #FFFFFF;
+
+
+  /* ----------------------------------------------------------
+     ICONOS
+     ---------------------------------------------------------- */
+
+  --icon-filter: brightness(0) invert(1);
+
+
+  /* ----------------------------------------------------------
+     BARRA DE DESPLAZAMIENTO
+     ---------------------------------------------------------- */
+
+  --scrollbar-bg: rgba(255, 255, 255, 0.38);
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS / INFIMA — COLORES PRINCIPALES
+     ---------------------------------------------------------- */
+
+  --ifm-color-primary: #D5DEEB;
+  --ifm-color-primary-dark: #B9C9DE;
+  --ifm-color-primary-darker: #ADC0D8;
+  --ifm-color-primary-darkest: #7D9DBF;
+
+  --ifm-color-primary-light: #F1F5FA;
+  --ifm-color-primary-lighter: #FFFFFF;
+  --ifm-color-primary-lightest: #FFFFFF;
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS — FONDOS
+     ---------------------------------------------------------- */
+
+  --ifm-background-color: #091828;
+  --ifm-background-surface-color: #091828;
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS — TIPOGRAFÍA
+     ---------------------------------------------------------- */
+
+  --ifm-font-color-base: #FFFFFF;
+  --ifm-heading-color: #FFFFFF;
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS — NAVBAR
+     ---------------------------------------------------------- */
+
+  --ifm-navbar-background-color: #001838;
+  --ifm-navbar-link-color: #FFFFFF;
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS — SIDEBAR
+     ---------------------------------------------------------- */
+
+  --ifm-menu-color: #FFFFFF;
+  --ifm-menu-color-active: #FFFFFF;
+
+  --ifm-menu-color-background-active:
+    rgba(255, 255, 255, 0.15);
+
+  --ifm-menu-color-background-hover:
+    rgba(255, 255, 255, 0.08);
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS — PAGINACIÓN
+     ---------------------------------------------------------- */
+
+  --ifm-pagination-nav-card-bg: transparent;
+  --ifm-pagination-nav-border-color: transparent;
+
+
+  /* ----------------------------------------------------------
+     DOCUSAURUS — BORDES
+     ---------------------------------------------------------- */
+
+  --ifm-color-emphasis-200: rgba(255, 255, 255, 0.15);
+  --ifm-color-emphasis-300: rgba(255, 255, 255, 0.24);
+
 }
+
+
+
+/* ============================================================
+   3. FONDO GLOBAL
+   ============================================================ */
+
+html,
+body,
+#__docusaurus {
+  background-color: var(--bg-global);
+}
+
+
+/* ============================================================
+   4. NAVBAR
+   ============================================================ */
+
+.navbar {
+  background-color: var(--navbar-bg);
+  color: var(--nav-text);
+}
+
+.navbar__title,
+.navbar__link {
+  color: var(--nav-text);
+}
+
+.navbar__link:hover {
+  color: var(--nav-text);
+  opacity: 0.85;
+}
+
+
+/* ============================================================
+   5. SIDEBAR — DOCUMENTACIÓN
+   ============================================================ */
+
+.theme-doc-sidebar-container {
+  background-color: var(--sidebar-bg);
+}
+
+.theme-doc-sidebar-menu {
+  background-color: var(--sidebar-bg);
+}
+
+
+/* ============================================================
+   6. CONTENIDO PRINCIPAL
+   ============================================================ */
+
+.main-wrapper {
+  background-color: var(--bg-global);
+}
+
+
+/* ============================================================
+   7. ENLACES DEL CONTENIDO
+   ============================================================ */
+
+.theme-doc-markdown a {
+  color: var(--ifm-color-primary);
+}
+
+.theme-doc-markdown a:hover {
+  text-decoration: underline;
+}
+
+
+/* ============================================================
+   8. BARRA DE DESPLAZAMIENTO
+   ============================================================ */
+
+html {
+  scrollbar-color: var(--scrollbar-bg) transparent;
+  scrollbar-width: thin;
+}
+
+
+/* ============================================================
+   9. ACCESIBILIDAD
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 3px;
+}
+
+
+/* ============================================================
+   FIN — SISTEMA DE DISEÑO SOPORTE UMMA
+   ============================================================ */
