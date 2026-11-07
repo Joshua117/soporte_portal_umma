@@ -3,6 +3,8 @@ title: Ciclo
 pagination_prev: null
 ---
 
+import Icono from '@site/src/components/Iconos';
+
 # Ciclo
 
 Gestiona los ciclos escolares y consulta el calendario académico de la institución.
@@ -11,10 +13,7 @@ Gestiona los ciclos escolares y consulta el calendario académico de la instituc
 
   <a href="./Agregar_Ciclo" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/Add_Box.png').default}
-        alt="Agregar Ciclo"
-      />
+      <Icono nombre="agregar" size={80} />
     </div>
     <h3 className="umma-card-title">Agregar Ciclo</h3>
     <p className="umma-card-desc">
@@ -24,10 +23,7 @@ Gestiona los ciclos escolares y consulta el calendario académico de la instituc
 
   <a href="./Calendario" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/calendar.png').default}
-        alt="Calendario"
-      />
+      <Icono nombre="calendario" size={80} />
     </div>
     <h3 className="umma-card-title">Calendario</h3>
     <p className="umma-card-desc">
