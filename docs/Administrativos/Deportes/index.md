@@ -1,18 +1,38 @@
 ---
-title: Deportes    
+title: Deportes
 pagination_prev: null
 ---
 
-<div className="grid-gestion-total">
+# Deportes
 
-  <a href="./Categorias" className="card-total">
-    <img src={require('@site/src/components/Icons/Category.png').default} className="icon-admin-svg" />
-    <h3>Categorias</h3>
+Gestiona las categorías deportivas y el registro de asistencia de los participantes.
+
+<div className="umma-cards-grid">
+
+  <a href="./Categorias" className="umma-card">
+    <div className="umma-icon-box">
+      <img
+        src={require('@site/src/components/Icons/Category.png').default}
+        alt="Categorías"
+      />
+    </div>
+    <h3 className="umma-card-title">Categorías</h3>
+    <p className="umma-card-desc">
+      Consulta y administra las categorías deportivas disponibles en la institución.
+    </p>
   </a>
 
-  <a href="./Registrar_Asistencia" className="card-total">
-    <img src={require('@site/src/components/Icons/CalendarClock.png').default} className="icon-admin-svg" />
-    <h3>Registrar Asistencia</h3>
+  <a href="./Registrar_Asistencia" className="umma-card">
+    <div className="umma-icon-box">
+      <img
+        src={require('@site/src/components/Icons/CalendarClock.png').default}
+        alt="Registrar Asistencia"
+      />
+    </div>
+    <h3 className="umma-card-title">Registrar Asistencia</h3>
+    <p className="umma-card-desc">
+      Registra y consulta la asistencia de los participantes en las actividades deportivas.
+    </p>
   </a>
 
 </div>

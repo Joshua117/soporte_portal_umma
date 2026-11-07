@@ -1,3 +1,4 @@
+
 export default {
   "title": "Universidad Mundo Maya",
   "tagline": "Manual de usuario",
@@ -54,6 +55,7 @@ export default {
       "respectPrefersColorScheme": false,
       "disableSwitch": false
     },
+
     "navbar": {
       "title": "Documentación UMMA",
       "logo": {
@@ -70,12 +72,15 @@ export default {
       ],
       "hideOnScroll": false
     },
+
     "footer": {
       "style": "dark",
       "links": [],
       "copyright": "Copyright © 2026 Portal UMMA."
     },
+
     // ... (Mantén toda tu configuración de prism aquí)
+
     "tableOfContents": {
       "minHeadingLevel": 2,
       "maxHeadingLevel": 3
@@ -100,6 +105,7 @@ export default {
         "onBrokenMarkdownImages": "throw"
       }
     },
+
     "future": {
       "v4": {
         "removeLegacyPostBuildHeadAttribute": false,
@@ -122,8 +128,13 @@ export default {
       "experimental_router": "browser"
     }
   },
-  
-  "stylesheets": ["https://fonts.googleapis.com/icon?family=Material+Icons"],
+
+  // FUENTES DE ICONOS
+  "stylesheets": [
+    "https://fonts.googleapis.com/icon?family=Material+Icons",
+    "https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+  ],
+
   "titleDelimiter": "|",
   "noIndex": false
 };

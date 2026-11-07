@@ -465,3 +465,67 @@ html {
 /* ============================================================
    FIN — SISTEMA DE DISEÑO SOPORTE UMMA
    ============================================================ */
+
+/* ============================================================
+   10. CONSISTENCIA CROMÁTICA HOME / DOCUMENTACIÓN
+   Solo colores: no modifica distribución, tamaños ni posiciones.
+   ============================================================ */
+
+html[data-theme='light'] {
+  --bg-global: #FFFFFF;
+  --sidebar-bg: #FFFFFF;
+  --navbar-bg: #1A3867;
+}
+
+html[data-theme='dark'] {
+  --bg-global: #091828;
+  --sidebar-bg: #001838;
+  --navbar-bg: #001838;
+}
+
+html body,
+html #__docusaurus,
+html .main-wrapper {
+  background-color: var(--bg-global) !important;
+}
+
+html .hero,
+html .hero--primary {
+  background-color: var(--bg-global) !important;
+}
+
+html .theme-doc-sidebar-container,
+html .theme-doc-sidebar-menu {
+  background-color: var(--sidebar-bg) !important;
+}
+
+html .navbar {
+  background-color: var(--navbar-bg) !important;
+}
+
+html .navbar__title,
+html .navbar__link,
+html .navbar__toggle {
+  color: var(--nav-text) !important;
+}
+
+html .theme-doc-markdown {
+  background-color: transparent !important;
+}
+
+html .menu__link {
+  color: var(--ifm-menu-color);
+}
+
+html .menu__link--active {
+  color: var(--ifm-menu-color-active);
+  background-color: var(--ifm-menu-color-background-active);
+}
+
+html .menu__link:hover {
+  background-color: var(--ifm-menu-color-background-hover);
+}
+
+html .navbar :focus-visible {
+  outline-color: #FFFFFF;
+}
