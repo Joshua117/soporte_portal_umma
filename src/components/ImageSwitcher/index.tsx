@@ -1,59 +1,87 @@
+
 import React, { useState } from 'react';
 import IphoneWrapper from '../IphoneWrapper';
+import Icono from '../Iconos';
 import styles from './styles.module.css';
-
-const Iz1 = require('../Icons/Iz1.png').default;
-const De1 = require('../Icons/De1.png').default;
-const Iz = require('../Icons/Iz.png').default;
-const De = require('../Icons/De.png').default;
 
 interface ImageSwitcherProps {
   images: string[];
 }
 
-export default function ImageSwitcher({ images }: ImageSwitcherProps) {
+export default function ImageSwitcher({
+  images,
+}: ImageSwitcherProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextImage = () => setCurrentIndex((prev) => Math.min(prev + 1, images.length - 1));
-  const prevImage = () => setCurrentIndex((prev) => Math.max(prev - 1, 0));
+  const nextImage = () => {
+    setCurrentIndex((prev) =>
+      Math.min(prev + 1, images.length - 1)
+    );
+  };
+
+  const prevImage = () => {
+    setCurrentIndex((prev) =>
+      Math.max(prev - 1, 0)
+    );
+  };
 
   return (
     <div className={styles.container}>
-      
-      {/* El teléfono se queda arriba por el flujo del container */}
+
+      {/* Visualización del iPhone */}
       <div className={styles.phoneSection}>
         <IphoneWrapper>
-          <img 
-            src={images[currentIndex]} 
-            alt={`Vista ${currentIndex + 1}`} 
-            className={styles.carouselImage}
-          />
+          {images.length > 0 && (
+            <img
+              src={images[currentIndex]}
+              alt={`Vista ${currentIndex + 1}`}
+              className={styles.carouselImage}
+            />
+          )}
         </IphoneWrapper>
       </div>
 
-      {/* Los controles aparecen siempre debajo */}
+      {/* Controles de navegación */}
       <div className={styles.controls}>
-        <button 
-          onClick={prevImage} 
+
+        {/* Botón anterior */}
+        <button
+          type="button"
+          onClick={prevImage}
           className={styles.navButton}
           disabled={currentIndex === 0}
+          aria-label="Imagen anterior"
         >
-          <img className={`light-only ${styles.navIcon}`} src={Iz1} alt="Anterior" />
-          <img className={`dark-only ${styles.navIcon}`} src={Iz} alt="Anterior" />
+          <Icono
+            nombre="chevron_left"
+            size={36}
+          />
         </button>
-        
+
+        {/* Contador de imágenes */}
         <span className={styles.counter}>
-          {currentIndex + 1} / {images.length}
+          {images.length === 0 ? 0 : currentIndex + 1}
+          {' / '}
+          {images.length}
         </span>
 
-        <button 
-          onClick={nextImage} 
+        {/* Botón siguiente */}
+        <button
+          type="button"
+          onClick={nextImage}
           className={styles.navButton}
-          disabled={currentIndex === images.length - 1}
+          disabled={
+            images.length === 0 ||
+            currentIndex >= images.length - 1
+          }
+          aria-label="Imagen siguiente"
         >
-          <img className={`light-only ${styles.navIcon}`} src={De1} alt="Siguiente" />
-          <img className={`dark-only ${styles.navIcon}`} src={De} alt="Siguiente" />
+          <Icono
+            nombre="chevron_right"
+            size={36}
+          />
         </button>
+
       </div>
     </div>
   );
