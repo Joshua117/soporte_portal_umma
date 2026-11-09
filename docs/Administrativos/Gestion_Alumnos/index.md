@@ -1,25 +1,44 @@
 ---
 title: Gestión Alumnos
-pagination_prev: null 
+pagination_prev: null
 ---
 
+import Icono from '@site/src/components/Iconos';
 
 # Gestión Alumnos
 
-<div className="grid-gestion-total">
+Administra el registro, las ausencias y la información de los estudiantes de la institución.
 
-  <a href="./Agregar_Estudiantes" className="card-total">
-    <img src={require('@site/src/components/Icons/person_add.png').default} className="icon-admin-svg" />
-    <h3>Agregar Estudiantes</h3>
+<div className="umma-cards-grid">
+
+  <a href="./Agregar_Estudiantes" className="umma-card">
+    <div className="umma-icon-box">
+      <Icono nombre="person_add" size={80} />
+    </div>
+    <h3 className="umma-card-title">Agregar Estudiantes</h3>
+    <p className="umma-card-desc">
+      Registra nuevos estudiantes y administra su información académica y personal.
+    </p>
   </a>
 
-  <a href="./Alumnos_Ausentes" className="card-total">
-    <img src={require('@site/src/components/Icons/calendar.png').default} className="icon-admin-svg" />
-    <h3>Alumnos Ausentes</h3>
+  <a href="./Alumnos_Ausentes" className="umma-card">
+    <div className="umma-icon-box">
+      <Icono nombre="person_off" size={80} />
+    </div>
+    <h3 className="umma-card-title">Alumnos Ausentes</h3>
+    <p className="umma-card-desc">
+      Consulta y da seguimiento a los estudiantes que registran ausencias.
+    </p>
   </a>
 
-  <a href="./Lista_Estudiantes" className="card-total">
-    <img src={require('@site/src/components/Icons/Gruups.png').default} className="icon-admin-svg" />
-    <h3>Lista de Estudiantes</h3>
+  <a href="./Lista_Estudiantes" className="umma-card">
+    <div className="umma-icon-box">
+      <Icono nombre="groups" size={80} />
+    </div>
+    <h3 className="umma-card-title">Lista de Estudiantes</h3>
+    <p className="umma-card-desc">
+      Consulta y administra el listado general de estudiantes registrados.
+    </p>
   </a>
+
 </div>

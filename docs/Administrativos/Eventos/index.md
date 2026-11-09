@@ -3,6 +3,8 @@ title: Eventos
 pagination_prev: null
 ---
 
+import Icono from '@site/src/components/Iconos';
+
 # Eventos
 
 Consulta y administra los eventos académicos y culturales de la institución.
@@ -11,10 +13,7 @@ Consulta y administra los eventos académicos y culturales de la institución.
 
   <a href="./Eventos_Academicos" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/Date range.png').default}
-        alt="Eventos Académicos"
-      />
+      <Icono nombre="event_note" size={80} />
     </div>
     <h3 className="umma-card-title">Eventos Académicos</h3>
     <p className="umma-card-desc">
@@ -24,10 +23,7 @@ Consulta y administra los eventos académicos y culturales de la institución.
 
   <a href="./Eventos_Culturales" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/calendar.png').default}
-        alt="Eventos Culturales"
-      />
+      <Icono nombre="theater_comedy" size={80} />
     </div>
     <h3 className="umma-card-title">Eventos Culturales</h3>
     <p className="umma-card-desc">

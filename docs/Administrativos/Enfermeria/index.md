@@ -3,6 +3,8 @@ title: Enfermeria
 pagination_prev: null
 ---
 
+import Icono from '@site/src/components/Iconos';
+
 # Enfermería
 
 Administra las visitas, el inventario y las fichas clínicas del área de enfermería.
@@ -11,10 +13,7 @@ Administra las visitas, el inventario y las fichas clínicas del área de enferm
 
   <a href="./Agregar_Visita" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/Add_Box.png').default}
-        alt="Agregar Visita"
-      />
+      <Icono nombre="medical_information" size={80} />
     </div>
     <h3 className="umma-card-title">Agregar Visita</h3>
     <p className="umma-card-desc">
@@ -24,10 +23,7 @@ Administra las visitas, el inventario y las fichas clínicas del área de enferm
 
   <a href="./Inventario" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/Inventory.png').default}
-        alt="Inventario"
-      />
+      <Icono nombre="inventory_2" size={80} />
     </div>
     <h3 className="umma-card-title">Inventario</h3>
     <p className="umma-card-desc">
@@ -37,10 +33,7 @@ Administra las visitas, el inventario y las fichas clínicas del área de enferm
 
   <a href="./Ficha_Clinica" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/FichaClinica.png').default}
-        alt="Ficha Clínica"
-      />
+      <Icono nombre="clinical_notes" size={80} />
     </div>
     <h3 className="umma-card-title">Ficha Clínica</h3>
     <p className="umma-card-desc">

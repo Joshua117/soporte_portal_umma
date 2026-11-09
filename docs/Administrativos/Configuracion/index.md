@@ -3,6 +3,8 @@ title: Configuración
 pagination_prev: null
 ---
 
+import Icono from '@site/src/components/Iconos';
+
 # Configuración del Sistema
 
 Administra las áreas y los permisos de acceso del sistema institucional.
@@ -11,10 +13,7 @@ Administra las áreas y los permisos de acceso del sistema institucional.
 
   <a href="./Areas" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/Settings.png').default}
-        alt="Áreas"
-      />
+      <Icono nombre="settings" size={80} />
     </div>
     <h3 className="umma-card-title">Áreas</h3>
     <p className="umma-card-desc">
@@ -24,10 +23,7 @@ Administra las áreas y los permisos de acceso del sistema institucional.
 
   <a href="./Permisos" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/Security.png').default}
-        alt="Permisos"
-      />
+      <Icono nombre="verified_user" size={80} />
     </div>
     <h3 className="umma-card-title">Permisos</h3>
     <p className="umma-card-desc">

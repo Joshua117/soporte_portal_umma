@@ -3,6 +3,8 @@ title: Deportes
 pagination_prev: null
 ---
 
+import Icono from '@site/src/components/Iconos';
+
 # Deportes
 
 Gestiona las categorías deportivas y el registro de asistencia de los participantes.
@@ -11,10 +13,7 @@ Gestiona las categorías deportivas y el registro de asistencia de los participa
 
   <a href="./Categorias" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/Category.png').default}
-        alt="Categorías"
-      />
+      <Icono nombre="sports_basketball" size={80} />
     </div>
     <h3 className="umma-card-title">Categorías</h3>
     <p className="umma-card-desc">
@@ -24,10 +23,7 @@ Gestiona las categorías deportivas y el registro de asistencia de los participa
 
   <a href="./Registrar_Asistencia" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/CalendarClock.png').default}
-        alt="Registrar Asistencia"
-      />
+      <Icono nombre="how_to_reg" size={80} />
     </div>
     <h3 className="umma-card-title">Registrar Asistencia</h3>
     <p className="umma-card-desc">

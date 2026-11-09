@@ -3,6 +3,8 @@ title: Cobranza
 pagination_prev: null
 ---
 
+import Icono from '@site/src/components/Iconos';
+
 # Cobranza
 
 Gestiona las citas, trámites, formas de pago y cajas de atención de la institución.
@@ -11,10 +13,7 @@ Gestiona las citas, trámites, formas de pago y cajas de atención de la institu
 
   <a href="./Agendar_Cita" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/CalendarClock.png').default}
-        alt="Agendar cita"
-      />
+      <Icono nombre="calendar_clock" size={80} />
     </div>
     <h3 className="umma-card-title">Agendar cita</h3>
     <p className="umma-card-desc">
@@ -24,10 +23,7 @@ Gestiona las citas, trámites, formas de pago y cajas de atención de la institu
 
   <a href="./Citas" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/calendar.png').default}
-        alt="Citas"
-      />
+      <Icono nombre="calendar_month" size={80} />
     </div>
     <h3 className="umma-card-title">Citas</h3>
     <p className="umma-card-desc">
@@ -37,10 +33,7 @@ Gestiona las citas, trámites, formas de pago y cajas de atención de la institu
 
   <a href="./Tipos_de_Tramite" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/Category.png').default}
-        alt="Tipos de trámite"
-      />
+      <Icono nombre="category" size={80} />
     </div>
     <h3 className="umma-card-title">Tipos de trámite</h3>
     <p className="umma-card-desc">
@@ -50,10 +43,7 @@ Gestiona las citas, trámites, formas de pago y cajas de atención de la institu
 
   <a href="./Tipos_de_Pagos" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/paid.png').default}
-        alt="Tipos de pagos"
-      />
+      <Icono nombre="paid" size={80} />
     </div>
     <h3 className="umma-card-title">Tipos de pagos</h3>
     <p className="umma-card-desc">
@@ -63,10 +53,7 @@ Gestiona las citas, trámites, formas de pago y cajas de atención de la institu
 
   <a href="./Ajustes_Citas" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/Settings.png').default}
-        alt="Ajustes de citas"
-      />
+      <Icono nombre="settings" size={80} />
     </div>
     <h3 className="umma-card-title">Ajustes de citas</h3>
     <p className="umma-card-desc">
@@ -76,10 +63,7 @@ Gestiona las citas, trámites, formas de pago y cajas de atención de la institu
 
   <a href="./Cajas" className="umma-card">
     <div className="umma-icon-box">
-      <img
-        src={require('@site/src/components/Icons/paid.png').default}
-        alt="Cajas"
-      />
+      <Icono nombre="point_of_sale" size={80} />
     </div>
     <h3 className="umma-card-title">Cajas</h3>
     <p className="umma-card-desc">

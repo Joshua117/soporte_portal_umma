@@ -13,7 +13,7 @@ Gestiona las materias, horarios y asignaciones académicas de la institución.
 
   <a href="./Agregar_Carga" className="umma-card">
     <div className="umma-icon-box">
-      <Icono nombre="escuela" size={80} />
+      <Icono nombre="menu_book" size={80} />
     </div>
     <h3 className="umma-card-title">Carga Académica</h3>
     <p className="umma-card-desc">
@@ -23,7 +23,7 @@ Gestiona las materias, horarios y asignaciones académicas de la institución.
 
   <a href="./Generar_Carga" className="umma-card">
     <div className="umma-icon-box">
-      <Icono nombre="horarios" size={80} />
+      <Icono nombre="calendar_clock" size={80} />
     </div>
     <h3 className="umma-card-title">Generar Carga</h3>
     <p className="umma-card-desc">
@@ -33,7 +33,7 @@ Gestiona las materias, horarios y asignaciones académicas de la institución.
 
   <a href="./Supervision" className="umma-card">
     <div className="umma-icon-box">
-      <Icono nombre="supervision" size={80} />
+      <Icono nombre="fact_check" size={80} />
     </div>
     <h3 className="umma-card-title">Supervisión</h3>
     <p className="umma-card-desc">
