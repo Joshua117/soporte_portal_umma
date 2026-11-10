@@ -678,60 +678,100 @@ button.clean-btn[class*='colorModeToggle']::before {
 }
 
 
+
+
 /* ============================================================
-   UMMA - AJUSTES RESPONSIVOS PARA TELÉFONOS
+   SIDEBAR MÓVIL UMMA - MODO CLARO Y OSCURO
    ============================================================ */
 
-@media (max-width: 768px) {
+@media (max-width: 996px) {
 
-  /* MENÚ MÓVIL */
-
-  .navbar-sidebar {
-    background-color: #001838 !important;
-  }
-
+  /* Estructura del menú móvil */
+  .navbar-sidebar,
   .navbar-sidebar__items,
   .navbar-sidebar__item {
-    background-color: #001838 !important;
+    background-color: var(--mobile-sidebar-bg) !important;
   }
 
-  .navbar-sidebar .menu__link,
+  .navbar-sidebar .menu {
+    background-color: var(--mobile-menu-bg) !important;
+  }
+
+  /* Enlaces y categorías */
+  .navbar-sidebar .menu__link {
+    color: var(--mobile-menu-text) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Categorías desplegables */
   .navbar-sidebar .menu__list-item-collapsible {
-    color: #ffffff !important;
+    display: flex !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    background-color: transparent !important;
   }
 
-  .navbar-sidebar .menu__link--active {
-    background-color: #091828 !important;
-    color: #ffffff !important;
-  }
-
-  .navbar-sidebar .menu__link:hover {
-    background-color: #1A3867 !important;
-  }
-
-  /* PORTADA */
-
-  .hero__title {
-    font-size: clamp(1.7rem, 7vw, 2.3rem) !important;
-    line-height: 1.25 !important;
-    text-align: center !important;
-    overflow-wrap: normal !important;
-  }
-
-  .hero__subtitle {
-    font-size: 1.2rem !important;
-    line-height: 1.4 !important;
-    margin-top: 8px !important;
-    text-align: center !important;
-  }
-
-  .hero {
-    padding: 24px 16px !important;
-  }
-
-  /* Evitar desbordamiento horizontal */
-
-  .main-wrapper {
+  .navbar-sidebar
+  .menu__list-item-collapsible > .menu__link {
+    flex: 1 1 auto !important;
+    width: auto !important;
     min-width: 0 !important;
+    background: transparent !important;
+  }
+
+  /* Flechas */
+  .navbar-sidebar .menu__caret {
+    color: var(--mobile-menu-text) !important;
+    flex-shrink: 0 !important;
+    background: transparent !important;
+  }
+
+  /* Elemento seleccionado */
+  .navbar-sidebar .menu__link--active {
+    background-color: var(--mobile-menu-active) !important;
+    color: var(--mobile-menu-active-text) !important;
+  }
+
+  /* Categoría activa completa */
+  .navbar-sidebar
+  .menu__list-item--active > .menu__list-item-collapsible {
+    background-color: var(--mobile-menu-active) !important;
+  }
+
+  .navbar-sidebar
+  .menu__list-item--active
+  > .menu__list-item-collapsible > .menu__link {
+    color: var(--mobile-menu-active-text) !important;
+  }
+
+  /* Regresar al menú principal */
+  .navbar-sidebar__back {
+    color: #ffffff !important;
   }
 }
+
+/* ============================================================
+   COLORES DEL MENÚ MÓVIL - MODO CLARO
+   ============================================================ */
+
+html[data-theme='light'] {
+  --mobile-sidebar-bg: #1A3867;
+  --mobile-menu-bg: #FFFFFF;
+  --mobile-menu-text: #1A3867;
+  --mobile-menu-active: #E8ECF1;
+  --mobile-menu-active-text: #1A3867;
+}
+
+/* ============================================================
+   COLORES DEL MENÚ MÓVIL - MODO OSCURO
+   ============================================================ */
+
+html[data-theme='dark'] {
+  --mobile-sidebar-bg: #001838;
+  --mobile-menu-bg: #091828;
+  --mobile-menu-text: #FFFFFF;
+  --mobile-menu-active: #1A3867;
+  --mobile-menu-active-text: #FFFFFF;
+}
+
