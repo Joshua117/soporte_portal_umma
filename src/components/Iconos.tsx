@@ -1,35 +1,47 @@
-
 import React from 'react';
 
-// Alias de iconos para los módulos de SoporteUMMA
+// Alias de iconos relacionados con los módulos de Administrativos y Protección Civil
 export const iconos = {
+  // Panel / Tablero de control
+  panel: 'space_dashboard',
+  tableroPanel: 'dashboard',
+  monitoreoPanel: 'monitoring',
+
+  // Protección Civil (Brigadas, Control Conteo, Panel)
+  proteccionCivil: 'health_and_safety',
+  brigadas: 'groups',
+  brigadaEmergencia: 'emergency',
+  controlConteo: 'assignment',
+  conteoPersonas: 'how_to_reg',
+  evacuacion: 'directions_run',
+  simulacro: 'campaign',
+  extintor: 'fire_extinguisher',
+  puntoReunion: 'pin_drop',
+
+  // Carga Académica
+  cargaAcademica: 'library_books',
+  agregarCarga: 'add_box',
+  generarCarga: 'calendar_clock',
+  supervision: 'fact_check',
+
+  // Ciclo
+  ciclo: 'event_note',
+  calendario: 'calendar_month',
+  horarios: 'schedule',
+
+  // Cobranza
+  cobranza: 'payments',
+  cajas: 'point_of_sale',
+  tramites: 'category',
+  tiposPago: 'paid',
+  citas: 'calendar_month',
+  agendarCita: 'calendar_clock',
+  ajustesCitas: 'settings',
+
   // Configuración
   configuracion: 'settings',
   permisos: 'security',
   areas: 'category',
-
-  // Generales
-  agregar: 'add_box',
-  escuela: 'school',
-  calendario: 'calendar_month',
-  horarios: 'schedule',
-  supervision: 'fact_check',
-  ciclo: 'event_note',
-
-  // Carga Académica
-  cargaAcademica: 'library_books',
-  generarCarga: 'calendar_clock',
-  materias: 'menu_book',
-  planesEstudio: 'collections_bookmark',
-
-  // Cobranza
-  cobranza: 'payments',
-  agendarCita: 'calendar_clock',
-  citas: 'calendar_month',
-  tramites: 'category',
-  tiposPago: 'paid',
-  ajustesCitas: 'settings',
-  cajas: 'point_of_sale',
 
   // Deportes
   deportes: 'sports_soccer',
@@ -39,7 +51,6 @@ export const iconos = {
   // Enfermería
   enfermeria: 'medical_services',
   visita: 'medical_information',
-  inventario: 'inventory_2',
   fichaClinica: 'clinical_notes',
 
   // Eventos
@@ -65,17 +76,41 @@ export const iconos = {
   // Gestión Personal
   gestionPersonal: 'manage_accounts',
 
-  // Otros módulos administrativos
+  // Grados y Áreas Escolares
   gradosAreas: 'account_tree',
+
+  // Inventario
+  inventario: 'inventory_2',
+
+  // Justificantes
   justificantes: 'assignment_turned_in',
+
+  // Materias
+  materias: 'menu_book',
+
+  // Mobiliario
   mobiliario: 'chair',
+
+  // Pase Vehicular
   paseVehicular: 'directions_car',
+
+  // Planes de Estudio
+  planesEstudio: 'collections_bookmark',
+
+  // Salones
   salones: 'meeting_room',
+
+  // Seguridad
   seguridad: 'security',
+
+  // Talleres
   talleres: 'palette',
+
+  // Transporte UMMA
   transporte: 'directions_bus',
 
-  // Acciones generales
+  // Generales y acciones base
+  agregar: 'add_box',
   buscar: 'search',
   editar: 'edit',
   eliminar: 'delete',

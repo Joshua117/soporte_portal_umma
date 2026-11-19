@@ -97,6 +97,11 @@ Consulta y administra los módulos académicos, administrativos y de servicios d
       icon: 'collections_bookmark'
     },
     {
+      title: 'Protección Civil',
+      to: './Proteccion_Civil/',
+      icon: 'health_and_safety'
+    },
+    {
       title: 'Salones',
       to: './Salones/',
       icon: 'meeting_room'
