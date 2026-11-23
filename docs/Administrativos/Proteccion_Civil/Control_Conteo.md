@@ -1,3 +1,7 @@
+---
+title: Control y Conteo
+hide_table_of_contents: true
+---
 Este módulo detalla el funcionamiento del **control y conteo durante simulacros**, permitiendo registrar en tiempo real la participación de la comunidad universitaria y evaluar los tiempos de respuesta. El sistema organiza la información por sectores y genera métricas históricas de desempeño:
 
 ### Conteo por Sectores e Historial de Simulacros

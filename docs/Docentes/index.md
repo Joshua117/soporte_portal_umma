@@ -12,63 +12,99 @@ Consulta y administra las herramientas académicas, los horarios y los recursos 
 <div className="umma-cards-grid">
 
   <a href="./Ausencias_alumnos" className="umma-card">
-    <div className="umma-icon-box">
-      <Icono nombre="person_remove" size={80} />
+    <div className="umma-card-left">
+      <div className="umma-icon-circle">
+        <Icono nombre="person_remove" size={36} />
+      </div>
+      <span className="umma-card-title">
+        Ausencias Alumnos
+      </span>
     </div>
-    <h3 className="umma-card-title">Ausencias Alumnos</h3>
-    <p className="umma-card-desc">
-      Consulta y administra los registros de ausencia de los alumnos.
-    </p>
+    <div className="umma-arrow-circle">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="9 18 15 12 9 6" />
+      </svg>
+    </div>
   </a>
 
   <a href="./Control_asistencias" className="umma-card">
-    <div className="umma-icon-box">
-      <Icono nombre="date_range" size={80} />
+    <div className="umma-card-left">
+      <div className="umma-icon-circle">
+        <Icono nombre="date_range" size={36} />
+      </div>
+      <span className="umma-card-title">
+        Control Asistencias
+      </span>
     </div>
-    <h3 className="umma-card-title">Control Asistencias</h3>
-    <p className="umma-card-desc">
-      Registra y consulta el control de asistencias de los estudiantes.
-    </p>
+    <div className="umma-arrow-circle">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="9 18 15 12 9 6" />
+      </svg>
+    </div>
   </a>
 
   <a href="./Formatos" className="umma-card">
-    <div className="umma-icon-box">
-      <Icono nombre="description" size={80} />
+    <div className="umma-card-left">
+      <div className="umma-icon-circle">
+        <Icono nombre="description" size={36} />
+      </div>
+      <span className="umma-card-title">
+        Formatos
+      </span>
     </div>
-    <h3 className="umma-card-title">Formatos</h3>
-    <p className="umma-card-desc">
-      Consulta los formatos y documentos disponibles para los docentes.
-    </p>
+    <div className="umma-arrow-circle">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="9 18 15 12 9 6" />
+      </svg>
+    </div>
   </a>
 
   <a href="./Horario_Clases" className="umma-card">
-    <div className="umma-icon-box">
-      <Icono nombre="schedule" size={80} />
+    <div className="umma-card-left">
+      <div className="umma-icon-circle">
+        <Icono nombre="schedule" size={36} />
+      </div>
+      <span className="umma-card-title">
+        Horario de Clases
+      </span>
     </div>
-    <h3 className="umma-card-title">Horario de Clases</h3>
-    <p className="umma-card-desc">
-      Consulta los horarios de clases y las actividades académicas.
-    </p>
+    <div className="umma-arrow-circle">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="9 18 15 12 9 6" />
+      </svg>
+    </div>
   </a>
 
   <a href="./Area_Deportiva" className="umma-card">
-    <div className="umma-icon-box">
-      <Icono nombre="sports_soccer" size={80} />
+    <div className="umma-card-left">
+      <div className="umma-icon-circle">
+        <Icono nombre="sports_soccer" size={36} />
+      </div>
+      <span className="umma-card-title">
+        Área Deportiva
+      </span>
     </div>
-    <h3 className="umma-card-title">Área Deportiva</h3>
-    <p className="umma-card-desc">
-      Consulta y administra las actividades relacionadas con el área deportiva.
-    </p>
+    <div className="umma-arrow-circle">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="9 18 15 12 9 6" />
+      </svg>
+    </div>
   </a>
 
   <a href="./Materias" className="umma-card">
-    <div className="umma-icon-box">
-      <Icono nombre="menu_book" size={80} />
+    <div className="umma-card-left">
+      <div className="umma-icon-circle">
+        <Icono nombre="menu_book" size={36} />
+      </div>
+      <span className="umma-card-title">
+        Materias
+      </span>
     </div>
-    <h3 className="umma-card-title">Materias</h3>
-    <p className="umma-card-desc">
-      Consulta las materias y los recursos académicos correspondientes.
-    </p>
+    <div className="umma-arrow-circle">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+        <polyline points="9 18 15 12 9 6" />
+      </svg>
+    </div>
   </a>
 
 </div>

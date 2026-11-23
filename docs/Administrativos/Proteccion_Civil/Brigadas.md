@@ -1,3 +1,8 @@
+---
+title: Brigadas
+hide_table_of_contents: true
+---
+
 Este módulo detalla cómo consultar y dar de alta las **brigadas de emergencia** en la institución para tener claro cómo se conforman los equipos de respuesta ante cualquier imprevisto. Su estructura separa con claridad la revisión de las brigadas existentes del registro de nuevas brigadas:
 
 ### Consulta de Brigadas y Registro de Nuevas
