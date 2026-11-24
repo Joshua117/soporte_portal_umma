@@ -1,5 +1,5 @@
 ---
-title: Ajustes Cobranza
+title: Cajas
 sidebar_position: 2
 hide_table_of_contents: true
 ---
@@ -82,22 +82,6 @@ export const ArrowSlider = () => {
     {/* Columna de Texto */}
     <div className="col col--7">
       Este apartado agrupa las funciones clave para **administrar la operatividad financiera y la atención al cliente** dentro de la institución, centralizando los servicios, canales de cobro y puntos de atención.
-
-      ### Tipos de Trámites
-      Este módulo permite gestionar el **catálogo de servicios institucionales**, facilitando la clasificación, identificación y control de cada solicitud realizada por los usuarios:
-
-      * **Gestión de Estados:** Permite habilitar o deshabilitar servicios de forma dinámica según la disponibilidad operativa o temporada académica.
-      * **Creación de Trámites:** Facilita el alta de nuevos conceptos mediante la captura del nombre oficial del trámite y su correspondiente subtipo.
-
-      ---
-
-      ### Métodos de Pago
-      Define las distintas **opciones de cobro disponibles**, adaptándose a las necesidades de los usuarios y a los requerimientos de cada trámite:
-
-      * **Flexibilidad:** Incluye opciones base como *Efectivo* y *Tarjeta*, con la posibilidad de incorporar rápidamente nuevas alternativas de pago.
-      * **Integración Operativa:** Los métodos activos se reflejan de forma automática al momento de agendar citas o procesar solicitudes.
-
-      ---
 
       ### Administración de Cajas
       Garantiza que cada punto de atención opere de manera estructurada, eficiente y supervisada mediante la asignación de:
