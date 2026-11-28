@@ -4,99 +4,24 @@ sidebar_position: 2
 hide_table_of_contents: true
 ---
 
-import React, { useState } from 'react';
-import IphoneWrapper from '@site/src/components/IphoneWrapper';
+import Link from '@docusaurus/Link';
+import DualLayout from '@site/src/components/DualLayout';
 
-export const ArrowSlider = () => {
-  const [index, setIndex] = useState(0);
-  
-  const media = [
-    { type: 'image', src: '/img/Cobranza/Cajas.webp' },
-    { type: 'image', src: '/img/Cobranza/TipoTra.webp' },
-    { type: 'image', src: '/img/Cobranza/TipoPag.webp' },
-  ];
+<DualLayout
+  imageSrc="/img/Ciclo/PanelCiclo.webp"
+  altText="Administración de Cajas"
+  stickyImage={true}
+>
 
-  const siguienteImagen = () => {
-    setIndex((prev) => (prev === media.length - 1 ? 0 : prev + 1));
-  };
+Este apartado agrupa las funciones clave para **administrar la operatividad financiera y la atención al cliente** dentro de la institución, centralizando los puntos de atención, los turnos del personal y los trámites habilitados en cada ventanilla.
 
-  const anteriorImagen = () => {
-    setIndex((prev) => (prev === 0 ? media.length - 1 : prev - 1));
-  };
+### Administración de Cajas
+Aquí podrás consultar y organizar cómo opera cada caja para mantener una atención ordenada y con seguimiento continuo:
 
-  const botonStyle = {
-    position: 'absolute',
-    top: '50%',
-    transform: 'translateY(-50%)',
-    backgroundColor: 'rgba(0, 0, 0, 0.5)',
-    color: 'white',
-    border: 'none',
-    width: '35px',
-    height: '35px',
-    borderRadius: '50%',
-    cursor: 'pointer',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    zIndex: 10,
-    transition: 'background-color 0.3s ease',
-  };
+- **Personal y Horarios:** Asignación y consulta del personal de caja en turno junto con sus horarios de atención establecidos.
+- **Disponibilidad y Flujo:** Monitoreo del estatus activo de cada caja y control del avance de los usuarios atendidos.
+- **Trámites Habilitados:** Configuración específica de los tipos de trámites y pagos permitidos en cada ventanilla para evitar desvíos operativos.
 
-  return (
-    <div style={{ position: 'relative', width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      
-      <button onClick={anteriorImagen} style={{ ...botonStyle, left: '-10px' }} aria-label="Anterior">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-      </button>
+> **Propósito del Módulo:** Optimizar la gestión de ingresos, reducir tiempos de espera en ventanilla y mantener la trazabilidad completa del flujo financiero y de atención al usuario.
 
-      <IphoneWrapper>
-        <img 
-          src={media[index].src} 
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
-          alt="Contenido Cobranza" 
-        />
-      </IphoneWrapper>
-
-      <button onClick={siguienteImagen} style={{ ...botonStyle, right: '-10px' }} aria-label="Siguiente">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </button>
-
-      {/* Indicadores de puntos */}
-      <div style={{ position: 'absolute', bottom: '-20px', left: '50%', transform: 'translateX(-50%)', display: 'flex', gap: '8px' }}>
-        {media.map((_, i) => (
-          <div key={i} style={{
-            width: '8px',
-            height: '8px',
-            borderRadius: '50%',
-            backgroundColor: i === index ? 'var(--ifm-color-primary)' : 'rgba(0, 0, 0, 0.2)',
-          }}/>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-<div className="container margin-vert--lg padding-horiz--lg">
-  <div className="row">
-
-    {/* Columna de Texto */}
-    <div className="col col--7">
-      Este apartado agrupa las funciones clave para **administrar la operatividad financiera y la atención al cliente** dentro de la institución, centralizando los servicios, canales de cobro y puntos de atención.
-
-      ### Administración de Cajas
-      Garantiza que cada punto de atención opere de manera estructurada, eficiente y supervisada mediante la asignación de:
-
-      * **Personal y Horarios:** Identificación clara de las cajeras o cajeros en turno y sus horarios de atención establecidos.
-      * **Disponibilidad en Tiempo Real:** Monitoreo del estatus activo de cada caja y control del flujo de usuarios atendidos.
-      * **Capacidad de Trámites:** Configuración específica de los tipos de trámites y pagos habilitados para procesarse en cada ventanilla.
-
-      > **Propósito del Módulo:** Optimizar la gestión de ingresos, reducir tiempos de espera en ventanilla y mantener la trazabilidad completa del flujo financiero y de atención al usuario.
-    </div>
-
-    {/* Columna del Slider - Con Sticky para acompañar el scroll */}
-    <div className="col col--5" style={{ position: 'sticky', top: '100px', height: 'fit-content' }}>
-      <ArrowSlider />
-    </div>
-
-  </div>
-</div>
+</DualLayout>

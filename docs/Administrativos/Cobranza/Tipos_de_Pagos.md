@@ -1,13 +1,32 @@
 ---
-title: Tipos de Pagos
+title: Tipos de pago
+sidebar_position: 5
 hide_table_of_contents: true
 ---
-Este módulo detalla la administración de los **tipos de pago o cobro disponibles**, permitiendo consultar el catálogo vigente, dar de alta nuevas formas de cobro y gestionar las opciones existentes. El flujo combina una vista de listado con acciones de control y un formulario sencillo para registrar métodos de pago:
 
-### Catálogo, Acciones y Alta de Tipos de Pago
+import Link from '@docusaurus/Link'; 
+import DualLayout from '@site/src/components/DualLayout';
 
-- **Listado y Gestión de Tipos de Pago:** Muestra el total de tipos de pago registrados y cada método disponible (como efectivo o tarjeta) junto con su indicador de **estado** y los botones para **editar** o **borrar**.
-- **Registro de Nuevo Tipo de Pago:** Permite escribir el nombre del método de cobro (por ejemplo, efectivo, tarjeta o transferencia) en el campo de captura para sumarlo a las opciones disponibles.
-- **Confirmación o Descarte:** Cuenta con los botones **Guardar** para registrar el nuevo tipo de pago y **Cancelar** para salir sin aplicar cambios.
+<DualLayout 
+  imageSrc="/img/Cobranza/TiposPago.webp" 
+  altText="Descripción de la imagen" 
+  stickyImage={true}
+>
 
-> **Propósito del Módulo:** Mantener actualizadas y administrables las formas de cobro habilitadas para los pagos y citas dentro del sistema.
+Este módulo centraliza la **gestión y configuración principal** del apartado dentro del portal, permitiendo consultar la información vigente, administrar registros y mantener el control operativo de forma clara y ordenada.
+
+### Vista General y Gestión
+Aquí podrás revisar los elementos disponibles y realizar las acciones clave del módulo con trazabilidad:
+
+- **Consulta y Estado:** Visualización rápida de los registros existentes y su estado operativo actual.
+- **Administración:** Alta, edición o control de parámetros para mantener la información actualizada.
+
+### Configuración y Seguimiento
+Permite ajustar los criterios específicos del flujo y dar seguimiento continuo a la operación:
+
+- **Parámetros Operativos:** Definición de reglas, periodos o asignaciones necesarias para el funcionamiento del módulo.
+- **Control y Revisión:** Verificación continua para asegurar consistencia y evitar inconsistencias en los datos.
+
+> **Propósito del Módulo:** Centralizar y simplificar la operación de este apartado, brindando información clara y herramientas ágiles para la gestión administrativa.
+
+</DualLayout>
